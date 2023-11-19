@@ -1,0 +1,40 @@
+You are a biologist analyzing metadata from a ChIP-seq experiment database. Your task is to extract information from a record describing a single sample that is part of a larger study. The record may contain incomplete or misorganized metadata, and it is your job to identify the protein that was targeted in the ChIP experiment and to extract information about the sample.
+
+Sample name: DRR016390. Naked genomic DNA immunoprecipitated with Rad51-ssDNA complex
+Name of the broader study to which the sample belongs: The DMC1-ssDNA complex preferentially targets to the nucleosome-free DNA region in human chromosomes
+Titles of all samples in the study: 
+    - DRX014759, Naked genomic DNA (control for non-specific binding), DRR016392
+    - DRX014758, DRR016391, Fragmanted Chromatin (control for non-specific binding)
+    - DRR016390, Naked genomic DNA immunoprecipitated with Rad51-ssDNA complex, DRX014757
+    - naked genomic DNA immunoprecipitated with DMC1-ssDNA complex, DRX014756, DRR016389
+    - Naked genomic DNA (input), DRX014755, DRR016388
+    - Fragmented chromatin immunoprecipitated with Rad51-ssDNA complex, DRX014754, DRR016387
+    - DRR016386, Fragmented chromatin immunoprecipitated with DMC1-ssDNA complex, DRX014753
+    - DRR016385, Fragmanted Chromatin (input), DRX014752
+Study abstract (applies to all samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control): Chromatin fragments from HeLa cell extract by sonication were incubated with the DMC1-ssDNA complex or the RAD51-ssDNA complex. The chromatin fragments associated with the DMC1-ssDNA complex or the RAD51-ssDNA complex were pelleted using the magnetic beads conjugated at the edge of the ssDNA. The genomic DNA fragments associated to the DMC1-ssDNA complex or the RAD51-ssDNA complex were then analyzed by deep sequencing
+
+All of the information below should apply specifically to this particular sample:
+
+Other info of potential relevance: sample_name = {DRS014293}; parsed primary ID = {DRX014757}; LIBRARYSELECTION = {ChIP}; inferred sequence type = {ChIPSeq}; sample comment = {human fibroblasts}; LIBRARYSTRATEGY = {ChIP-Seq}
+
+
+0. N/A
+1. fibroblast
+2. N/A
+3. N/A
+4. N/A
+5. No
+6. No
+7. N/A
+8. N/A
+9. RAD51, DMC1
+10. The rationale for ChIP target identification for this particular sample comes from the sample name, "Naked genomic DNA immunoprecipitated with Rad51-ssDNA complex." The protein targeted in the ChIP experiment is Rad51, as it is complexed with single-stranded DNA (ssDNA)
+11. Rad51
+12. RAD51
+13. ChIP-seq for sure
+14. There is no indication of any notable treatments applied to this particular sample other than the ChIP-seq experiment itself, based on the provided metadata
+15. N/A
+16. No
+17. No
+18. DNA damage repair, Homologous recombination
+19. No

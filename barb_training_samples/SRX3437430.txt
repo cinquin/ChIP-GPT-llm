@@ -1,0 +1,64 @@
+You are a biologist analyzing metadata from a ChIP-seq experiment database. Your task is to extract information from a record describing a single sample that is part of a larger study. The record may contain incomplete or misorganized metadata, and it is your job to identify the protein that was targeted in the ChIP experiment and to extract information about the sample.
+
+Sample name: GSM2872313: HeLa CTCF dC9Sun-D3AMut MIR152 ChIP-bs-seq rep2;  ChIP-Seq. RL508 2016 11 06 CTCF MIR152 DNMT3Mut ChIPbs 18 S42
+Name of the broader study to which the sample belongs: A modular dCas9-SunTag DNMT3A epigenome editing system overcomes pervasive off-target activity of direct fusion dCas9-DNMT3A constructs
+Titles of all samples in the study: 
+    - GSM2872370 r1, GSM2872370: Input HA-dCas9 and Ty1 aGCN4-D3A 10ng;  ChIP-Seq
+    - GSM2872369: Ty1 aGCN4-D3A Chip;  ChIP-Seq, GSM2872369 r1
+    - GSM2872368: HA dCas9 Chip;  ChIP-Seq, GSM2872368 r1
+    - GSM2872351 r1, GSM2872351: NRF1 TMEM ChIPbs dC9Sun-mCherry rep1;  ChIP-Seq
+    - GSM2872350 r1, GSM2872350: NRF1 TMEM ChIPbs dC9Sun-D3A rep3;  ChIP-Seq
+    - GSM2872349: NRF1 TMEM ChIPbs dC9Sun-D3A rep2;  ChIP-Seq, GSM2872349 r1
+    - GSM2872348: NRF1 TMEM ChIPbs dC9Sun-D3A rep1;  ChIP-Seq, GSM2872348 r1
+    - GSM2872347 r1, GSM2872347: NRF1 ChIP-seq dC9Sun-D3A input;  ChIP-Seq
+    - GSM2872346: NRF1 ChIP-seq dC9Sun-mCherry TMEM206 rep2;  ChIP-Seq, GSM2872346 r1
+    - GSM2872345: NRF1 ChIP-seq dC9Sun-mCherry TMEM206 rep1;  ChIP-Seq, GSM2872345 r1
+    - GSM2872344 r1, GSM2872344: NRF1 ChIP-seq dC9Sun-D3A TMEM206 rep3;  ChIP-Seq
+    - GSM2872343 r1, GSM2872343: NRF1 ChIP-seq dC9Sun-D3A TMEM206 rep2;  ChIP-Seq
+    - GSM2872342 r1, GSM2872342: NRF1 ChIP-seq dC9Sun-D3A TMEM206 rep1;  ChIP-Seq
+    - GSM2872313: HeLa CTCF dC9Sun-D3AMut MIR152 ChIP-bs-seq rep2;  ChIP-Seq, GSM2872313 r1
+    - GSM2872312 r1, GSM2872312: HeLa CTCF dC9Sun-D3A CDCC85C ChIP-bs-seq rep2;  ChIP-Seq
+    - GSM2872311 r1, GSM2872311: HeLa CTCF dC9Sun-D3A MIR152 ChIP-bs-seq rep2;  ChIP-Seq
+    - GSM2872310 r1, GSM2872310: HeLa CTCF dC9Sun-D3A SHB ChIP-bs-seq rep2;  ChIP-Seq
+    - GSM2872309 r1, GSM2872309: HeLa CTCF dC9Sun-D3AMut MIR152 ChIP-bs-seq rep1;  ChIP-Seq
+    - GSM2872308: HeLa CTCF dC9Sun-D3A CDCC85C ChIP-bs-seq rep1;  ChIP-Seq, GSM2872308 r1
+    - GSM2872307: HeLa CTCF dC9Sun-D3A MIR152 ChIP-bs-seq rep1;  ChIP-Seq, GSM2872307 r1
+    - GSM2872306 r1, GSM2872306: HeLa CTCF dC9Sun-D3A SHB ChIP-bs-seq rep1;  ChIP-Seq
+    - GSM2872305 r1, GSM2872305: HeLa CTCF dC9Sun-D3AMut MIR152 ChIP-seq rep2;  ChIP-Seq
+    - GSM2872304: HeLa CTCF dC9Sun-D3A CDCC85C ChIP-seq rep2;  ChIP-Seq, GSM2872304 r1
+    - GSM2872303 r1, GSM2872303: HeLa CTCF dC9Sun-D3A MIR152 ChIP-seq rep2;  ChIP-Seq
+    - GSM2872302 r1, GSM2872302: HeLa CTCF dC9Sun-D3A SHB ChIP-seq rep2;  ChIP-Seq
+    - GSM2872301 r1, GSM2872301: HeLa CTCF dC9Sun-D3AMut MIR152 ChIP-seq rep1;  ChIP-Seq
+    - GSM2872300 r1, GSM2872300: HeLa CTCF dC9Sun-D3A input ChIP-seq;  ChIP-Seq
+    - GSM2872299 r1, GSM2872299: HeLa CTCF dC9Sun-D3A CDCC85C ChIP-seq rep1;  ChIP-Seq
+    - GSM2872298 r1, GSM2872298: HeLa CTCF dC9Sun-D3A MIR152 ChIP-seq rep1;  ChIP-Seq
+    - GSM2872297 r1, GSM2872297: HeLa CTCF dC9Sun-D3A SHB ChIP-seq rep1;  ChIP-Seq
+Study abstract (applies to all samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control): DNA methylation is a covalent modification of the genome that plays important roles in genome regulation and vertebrate development. Although detection of this modification in the genome has been possible for several decades, the ability to deliberately and specifically manipulate local DNA methylation states  in the genome has been extremely limited. Consequently, this has impeded the direct determination of the consequence of DNA methylation on transcriptional regulation and transcription factor binding in the native chromatin context. Thus, highly specific targeted epigenome editing tools are needed to address this outstanding question. Recent adaptations of genome editing technologies, such as the fusion of the DNMT3A methyltransferase catalytic domain to catalytically inactive Cas9 (dC9-D3A), have aimed to provide new tools for altering DNA methylation at desired loci. Here, we performed a deeper analysis of the performance of the tools at a genome wide level which revealed consistent off-target binding events and DNA methylation deposition throughout the genome, limiting the capacity of these tools to generate unambiguous determination of the functional consequences of DNA methylation. To address this issue, we developed a modular dCas9-SunTag (dC9Sun-D3A) system that can recruit multiple DNMT3A catalytic domains to a target site for editing DNA-methylation. dC9Sun-D3A is tunable, specific and exhibits much higher induction of DNA methylation at target sites than the dC9-D3A direct fusion protein. Importantly, genome-wide characterization of dC9Sun-D3A binding sites and DNA methylation revealed minimal off-target protein binding and induction of DNA methylation with dC9Sun-D3A, compared to pervasive off-target binding and methylation by the dC9-D3A direct fusion construct. Furthermore, we used dC9Sun-D3A to test the impact of DNA methylation upon the DNA binding of CTCF and NRF1 upon targeted methylation of their core binding sites, demonstrating the binding sensitivity of these proteins to DNA methylation in situ. Overall, this modular dC9Sun-D3A system enables precise DNA methylation deposition with the least amount of off-target DNA methylation reported to date, allowing accurate functional determination of the role of DNA methylation at single loci. Overall design: A direct fusion dCas9-DNMT3A construct was compared to a modular, highly specific dCas9-SunTag + aGCN4-DNMT3A catalytic domain (dC9Sun-D3A) system, where on- and off-target DNA methylation deposition was measured by bsPCR-seq at select loci. dC9Sun-D3A was found to have less off-target effects compared to direct fusion dCas9-DNMT3A while not compromising its high on-target performance. Consequently, the response of targeted DNA methylation at CTCF and NRF1 core binding sites in HeLa cells by dC9Sun-D3A was measured by bsPCR-seq, ChIP-seq and ChIP-BS-seq to assess CTCF and NRF1 DNA methylation tolerance. dC9Sun-D3A was introduced by “hit-and-run epigenetic editing”, using transient transfection, and expression was selected for by either 48h puromycin treatment or cell sorting. DNA or chromatin was extracted from the cells after treatment and selection with controls (DNMT3AMut or mCherry aGCN4 coupled effectors) or dC9Sun-D3A for on-target DNA methylation deposition. WGBS, targeted solution capture bisulfite sequencing (TSC-bs-seq), ChIP-seq and ChIP-BS-seq libraries were prepared for sequencing on the Illumina HiSeq1500. bsPCR-seq libraries were sequenced on Illumina MiSeq
+
+All of the information below should apply specifically to this particular sample:
+
+Antibody info:CTCF (Cell Signaling, 2899B)
+Tissue info: HeLa. human cervical cancer cell line
+Other info of potential relevance: parsed primary ID = {SRX3437430}; plasmids = {pGK-dCas9-SunTag (Addgene #100943) + pEF1a-NLS-scFvGCN4-DNMT3A (Addgene #100941) + pEf1a-MIR152_3-gRNA-GFP}; LIBRARYSELECTION = {ChIP}; molecule-type = {genomic DNA}; parsed_GSM_ID = {GSM2872313}; inferred sequence type = {ChIPSeq}; LIBRARYSTRATEGY = {ChIP-Seq}; sample-type = {SRA}
+
+
+0. HeLa
+1. adenocarcinoma
+2. cervix
+3. N/A
+4. dC9Sun-D3AMut (DNMT3A catalytic domain mutation tagged with SunTag to dead Cas9) and MIR152-gRNA targeting dCas9-D3AMut to MIR152 targets
+5. No, input does not appear in the sample name "GSM2872313: HeLa CTCF dC9Sun-D3AMut MIR152 ChIP-bs-seq rep2;  ChIP-Seq. RL508 2016 11 06 CTCF MIR152 DNMT3Mut ChIPbs 18 S42". The sample is not an input control.
+6. Yes, "HeLa" appears in the sample name "GSM2872313: HeLa CTCF dC9Sun-D3AMut MIR152 ChIP-bs-seq rep2;  ChIP-Seq. RL508 2016 11 06 CTCF MIR152 DNMT3Mut ChIPbs 18 S42"
+7. CTCF (Cell Signaling, 2899B)
+8. manufacturer=cell_signaling,clone=N/A,catalog=2899B,lot=N/A,target=CTCF
+9. CTCF, MIR152, DNMT3A
+10. The ChIP target identification for this particular sample can be inferred as CTCF from "Antibody info" in the sample-specific section of record, consitent with the sample name "HeLa CTCF dC9Sun-D3AMut MIR152 ChIP-bs-seq rep2". The sample focuses on ChIP-bs-seq (ChIP with bisulfite sequencing) to assess DNA methylation and protein binding
+11. CTCF
+12. CTCF
+13. ChIP-seq for sure
+14. The treatment applied to this particular sample can be inferred from the sample name "HeLa CTCF dC9Sun-D3AMut MIR152 ChIP-bs-seq rep2." The dC9Sun-D3AMut system (DNMT3A catalytic domain mutation) and MIR152-gRNA are used in this study to target DNA methylation at specific loci. Notably, this corresponds to a *genetic* modification, and for this sample the DNMT3A catalytic domain is mutated and therefore does not cause methylation at target loci
+15. N/A
+16. Yes, the sample corresponds to a control genetic modification since it uses a mutated version of the DNMT3A catalytic domain (dC9Sun-D3AMut) to assess the specificity and performance of the dC9Sun-D3A system in comparison to the direct fusion dCas9-DNMT3A construct
+17. No
+18. N/A
+19. No

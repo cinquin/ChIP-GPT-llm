@@ -1,0 +1,36 @@
+You are a biologist analyzing metadata from a ChIP-seq experiment database. Your task is to extract information from a record describing a single sample that is part of a larger study. The record may contain incomplete or misorganized metadata, and it is your job to identify the protein that was targeted in the ChIP experiment and to extract information about the sample.
+
+Sample name: GSM4205421: HEK293T transfected with ZCWPW1-HA and humanPRDM9-V5;  ChIP-Seq. ChIPHA ZCWPW1-HA+humanPRDM9-V5
+Name of the broader study to which the sample belongs: Genome-wide maps of ZCWPW1 in HEK293T cells with or without PRDM9, plus DMC1 ChIP-seq in ZCWPW1 KO mouse
+Study abstract (applies to all samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control): During meiosis, homologous chromosomes pair (synapse) and recombine, enabling balanced segregation and generating genetic diversity. In many vertebrates, recombination initiates with double-strand breaks (DSBs) within hotspots where PRDM9 binds, and deposits H3K4me3 and H3K36me3. However, no protein(s) recognising this unique combination of histone marks have yet been identified.  We identified Zcwpw1, which possesses H3K4me3 and H3K36me3 recognition domains, as highly co-expressed with Prdm9. In this study we used ChIP-sequencing in human HEK293T cells (co)-transfected with HA tagged ZCWPW1 (and human or chimp PRDM9). This enabled us to determine that PRDM9 causes the recruitment of ZCWPW1 to its binding sites, and to determine the general binding properties of ZCWPW1 including a preference for CpG sites. We also performed SSDS ChIP-sequencing of mice testis that are homozygous KO for ZCWPW1, revealing that double strand breaks occour at completely normal positions in the ZCWPW1 KO, but with persistant DMC1 at many hotspots, particularly those more strongly bound by PRDM9. Overall design: ChIP-sequencing of HA-tagged ZCWPW1 in HEK293T cells (either alone or with co-transfection of either human or chimp PRDM9). Additionally SSDS DMC1 ChIP-sequencing in ZCWPW1 KO mice testis ***Please note that the series includes re-analysis of GSE99407 (Mapping PRDM9 binding and its effects in transfected HEK293T cells). The 'GSE99407_re-processed_readme.xls' includes the source of the sequence data accession numbers (GSMnnnn/SRRnnnn) and the re-analysis data processing details/output. The re-processed 'SingleBasePeaks.NA15* and ForceCalledPeaks_NA15* bed.gz' files are linked as Series supplementary files
+The protocol information in this paragraph likely (but not necessarily) applies to **all** samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control (see abstract). Cells were transfected for 24h with the relevant plasmid DNA using Fugene HD. HEK293T cells were cultured in DMEM medium supplemented with 10% FBS, 2 mM L-Glutamine, 100 U/ml penicillin and 100 μg/ml streptomycin. Libraries were prepared using the Apollo Prep System (Wafergen, PrepX ILMN 32i, 96 sample kit) and standard Illumina multiplexing adapters following the manufacturer's protocol up to pre-PCR amplification Protein-DNA immunocomplexes were isolated from sonicates using antibodies against the relevant proteins. processed data file:.  ForceCalledPeaks_ChIPHA_ZCWPW1-HA+humanPRDM9-V5_vs_ChIPHA_ZCWPW1-HA_AT_100bpWindows.bed.gz.  ForceCalledPeaks_ChIPHA_ZCWPW1-HA+humanPRDM9-V5_vs_ChIPHA_ZCWPW1-HA_AT_NA15-ChIPHA_humanPRDM9-HA_AND_NA15-ChIPV5_humanPRDM9-V5_vs_NA15-Input_humanPRDM9-HA.bed.gz.  ForceCalledPeaks_ChIPHA_ZCWPW1-HA+humanPRDM9-V5_vs_Input_ZCWPW1-HA_AND_Input_ZCWPW1-HA+humanPRDM9-V5_AT_100bpWindows.bed.gz.  SingleBasePeaks.ChIPHA_ZCWPW1-HA+humanPRDM9-V5_vs_ChIPHA_ZCWPW1-HA.p0.000001.sep250.ALL.bed.gz.  SingleBasePeaks.ChIPHA_ZCWPW1-HA+humanPRDM9-V5_vs_Input_ZCWPW1-HA+humanPRDM9-V5.p0.000001.sep250.ALL.bed.gz.  SingleBasePeaks.ChIPHA_ZCWPW1-HA+humanPRDM9-V5_vs_Input_ZCWPW1-HA_AND_Input_ZCWPW1-HA+humanPRDM9-V5.p0.000001.sep250.ALL.bed.gz
+
+All of the information below should apply specifically to this particular sample:
+
+Antibody info:anti-HA (Abcam ab9110)
+Genotype info: HA-tagged ZCWPW1
+Tissue info: HEK293T
+Other info of potential relevance: parsed primary ID = {SRX7276677}; LIBRARYSELECTION = {ChIP}; molecule-type = {genomic DNA}; parsed_GSM_ID = {GSM4205421}; inferred sequence type = {ChIPSeq}; LIBRARYSTRATEGY = {ChIP-Seq}; passages = {15-20}; sample-type = {SRA}
+
+
+Barb's answers are as follows:
+0. HEK293T
+1. Embryonic kidney
+2. Kidney
+3. N/A
+4. Transfection with HA-tagged ZCWPW1 and V5-tagged human PRDM9
+5. No, the sample is not an input control
+6. Yes, "HEK293T" appears in the sample name
+7. anti-HA (Abcam ab9110)
+8. manufacturer=abcam,clone=N/A,catalog=ab9110,lot=N/A,target=HA
+9. ZCWPW1, PRDM9 (Prdm9), DMC1
+10. The sample name indicates that the cells were transfected with ZCWPW1-HA and human PRDM9-V5. The ChIP experiment used an anti-HA antibody (as indicated by "Antibody info: anti-HA (Abcam ab9110)") to immunoprecipitate the HA-tagged ZCWPW1 protein. Therefore, the ChIP target is specifically ZCWPW1-HA. The mention of human PRDM9-V5 in the sample name and description indicates that the cells were co-transfected with both ZCWPW1-HA and human PRDM9-V5. However, the ChIP experiment specifically targeted ZCWPW1-HA using the anti-HA antibody, and not human PRDM9-V5. The presence of human PRDM9-V5 in the cells is relevant to the broader study, as it allows the researchers to investigate the interaction between ZCWPW1 and PRDM9, but it is not the direct target of the ChIP experiment for this particular sample
+11. ZCWPW1-HA
+12. ZCWPW1
+13. ChIP-seq for sure
+14. The sample was transfected with plasmid DNA encoding HA-tagged ZCWPW1 and human PRDM9-V5. This transfection corresponds to a genetic modification not to be reported here
+15. N/A
+16. No
+17. No
+18. "Meiotic recombination," "Homologous chromosome pairing," "Double-strand break repair"
+19. No

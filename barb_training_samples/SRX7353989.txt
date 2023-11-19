@@ -1,0 +1,79 @@
+You are a biologist analyzing metadata from a ChIP-seq experiment database. Your task is to extract information from a record describing a single sample that is part of a larger study. The record may contain incomplete or misorganized metadata, and it is your job to identify the protein that was targeted in the ChIP experiment and to extract information about the sample.
+
+Sample name: GSM4215610: hela-siH2A.Z-repli-seq S2;  ChIP-Seq. SI-S2-IP-170819 L6 7005.R1.clean
+Name of the broader study to which the sample belongs: H2A.Z Facilitates Licensing and Activation of Early Replication Origins
+Titles of all samples in the study: 
+    - GSM3983215 r1, GSM3983215: hela-siNC-BrdU-1h;  ChIP-Seq
+    - GSM3983214: hela-siNC-BrdU-10min rep2;  ChIP-Seq, GSM3983214 r1
+    - GSM3983213: hela-siNC-BrdU-10min rep1;  ChIP-Seq, GSM3983213 r1
+    - GSM3983204: hela-siH2A.Z-ORC1 rep2;  ChIP-Seq, GSM3983204 r1
+    - GSM3983203: hela-siH2A.Z-ORC1 rep1;  ChIP-Seq, GSM3983203 r1
+    - GSM3983202: hela-siNC-ORC1 rep2;  ChIP-Seq, GSM3983202 r1
+    - GSM3983201: hela-siNC-ORC1 rep1;  ChIP-Seq, GSM3983201 r1
+    - GSM3983200 r1, GSM3983200: hela-siH2A.Z-H4K20me3 rep2;  ChIP-Seq
+    - GSM3983199: hela-siH2A.Z-H4K20me3 rep1;  ChIP-Seq, GSM3983199 r1
+    - GSM3983198: hela-siH2A.Z-H4K20me2 rep2;  ChIP-Seq, GSM3983198 r1
+    - GSM3983197: hela-siH2A.Z-H4K20me2 rep1;  ChIP-Seq, GSM3983197 r1
+    - GSM3983196 r1, GSM3983196: hela-siH2A.Z-H4K20me1 rep2;  ChIP-Seq
+    - GSM3983195: hela-siH2A.Z-H4K20me1 rep1;  ChIP-Seq, GSM3983195 r1
+    - GSM3983194 r1, GSM3983194: hela-siH2A.Z-native-input;  ChIP-Seq
+    - GSM3983193 r1, GSM3983193: hela-siNC-native-input;  ChIP-Seq
+    - GSM3983192: hela-siNC-H4K20me3 rep2;  ChIP-Seq, GSM3983192 r1
+    - GSM3983191 r1, GSM3983191: hela-siNC-H4K20me3 rep1;  ChIP-Seq
+    - GSM3983190 r1, GSM3983190: hela-siNC-H4K20me2 rep2;  ChIP-Seq
+    - GSM3983189: hela-siNC-H4K20me2 rep1;  ChIP-Seq, GSM3983189 r1
+    - GSM3983188: hela-siNC-H4K20me1 rep2;  ChIP-Seq, GSM3983188 r1
+    - GSM3983187: hela-siNC-H4K20me1 rep1;  ChIP-Seq, GSM3983187 r1
+    - GSM3983186: hela-siH2A.Z-H2A.Z rep2;  ChIP-Seq, GSM3983186 r1
+    - GSM3983185 r1, GSM3983185: hela-siH2A.Z-H2A.Z rep1;  ChIP-Seq
+    - GSM3983184: hela-siNC-H2A.Z rep2;  ChIP-Seq, GSM3983184 r1
+    - GSM3983222 r1, GSM3983222: hela-siH2A.Z-6h;  ChIP-Seq
+    - GSM3983221 r1, GSM3983221: hela-siH2A.Z-3h;  ChIP-Seq
+    - GSM3983220 r1, GSM3983220: hela-siH2A.Z-1h;  ChIP-Seq
+    - GSM3983219: hela-siH2A.Z-10min rep2;  ChIP-Seq, GSM3983219 r1
+    - GSM3983218: hela-siH2A.Z-10min rep1;  ChIP-Seq, GSM3983218 r1
+    - GSM3983217: hela-siNC-BrdU-6h;  ChIP-Seq, GSM3983217 r1
+    - GSM3983216: hela-siNC-BrdU-3h;  ChIP-Seq, GSM3983216 r1
+    - GSM3983183 r1, GSM3983183: hela-siNC-H2A.Z rep1;  ChIP-Seq
+    - GSM3993419 r1, GSM3993419: hela-WT-input;  ChIP-Seq
+    - GSM4215615: hela-siSuv420H1/2-H4K20me2 rep2;  ChIP-Seq, GSM4215615 r1
+    - GSM4215614: hela-siSuv420H1/2-H4K20me2 rep1;  ChIP-Seq, GSM4215614 r1
+    - GSM4215613: hela-siH2A.Z-repli-seq S5;  ChIP-Seq, GSM4215613 r1
+    - GSM4215612: hela-siH2A.Z-repli-seq S4;  ChIP-Seq, GSM4215612 r1
+    - GSM4215611: hela-siH2A.Z-repli-seq S3;  ChIP-Seq, GSM4215611 r1
+    - GSM4215610: hela-siH2A.Z-repli-seq S2;  ChIP-Seq, GSM4215610 r1
+    - GSM4215609 r1, GSM4215609: hela-siNC-repli-seq S5;  ChIP-Seq
+    - GSM4215608 r1, GSM4215608: hela-siNC-repli-seq S4;  ChIP-Seq
+    - GSM4215607 r1, GSM4215607: hela-siNC-repli-seq S3;  ChIP-Seq
+    - GSM4215606: hela-siNC-repli-seq S2;  ChIP-Seq, GSM4215606 r1
+Study abstract (applies to all samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control): DNA replication is a tightly regulated process that ensures the precise duplication of the genome during cell cycle. Licensing and activation of eukaryotic replication origins are controlled primarily by chromatin. However, the chromatin features involved and the regulatory mechanism remain largely unknown. In this study, we found that H2A.Z binds Suv420H1 directly to promote H4K20me2 deposition on nucleosome both in vitro and in vivo. ORC1 is subsequently recruited to chromatin for licensing and activation of early replication origins. Depletion of H2A.Z results in defects of DNA replication and cell proliferation in both HeLa cells and T cells. Thus, our results provide novel mechanistic insights that the histone variant H2A.Z epigenetically regulates licensing and activation of the early DNA replication origins through the Suv420H1-H4K20me2-ORC1 pathway. Overall design: We first analyzed the interaction among H2A.Z, H4K20me2, ORC1, then investigated the role of H2A.Z on DNA replication through this pathway
+The protocol information in this paragraph likely (but not necessarily) applies to **all** samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control (see abstract). BrdU.  SI.S50.bw. Hela cells were cultured in medium with 90% DMEM, 10%FBS, 1% Pen/Strep in standard incubator with 5% CO2 at 37°C. Cells were transfected with siRNA oligos by lipo2000. Active CD4+ T cells were induced by by anti-CD3 and anti-CD28 for 72h from naïve CD4+ T cells of H2A.Zf/f and CD4creH2A.Zf/f mice. Cells were first crosslinked by formaldehyde, then sonicated in SDS containing buffer to dissolve the chromatin. The clarified chromatin were immunoprecipitated with dyno beas conjucated with antibodies. For ORC1 ChIP, the chromatin were  immunoprecipitated with streptavidin dyno beads( Invitrogent, M280). For native ChIP-seq, cells were collected and digested by MNase to get the mono-nucleosome. For BrdU-IP-seq, genomic DNA were extracted from cells and then sonicated to 200-500bp. The ChIP-seq antibodies are as following: Anti-H2A.Z, Abcam, ab4174; Anti-BrdU, BD, BD44; Anti-H4K20me1, Abcam, ab9051; Anti-H4K20me2, Abcam, ab9052; Anti-H4K20me3, Abcam, ab9053. H2A.Z, H4K20me, ORC1,BrdU Libraries(sample 1-22, 35-44, 49-52) were prepared according to NEBNext Ultra DNA Library Prep Kit for Illumina (E7370L) and were sequenced using HiSeq2000 or Nova seq
+
+All of the information below should apply specifically to this particular sample:
+
+Antibody info:BD, BD44, S2
+Genotype info: siH2A.Z
+Tissue info: Hela cell
+Other info of potential relevance: parsed primary ID = {SRX7353989}; LIBRARYSELECTION = {ChIP}; molecule-type = {genomic DNA}; parsed_GSM_ID = {GSM4215610}; inferred sequence type = {ChIPSeq}; LIBRARYSTRATEGY = {ChIP-Seq}; sample-type = {SRA}
+
+Barb's answers are as follows:
+0. HeLa
+1. adenocarcinoma
+2. cervix
+3. N/A
+4. siRNA knockdown of H2A.Z (gene targeted: H2A.Z)
+5. No, the sample is not an input control
+6. Yes, "hela" appears in the sample name
+7. Anti-H2A.Z, Abcam, ab4174; Anti-BrdU, BD, BD44; Anti-H4K20me1, Abcam, ab9051; Anti-H4K20me2, Abcam, ab9052; Anti-H4K20me3, Abcam, ab9053. H2A.Z, H4K20me
+8. manufacturer=abcam,clone=N/A,catalog=ab4174,lot=N/A,target=H2A.Z; manufacturer=bd,clone=BD44,catalog=N/A,lot=N/A,target=BrdU; manufacturer=abcam,clone=N/A,catalog=ab9051,lot=N/A,target=H4K20me1; manufacturer=abcam,clone=N/A,catalog=ab9052,lot=N/A,target=H4K20me2; manufacturer=abcam,clone=N/A,catalog=ab9053,lot=N/A,target=H4K20me3
+9. H2A.Z, Suv420H1, ORC1
+10. The sample name "GSM4215610: hela-siH2A.Z-repli-seq S2; ChIP-Seq" suggests that the experiment involved studying DNA replication dynamics using repli-seq. The protocol information mentions the use of an anti-BrdU antibody for ChIP-seq. Based on this information, it is inferred that the ChIP target for this sample was most likely BrdU, which is commonly used to label newly synthesized DNA during replication
+11. BrdU
+12. N/A (BrdU is a nucleotide analog, not a gene)
+13. ChIP-seq for sure (but, more specifically, repli-seq)
+14. The sample name "GSM4215610: hela-siH2A.Z-repli-seq S2;  ChIP-Seq. SI-S2-IP-170819 L6 7005.R1.clean" indicates that the HeLa cells were treated with siRNA to knockdown H2A.Z expression. But this corresponds to a *genetic* modification, not to be reported here
+15. N/A
+16. No
+17. No
+18. "DNA replication initiation," "DNA replication licensing," "Cell proliferation"
+19. No

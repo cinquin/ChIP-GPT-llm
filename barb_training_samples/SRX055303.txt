@@ -1,0 +1,35 @@
+You are a biologist analyzing metadata from a ChIP-seq experiment database. Your task is to extract information from a record describing a single sample that is part of a larger study. The record may contain incomplete or misorganized metadata, and it is your job to identify the protein that was targeted in the ChIP experiment and to extract information about the sample.
+
+Sample name: GSM700536: RBP2All ChIPSeq 1. JARID1A U937 AI replicat
+Name of the broader study to which the sample belongs: Genome-wide maps of KDM5A/JARID1A/RBP2 and its isoforms in differentiated U937 cells
+Study abstract (applies to all samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control): We report the identification of genomic regions bound by RBP2 isoforms and define the functional categories that these regions represent. RBP2 modifies methylated lysine residues on histone tails. We found that RBP2 large isoform containing the recognition module for histone H3K4me3 and RBP2 small isoform lacking this module bind to to different regions in the human genome. Importantly, isoform-specific regions and overlapping regions belong to genes with different molecular functions. For example, chromatin binding and transcription factor binding functions can be ascribed to gene targets of RBP2 small isoform but not of RBP2 large isoform. By comparing gene sets generated for all isoforms and RBP2 large isoform, we can define if the small isoform is specifically recruited to genomic regions dispaying certain signatures, such as transcription start sites, CpG-rich regions, transcriptional activity and transcription factor binding. Overall design: Examination of location of different isoforms
+The protocol information in this paragraph likely (but not necessarily) applies to **all** samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control (see abstract). Chromatin IP against RBP2. differentiated with TPA for 96 hours. Human U937 diffuse histiocytic lymphoma cells were seeded at the density 2.5x105 cell/ml and grown in RPMI medium (Mediatech) containing 50 nM TPA (Sigma) for 96 hours. The medium was changed on fresh medium 72 hours after the treatment has started. The cells successfully differentiated to macrophages/monocytes; displayed growth arrest and expressed monocytic markers CD11b and CD14. ChIP and genomic library preparation was performed as described (Beshiri, M.L, A. Islam A, D.C. DeWaal, W.F. Richter, Love J, N. Lopez-Bigas, and E.V. Benevolenskaya. 2010. Genome-wide Analysis using ChIP to Identify Isoform-specific Gene Targets. JoVE. 41. , doi: 10.3791/2101).  After adapter ligation DNA was PCR amplified with Illumina primers for 18 cycles and library fragments of ~300 bp (insert plus adaptor and PCR primer sequences) were band isolated from an agarose gel. The purified DNA was captured on an Illumina flow cell for cluster generation. Libraries were sequenced on the Genome Analyzer following the manufacturer's protocols
+
+All of the information below should apply specifically to this particular sample:
+
+Antibody info:2469(non-commercial, unpublished)
+Tissue info: Chromatin IP against RBP2. diffuse histiocytic lymphoma cells
+Cell line info: U937
+Other info of potential relevance: parsed primary ID = {SRX055303}; LIBRARYSELECTION = {ChIP}; molecule-type = {genomic DNA}; parsed_GSM_ID = {GSM700536}; inferred sequence type = {ChIPSeq}; LIBRARYSTRATEGY = {ChIP-Seq}; sample-type = {SRA}
+
+Barb's answers are as follows:
+0. U937
+1. monocyte/macrophage
+2. lymph node
+3. N/A
+4. N/A (no genetic modifications are mentioned)
+5. No, the string "input" does not appear in the sample name "GSM700536: RBP2All ChIPSeq 1. JARID1A U937 AI replicat". The sample is not an input control
+6. Yes, "U937" appears in the sample name "GSM700536: RBP2All ChIPSeq 1. JARID1A U937 AI replicat"
+7. N/A
+8. N/A
+9. KDM5A (RBP2, JARID1A), CD11b, CD14
+10. The sample-specific section contains "Chromatin IP against RBP2", and the sample name "GSM700536: RBP2All ChIPSeq 1. JARID1A U937 AI replicat" also indicates that the ChIP target is RBP2.
+11. RBP2
+12. KDM5A (Barbs knows this is the official gene name, with aliases RBP2 and JARID1A)
+13. ChIP-seq for sure
+14. The protocol information mentions that the cells were treated with 50 nM TPA for 96 hours. This treatment is notable because it was used to induce differentiation of the U937 cells to macrophages/monocytes
+15. TPA (concentration=50_nM, duration=96_hours, details=induces_differentiation_to_macrophages_and_monocytes)
+16. No, this sample does not correspond to a control genetic modification or control genetic background
+17. No, this sample does not correspond to a control treatment
+18. "Response to TPA," "Monocyte/macrophage differentiation," "Growth arrest"
+19. No

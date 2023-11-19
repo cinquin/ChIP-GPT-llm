@@ -1,0 +1,36 @@
+You are a biologist analyzing metadata from a ChIP-seq experiment database. Your task is to extract information from a record describing a single sample that is part of a larger study. The record may contain incomplete or misorganized metadata, and it is your job to identify the protein that was targeted in the ChIP experiment and to extract information about the sample.
+
+Sample name: K27me3-H4-N -7.FCHJMLGBBXX L6 R1 ICAGATCTG.PE.sorted.bam. GSM2769891: Ne K27me3;  ChIP-Seq
+Name of the broader study to which the sample belongs: Purification of nanogram-range immunoprecipitated DNA in ChIP-seq application
+Study abstract (applies to all samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control): As a part of the procedure, immnoprecipitated DNA must undergo purification and library preparation for subsequent high-throughput sequencing. Current ChIP protocols typically yield nanogram quantities of immunoprecipitated DNA mainly depending on the target of interest and starting chromatin input amount.  However, little information exists on the performance of reagents used for the purification of such minute amounts of immunoprecipitated DNA in ChIP elution buffer and their effects on ChIP-seq data. Here, we compared DNA recovery, library preparation efficiency, and ChIP-seq results obtained with several commercial DNA purification kits applied to 1 ng ChIP DNA and also investigated the impact of conditions under which ChIP DNA is stored. Overall design: We compared DNA recovery of ten commercial DNA purification reagents from 1 to 50 ng of immunopreciptated DNA in ChIP elution buffer. The immunoprecipitated DNA equivalent to 1 ng of purified DNA was subject to DNA purification and library preparation to evaluate the performance of four better performing purification reagents in ChIP-seq applications
+The protocol information in this paragraph likely (but not necessarily) applies to **all** samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control (see abstract). HeLa cells were purchased from ATCC. Cells were grown in Advanced DMEM (Dulbecco’s Modified Eagle Medium) containing 10% calf bovine serum at 37°C and 5% CO2. Chromatin input was prepeared by the combination of MNase treatment and sonication, and the chromatin associated with histone modification was isolated using indicated antibody. Libraries were prepared using ThruPLEX® DNA-seq Kit V2 (Rubicon Genomics, Ann Arbor, MI) according to the manufacturer’s instructions. The adapter-ligated DNA was PCR amplified for 12 cycles
+
+All of the information below should apply specifically to this particular sample:
+
+Antibody info:H3K27me3 (Cat. #9733,Lot #8,CST)
+Tissue info: Hela cells
+Cell line info: HeLa
+Other info of potential relevance: parsed primary ID = {SRX3154242}; LIBRARYSELECTION = {ChIP}; molecule-type = {genomic DNA}; parsed_GSM_ID = {GSM2769891}; inferred sequence type = {ChIPSeq}; LIBRARYSTRATEGY = {ChIP-Seq}; sample-type = {SRA}
+
+
+Barb's answers are as follows:
+0. HeLa
+1. adenocarcinoma (inferred by Barb)
+2. cervix (inferred by Barb)
+3. N/A
+4. N/A (no genetic modifications are mentioned)
+5. No, the string "input" does not appear in the sample name "K27me3-H4-N -7.FCHJMLGBBXX L6 R1 ICAGATCTG.PE.sorted.bam. GSM2769891: Ne K27me3;  ChIP-Seq". The sample is not an input control
+6. No abbreviation of the cells used appears in the sample name
+7. H3K27me3 (Cat. #9733,Lot #8,CST)
+8. manufacturer=cst,clone=N/A,catalog=9733,lot=8,target=H3K27me3
+9. N/A
+10. The ChIP target for this particular sample can be identified as H3K27me3 from "Antibody info:H3K27me3" in the sample-specific section. The "K27me3" string in the sample name "K27me3-H4-N -7.FCHJMLGBBXX L6 R1 ICAGATCTG.PE.sorted.bam. GSM2769891: Ne K27me3;  ChIP-Seq" confirms this; it is the only possible reference to a ChIP target.
+11. H3K27me3
+12. H3C1, H3C2, H3C3 (multiple genes correspond to Histone H3)
+13. ChIP-seq for sure
+14. There is no mention of any notable treatments applied to this particular sample other than the ChIP-seq experiment itself
+15. N/A
+16. No, this sample does not correspond to a control genetic modification or control genetic background
+17. No, this sample does not correspond to a control treatment
+18. N/A
+19. No

@@ -1,0 +1,32 @@
+You are a biologist analyzing metadata from a ChIP-seq experiment database. Your task is to extract information from a record describing a single sample that is part of a larger study. The record may contain incomplete or misorganized metadata, and it is your job to identify the protein that was targeted in the ChIP experiment and to extract information about the sample.
+
+Sample name: 16751655. ERR1703498.contigs.fasta. 20368 6#23.cram. LCL-ATAC6437596
+Name of the broader study to which the sample belongs: ATAC_pilot
+Study abstract (applies to all samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control): This data is part of a pre-publication release. For information on the proper use of pre-publication data shared by the Wellcome Trust Sanger Institute (including details of any publication moratoria), please see. The purpose of this pilot is to validate ATAC-seq protocols using a lymphoblastoid and macrophage cell lines. Once validated, the protocol will be used for future gene regulation studies examining open chromatin
+The protocol information in this paragraph likely (but not necessarily) applies to **all** samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control (see abstract). Nextera dual index qPCR only. ATAC-seq library preparation from B-lymphoblastoids. Illumina sequencing of library 16751655, constructed from sample accession ERS1199982 for study accession ERP011141.  This is part of an Illumina multiplexed sequencing run (20368_6).  This submission includes reads tagged with the sequence AAGAGGCACTCTCTAT
+
+All of the information below should apply specifically to this particular sample:
+
+Antibody info:This data is part of a pre-publication release. For information on the proper use of pre-publication data shared by the Wellcome Trust Sanger Institute (including details of any publication moratoria), please see http://www.sanger.ac.uk/datasharing/
+Other info of potential relevance: sample name = {75dc0000-2c8a-11e6-ba59-68b599768938}; ENA-LAST-UPDATE = {2018-11-16}; parsed primary ID = {ERX1773732}; LIBRARYSELECTION = {PCR}; inferred sequence type = {ATAC}; LIBRARYSTRATEGY = {ATAC-seq}; External Id = {SAMEA4028872}; ENA-FIRST-PUBLIC = {2016-10-24}
+
+0. N/A (the record does not explicitly mention the name of the cell line used for this particular sample)
+1. B-lymphoblastoid
+2. blood
+3. N/A
+4. N/A (the record does not mention any genetic modifications)
+5. No, the string "input" does not appear in the sample name "16751655. ERR1703498.contigs.fasta. 20368 6#23.cram. LCL-ATAC6437596", and there is no indication that the sample is an input control
+6. No, the sample name "16751655. ERR1703498.contigs.fasta. 20368 6#23.cram. LCL-ATAC6437596" does not contain a reference to the cells used
+7. N/A
+8. N/A
+9. N/A
+10. The sample name "16751655. ERR1703498.contigs.fasta. 20368 6#23.cram. LCL-ATAC6437596" contains no indication of the ChIP target or "input" status. Furthermore, the protocol information mentions ATAC-seq library preparation but no reference at all to ChIP-seq, and the sample-specific section contains "LIBRARYSTRATEGY = {ATAC-seq}". The sample is thus an ATAC-seq sample, for which there is no ChIP target
+11. N/A (this is an ATAC-seq sample, not a ChIP-seq sample)
+12. N/A (this is an ATAC-seq sample, not a ChIP-seq sample)
+13. No, it may be ATAC-seq (actually it *is* ATAC-seq for sure)
+14. The record does not mention any notable treatments applied to this particular sample
+15. N/A
+16. No, this sample does not correspond to a control genetic modification or control genetic background
+17. No, this sample does not correspond to a control treatment
+18. N/A
+19. No

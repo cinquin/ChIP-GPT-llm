@@ -1,0 +1,33 @@
+Bob now analyzes *one by one* all the sentences in the text below.
+```
+The protocol information in this paragraph applies to **all** samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control (see abstract). Libraries were prepared using the Apollo Prep System (Wafergen, PrepX ILMN 32i, 96 sample kit) and standard Illumina multiplexing adapters following the manufacturer's protocol up to pre-PCR amplification Protein-DNA immunocomplexes were isolated from sonicates using antibodies against the relevant proteins. Cells were transfected for 24h with the relevant plasmid DNA using Fugene HD.
+```
+
+
+Sentence:
+The protocol information in this paragraph applies to **all** samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control (see abstract).
+Bob's explanation:
+The sentence provides no specific information about the ChIP targets, cells processed, or treatments applied, and it focuses on the protocol information (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+Libraries were prepared using the Apollo Prep System (Wafergen, PrepX ILMN 32i, 96 sample kit) and standard Illumina multiplexing adapters following the manufacturer's protocol up to pre-PCR amplification.
+Bob's explanation:
+The sentence refers to the library preparation protocol, which is not of interest (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+Protein-DNA immunocomplexes were isolated from sonicates using antibodies against the relevant proteins.
+Bob's explanation:
+The sentence mentions the use of antibodies, but it lacks specific information on the antibodies themselves or their targets (hence 1:No, 5:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+Cells were transfected for 24h with the relevant plasmid DNA using Fugene HD.
+Bob's explanation:
+The sentence provides information about a treatment (transfection) applied to the cells (hence 1:No, 7:Yes).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:Yes ###END

@@ -1,0 +1,36 @@
+You are a biologist analyzing metadata from a ChIP-seq experiment database. Your task is to extract information from a record describing a single sample that is part of a larger study. The record may contain incomplete or misorganized metadata, and it is your job to identify the protein that was targeted in the ChIP experiment and to extract information about the sample.
+
+Sample name: 603 CTTGTA. GSM2288190: CL0603 H3K27me3 MUT 02 REP1 121;  ChIP-Seq
+Name of the broader study to which the sample belongs: Large-Scale Atlas of Mutant IDH1-Dependent Chromatin State Reprogramming, Reversibility, and Persistence [ChIP-seq]
+Study abstract (applies to all samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control): Isocitrate dehydrogenase 1 and 2 (IDH1 and IDH2) mutations drive the development of gliomas and other human malignancies.  Significant efforts are already underway to attempt to target mutant IDH in clinical trials.  However, how mutation of IDH leads to tumorigenesis is poorly understood. Mutant IDH1 promotes epigenetic changes that promote tumorigenesis but the scale of these changes throughout the epigenome and the reversibility of these changes are unknown.  Here, using both human astrocyte and glioma tumorsphere systems, we generate a large-scale atlas of mutant IDH1-induced epigenomic reprogramming.  We characterize the changes in the histone code landscape, DNA methylome, chromatin state, and transcriptional reprogramming that occur following IDH1 mutation and characterize the kinetics and reversibility of these alterations over time.  We discover coordinate changes in the localization and intensity of multiple histone marks and chromatin states throughout the genome.  These alterations result in systematic chromatin states changes, which result in widespread gene expression changes involving oncogenic pathways.  Specifically,  mutant IDH1 drives alterations in differentiation state and establishes a CD24+ population that features enhanced self-renewal and other stem-like properties.  Strikingly, prolonged exposure to mutant IDH1 results in irreversible genomic and epigenetic alterations.  Together, these observations provide unprecedented molecular portraits of mutant IDH1-dependent epigenomic reprogramming at high resolution.  These findings have significant implications for our understanding the mechanisms underlying mutant IDH function and for optimizing therapeutic approaches to targeting IDH mutant tumors. Overall design: Histone modification ChIP-sequencing of IDH1 R132H expressing astrocyte and tumorsphere models
+The protocol information in this paragraph likely (but not necessarily) applies to **all** samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control (see abstract). CL0603_H3K27me3_MUT_02_REP1_121.  processed data file: H3K27me3_MUT_02.rpkm.bedgraph. ChIP was performed using the Magna ChIP™ G - Chromatin Immunoprecipitation Kit (Millipore) according to manufacturer's instructions. Libraries were prepared according to Illumina's instructions. Stable immortalized astrocytes were grown in DMEM + 10% FBS. Inducible astrocytes were grown in DMEM + Tetracycline-free FBS (10%) and IDH1 R132H expression was induced with the addition of 1 ug/ml of doxycycline. Tumorspheres were grown in NeuroCult NS-A Proliferation media (STEMCELL Technologies) with EGF and FGF
+
+All of the information below should apply specifically to this particular sample:
+
+Antibody info:H3K27me3
+Genotype info: IDH1 R132H
+Tissue info: H3K27me3 MUT P2. immortalized human astrocytes
+Other info of potential relevance: parsed primary ID = {SRX2039705}; LIBRARYSELECTION = {ChIP}; molecule-type = {genomic DNA}; parsed_GSM_ID = {GSM2288190}; inferred sequence type = {ChIPSeq}; LIBRARYSTRATEGY = {ChIP-Seq}; sample-type = {SRA}
+
+
+Barb's answers are as follows:
+0. N/A
+1. immortalized astrocytes
+2. brain
+3. N/A
+4. Expression of IDH1 carrying R132H mutation
+5. No, the string "input" does not appear in the sample name "603 CTTGTA. GSM2288190: CL0603 H3K27me3 MUT 02 REP1 121; ChIP-Seq". The sample is not an input control
+6. No
+7. N/A
+8. N/A
+9. IDH1, IDH2
+10. The rationale for ChIP target identification in this particular sample is based on the "Antibody info" provided, which states "H3K27me3". This indicates that the ChIP target is the histone modification H3K27me3. This is further confirmed by the sample name "603 CTTGTA. GSM2288190: CL0603 H3K27me3 MUT 02 REP1 121; ChIP-Seq" containing "H3K27me3"
+11. H3K27me3
+12. H3C1, H3C2, H3C3 (multiple genes correspond to Histone H3)
+13. ChIP-seq for sure
+14. The record does not mention any notable treatments applied to this particular sample other than the genetic modification (IDH1 R132H expression), and doxycycline induction of its expression
+15. N/A
+16. No, this sample does not correspond to a control genetic modification or control genetic background
+17. No, this sample does not correspond to a control treatment
+18. "IDH1 mutation-dependent cellular transformation," "IDH1 mutation-dependent cellular differentiation," "IDH1 mutation-dependent stem cell properties"
+19. No

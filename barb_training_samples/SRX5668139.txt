@@ -1,0 +1,36 @@
+You are a biologist analyzing metadata from a ChIP-seq experiment database. Your task is to extract information from a record describing a single sample that is part of a larger study. The record may contain incomplete or misorganized metadata, and it is your job to identify the protein that was targeted in the ChIP experiment and to extract information about the sample.
+
+Sample name: OCIAML3 ChIP MENIN VTP50469 330nM d4 181004 TTCCTGCT S2 R2 merged. GSM3717711: OCIAML3 ChIP MENIN VTP50469 330nM d4 REP1 181004 TTCCTGCT;  ChIP-Seq. OCIAML3 ChIP MENIN VTP50469 330nM d4 181004 TTCCTGCT S2 R1 merged
+Name of the broader study to which the sample belongs: MLL-Menin inhibition reverses pre-leukemic progenitor self-renewal induced by NPM1c mutations [ChIP-Seq]
+Study abstract (applies to all samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control): Menin binding to MLL1 is required to maintain self-renewal properties of NPM1c progenitors at different stages of leukemia development Overall design: Mouse NPM1c knock-in cells and human AML cell lines  carrying NPM1c mutations were analyzed for the gene expression changes induced by NPM1c and in response to Menin inhibitor VTP-50469
+The protocol information in this paragraph likely (but not necessarily) applies to **all** samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control (see abstract). Treatment regimens indicated for each sample. IMSM2_OCIAML3_ChIPseq_CEAS_TSS_1000u_3000d_res200_signal.xlsx.  Table_S2_ChIPseq.xlsx. Human cell lines were cultured in RPMI with 10% FBS and 330nM VTP-50469 or DMSO control for 4 days. DMSO or VTP-50469 treated cells were crosslinked with 1% methanol-free formaldehyde (ThermoFisher) for 7-10 min at room temperature, followed by quenching with 100 mM Tris pH8.0 and 25 mM Glycine, and the cells were lysed in SDS buffer. Cytoplasm was lysed using 50 mM Tris-HCl pH 8.0, 100 mM NaCl, 5 mM EDTA, 1% SDS for 10 min and nuclei were precipitated by centrifugation at 10,000´g. Nuclei were resuspended in 66 mM Tris-HCl pH 8.0, 100 mM NaCl, 5 mM EDTA, 1.7% Triton X-100, 0.5% SDS and sheared using E100S (Covaris) to chromatin fragments of 200-400 base-pair DNA size. 1-10 ng of DNA was used in preparation of Illumina-compatible libraries using ThruPlex DNA kit (Rubicon Genomics) Illumina Next Gen Sequencing NextSeq platform (Illumina, San Diego, CA) was used to obtain 1-5´107 unique sequencing paired-end tags
+
+All of the information below should apply specifically to this particular sample:
+
+Antibody target: Menin
+Other antibody info: Menin. anti-Menin (A300-105A, Bethyl)
+Treatment info: VTP-50469 330nM
+Tissue info: OCI-AML-3 cultured cells
+Cell line info: OCI-AML-3
+Other info of potential relevance: parsed primary ID = {SRX5668139}; LIBRARYSELECTION = {ChIP}; molecule-type = {genomic DNA}; parsed_GSM_ID = {GSM3717711}; inferred sequence type = {ChIPSeq}; LIBRARYSTRATEGY = {ChIP-Seq}; timepoint = {4 days}; sample-type = {SRA}
+
+0. OCI-AML-3
+1. acute myeloid leukemia
+2. blood
+3. N/A
+4. NPM1c mutations (nature unspecified, applies to the human cell lines used in the study)
+5. The string "input" does not appear in the sample name, and there is no indication that the sample is an input control
+6. Yes, "OCIAML3" appears in the sample name "OCIAML3 ChIP MENIN VTP50469 330nM d4 181004 TTCCTGCT S2 R2 merged. GSM3717711: OCIAML3 ChIP MENIN VTP50469 330nM d4 REP1 181004 TTCCTGCT;  ChIP-Seq. OCIAML3 ChIP MENIN VTP50469 330nM d4 181004 TTCCTGCT S2 R1 merged"
+7. anti-Menin (A300-105A, Bethyl)
+8. manufacturer=bethyl,clone=N/A,catalog=A300-105A,lot=N/A,target=Menin
+9. Menin, MLL1, NPM1c (NPM1; Barb knows NPM1c refers to a mutation in NPM1, and "NPM1c" is therefore not a gene name per se)
+10. The antibody target is specified as "Menin" by the "Antibody target:" and "Other antibody info:" fields. In addition, the sample name "OCIAML3 ChIP MENIN VTP50469 330nM d4 181004 TTCCTGCT S2 R2 merged" contains "MENIN", which is the only protein mentioned in the sample name. Therefore the target is "Menin"
+11. Menin
+12. MEN1 (Barb knows MEN1 is the offical gene name for Menin)
+13. ChIP-seq for sure
+14. The protocol information mentions treatment with 330nM VTP-50469 or DMSO control for 4 days. The sample-specific information mentions treatment with VTP-50469 330nM, and the sample name contains "VTP50469 330nM d4" indicating that this sample was treated with the Menin inhibitor VTP-50469 at a concentration of 330nM. "d4" in the sample name, as well as "timepoint = {4 days}" in the sample-specific section confirm that the treatment lasted 4 days
+15. VTP-50469 (concentration=330nM, duration=4_days, details=menin_inhibitor)
+16. No
+17. No
+18. "MLL-Menin interaction in leukemia"
+19. No

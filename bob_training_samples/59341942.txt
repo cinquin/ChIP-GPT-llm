@@ -1,0 +1,190 @@
+Bob is an expert biologist analyzing sentences taken from a sequencing database record describing a ChIP-seq experiment. Bob's purpose is to distinguish sentences that contain information about ChIP targets, cells processed, or treatments applied to those cells from sentences that he's not interested in. This will help downstream text analysis to be performed in the future. Bob is not interested in fine technical detail, as his purpose is not to reproduce the experiments or to optimize them. Bob is also not **at all** interested in the technical aspect of the ChIP protocol; he does not care about general cell maintenance procedures, cell fixation or fixatives, crosslinking, washing, resuspension, elution, shearing, sonication, precipitation, library preparation protocols, sequencing protocols, sequencing platforms, or downstream analysis programs etc. To perform his task, Bob outputs a numbered list of Yes/No answers about each sentence:
+1. Is this sentence of interest to Bob?
+2. Does it correspond to scientific background of the study, or to interpretation of its results?
+3. Does it contain a file name with substrings (possibly abbreviated) that refer to sample-specific antibodies or their targets, cell line names, drugs, or treatment conditions? For example, "Yes" for "GSM2423903_HEK293_FLP_BRCA1_Empty_V5_GRCh38.bigWig", which refers to "HEK293" cells, the "FLP" recombinase, the "BRCA1" gene, the "V5" tag, and the "Empty [vector]" condition, but "No" for "GSM2423903_ENCFF471MBU_signal_p-value_GRCh38.bigWig" which only has GEO/SRA/Encode sample IDs.
+4. Does it pertain solely to metadata such as the date of the experiment, the institution or researcher who conducted the experiment, data availability or publication status, or file names with numeric IDs, etc. ?
+5. Does it mention the specific antibodies used for immunoprecipitation, their catalogue numbers or manufacturers, or how they were raised?
+6. Does it add **new** information (not already included in preceding sentences) about the cell line, tissue, or organ used for ChIP, or about the gene expression, overexpression or silencing status, or vectors the cells may contain?
+7. Does it mention "interesting" cell treatments including e.g. drug treatments, application of stress or stimuli, or drugs to induce expression? Bob is not interested in regular cell culture techniques or cell preparation for ChIP.
+
+Bob provides concise, professional, insightful, helpful, and truthful explanations for his answers -- as shown in the following examples.
+
+Sentence:
+Release of promoter-proximal paused RNA polymerase II (Pol II) during early elongation is a critical step in transcriptional regulation in metazoan cells.
+Bob's explanation:
+The sentence provides scientific background on the study (hence 1:No, 2:Yes).
+Bob's answer:
+1:No  2:Yes  3:No  4:No  5:No  6:No  7:No  ###END
+
+Sentence:
+The second day, after 2 washes with RIPA-0.5, 1 wash with RIPA-0.3, 1 wash with RIPA-0, 2 washes with LiCl buffer (10 mM Tris-HCl, 0.25 M LiCl, 0.25% NP-40, and 0,25% NaDOC, pH7.4), and 2 washes with TE buffer, bound protein-DNA complexes were resuspended in elution buffer (10 mM Tris-HCl, 1mM EDTA, and 1% SDS, pH7.4) supplemented with 10 µg/ml RNase A for elution and RNA digestion, and incubated at 55 °C for 1 hour.
+Bob's explanation:
+The sentence describes protocol details of no relevance (hence 1:No) and gives no information about antibodies (hence 5:No), or cell genetic background (hence 6:No), cell treatments (hence 7:No), etc.
+Bob's answer:
+1:No  2:No  3:No  4:No  5:No  6:No  7:No  ###END
+
+Sentence:
+We knocked down expression of NSD2 in B-ALL cell lines heterozygous for NSD2 EK (RS4;11, RCH-ACV, SEM).
+Bob's explanation:
+The sentence provides information unseen so far about gene expression manipulation and cell lines (hence 6:Yes).
+Bob's answer:
+1:Yes  2:No  3:No  4:No  5:No  6:Yes  7:No  ###END
+
+Bob now analyzes *one by one* all the sentences in the text below.
+```
+The protocol information in this paragraph applies to **all** samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control (see abstract). 24 hours after transfection, cells were collected by scraping, washed twice in pre-warmed culture medium and fixed in 1% FA solution (Sigma) for 15 minutes. The fixative was quenched by adding Glycine (125 mM) and incubation for 3 minutes. The cells were washed once in ice-cold PBS and re-suspended in 5 mL chromatin prep buffer (Active Motif), containing 0.1mM PMSF and 0.1% protease inhibitor cocktail (PIC). To release the nuclei the sample was transferred into a pre-cooled 15 mL glas Douncer and dounced with 30 strokes. After 10 minutes incubation on ice and centrifugation at 1250 g for 5 minutes at 4°C, the nuclei were re-suspended in 500 uL sonication buffer (1% SDS, 50 mM Tris-HCl pH 8.0, 10 mM EDTA pH 8.0, 1 mM PMSF, 1% PIC). Following another 10 minutes incubation on ice, the chromatin was sonicated with a Bioblock Scientific VibraCell 75042 sonicator (Amplitude: 25%, Time: 12 minutes, 30 seconds on, 30 seconds off, 24 cycles). Note: The sonication conditions were optimized to have a fragmentation size of around 250 bp. Then 100 uL of the sonicated chromatin was added to 900 uL ChIP dilution buffer (0.1% NP-40, 0.02 M HEPES pH 7.3, 1 mM EDTA pH 8.0, 0.15 M NaCl, 1 mM PMSF, 1% PIC) and incubated with 4 ug anti-HA antibody (NB600-363, Novus Biologicals) over night at 4°C on a rotator. Next, the sample was loaded on a ChIP-IT ProteinG Agarose Column (Active Motif) and incubated for 3 hours at 4°C on a rotator. The column was washed 6 times with 1 mL buffer AM1 (Active Motif) and the DNA eluted with 180 uL of pre-warmed buffer AM4 (Active Motif). The sample was decrosslinked by adding 30 uL 10x TE buffer, 18 uL 5 M NaCl, 57 uL H2O and incubated for 5 hours at 65°C. 5 uL of RNAse A (10 ug/uL) was added and the sample incubated at 37°C for 30 minutes before adding 10 uL of Proteinase K (10 ug/uL), and further incubation for 2 hours at 55°C. The DNA was purified with the MiniElute PCR purification kit (Qiagen). For preparing the Input DNA, 5 uL sonicated chromatin was added to 5 uL 5M NaCL in 40 uL H2O, and incubated for 15 minutes at 95°C. Next the sample was incubated at 37°C for 5 minutes with 2.5 uL of RNAse A (10 ug/ul), 2.5 uL PK (10 ug/uL) was then added, and the incubation continued at 55°C for 30 minutes. 10 uL were taken for purification (MiniElute PCR purification kit from Qiagen). 5-10 ng of purified DNA were used to make libraries according to the manufacturer's protocol (Illumina). The material was sequenced with 50 bp single-end reads on the Illumine HiSeq according to the manufacturer's specifications. HEK293T cells were seeded into a 10 cm dish (920 000 cells) and transfected  18-19 hours later with X-tremeGENETM HP DNA transfection reagent (Roche).  Plasmids used were: HySp5-420, ZfSp5-377, HySp5-ΔDBD-337, ZfSp5-ΔDBD-289, 3666 ng. Cells were transfected with the ZfWnt3 promoter. HEK293T cells, a kind gift from the laboratory of Ariel Ruiz i Altaba (University of Geneva Medical School), were maintained in DMEM High Glucose + 1mM Na pyruvate + 6mM L-glutamine + 10% fetal bovine serum
+
+```
+
+Sentence:
+The protocol information in this paragraph applies to **all** samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control (see abstract).
+Bob's explanation:
+The sentence only contains general information about the protocol (hence 1:No) and does not provide any details about ChIP targets, cells processed, or treatments applied.
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+24 hours after transfection, cells were collected by scraping, washed twice in pre-warmed culture medium and fixed in 1% FA solution (Sigma) for 15 minutes.
+Bob's explanation:
+This sentence only contains details about the cell preparation process, which is not of interest to Bob (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+The fixative was quenched by adding Glycine (125 mM) and incubation for 3 minutes.
+Bob's explanation:
+Again, this sentence only contains information about the cell preparation process, which is not of interest to Bob (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+The cells were washed once in ice-cold PBS and re-suspended in 5 mL chromatin prep buffer (Active Motif), containing 0.1mM PMSF and 0.1% protease inhibitor cocktail (PIC).
+Bob's explanation:
+This sentence describes the cell preparation process, which is not relevant to Bob's interests (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+To release the nuclei the sample was transferred into a pre-cooled 15 mL glas Douncer and dounced with 30 strokes.
+Bob's explanation:
+This sentence provides information about the cell preparation process, which is not of interest to Bob (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+After 10 minutes incubation on ice and centrifugation at 1250 g for 5 minutes at 4°C, the nuclei were re-suspended in 500 uL sonication buffer (1% SDS, 50 mM Tris-HCl pH 8.0, 10 mM EDTA pH 8.0, 1 mM PMSF, 1% PIC).
+Bob's explanation:
+This sentence focuses on the cell preparation process, which is not relevant to Bob's interests (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+Following another 10 minutes incubation on ice, the chromatin was sonicated with a Bioblock Scientific VibraCell 75042 sonicator (Amplitude: 25%, Time: 12 minutes, 30 seconds on, 30 seconds off, 24 cycles).
+Bob's explanation:
+This sentence describes the cell preparation process, which is not of interest to Bob (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+Note: The sonication conditions were optimized to have a fragmentation size of around 250 bp.
+Bob's explanation:
+This sentence discusses the technical aspect of the ChIP protocol, which is not of interest to Bob (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+Then 100 uL of the sonicated chromatin was added to 900 uL ChIP dilution buffer (0.1% NP-40, 0.02 M HEPES pH 7.3, 1 mM EDTA pH 8.0, 0.15 M NaCl, 1 mM PMSF, 1% PIC) and incubated with 4 ug anti-HA antibody (NB600-363, Novus Biologicals) over night at 4°C on a rotator.
+Bob's explanation:
+This sentence mentions a specific antibody used for immunoprecipitation for the first time (anti-HA antibody), which is of interest to Bob (hence 1:Yes and 5:Yes).
+Bob's answer:
+1:Yes 2:No 3:No 4:No 5:Yes 6:No 7:No ###END
+
+Sentence:
+Next, the sample was loaded on a ChIP-IT ProteinG Agarose Column (Active Motif) and incubated for 3 hours at 4°C on a rotator.
+Bob's explanation:
+This sentence contains information about the ChIP protocol, which is not of interest to Bob (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+The column was washed 6 times with 1 mL buffer AM1 (Active Motif) and the DNA eluted with 180 uL of pre-warmed buffer AM4 (Active Motif).
+Bob's explanation:
+This sentence provides information about the ChIP protocol, which is not of interest to Bob (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+The sample was decrosslinked by adding 30 uL 10x TE buffer, 18 uL 5 M NaCl, 57 uL H2O and incubated for 5 hours at 65°C.
+Bob's explanation:
+This sentence contains information about the ChIP protocol, which is not of interest to Bob (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+5 uL of RNAse A (10 ug/uL) was added and the sample incubated at 37°C for 30 minutes before adding 10 uL of Proteinase K (10 ug/uL), and further incubation for 2 hours at 55°C.
+Bob's explanation:
+This sentence discusses the ChIP protocol, which is not relevant to Bob's interests (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+The DNA was purified with the MiniElute PCR purification kit (Qiagen).
+Bob's explanation:
+This sentence contains information about the DNA purification process, which is not of interest to Bob (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+For preparing the Input DNA, 5 uL sonicated chromatin was added to 5 uL 5M NaCL in 40 uL H2O, and incubated for 15 minutes at 95°C.
+Bob's explanation:
+The sentence provides information on the input DNA preparation procedure (hence 1:No, 3:No), and does not contain information on scientific background or interpretation of the study (hence 2:No), cell treatments (hence 7:No), or cell genetic background (hence 6:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+Next the sample was incubated at 37°C for 5 minutes with 2.5 uL of RNAse A (10 ug/ul), 2.5 uL PK (10 ug/uL) was then added, and the incubation continued at 55°C for 30 minutes.
+Bob's explanation:
+The sentence provides technical details about the protocol with no relevance (hence 1:No) and no information about antibodies (hence 5:No), cell genetic background (hence 6:No), or cell treatments (hence 7:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+10 uL were taken for purification (MiniElute PCR purification kit from Qiagen).
+Bob's explanation:
+The sentence provides technical details about the protocol with no relevance (hence 1:No) and no information about antibodies (hence 5:No), cell genetic background (hence 6:No), or cell treatments (hence 7:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+5-10 ng of purified DNA were used to make libraries according to the manufacturer's protocol (Illumina).
+Bob's explanation:
+The sentence provides information on the DNA library preparation procedure (hence 1:No, 3:No), and does not contain information on scientific background or interpretation of the study (hence 2:No), cell treatments (hence 7:No), or cell genetic background (hence 6:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No
+
+Sentence:
+The material was sequenced with 50 bp single-end reads on the Illumine HiSeq according to the manufacturer's specifications.
+Bob's explanation:
+The sentence provides information on the sequencing procedure (hence 1:No, 3:No), and does not contain information on scientific background or interpretation of the study (hence 2:No), cell treatments (hence 7:No), or cell genetic background (hence 6:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+HEK293T cells were seeded into a 10 cm dish (920 000 cells) and transfected  18-19 hours later with X-tremeGENETM HP DNA transfection reagent (Roche).
+Bob's explanation:
+The sentence provides useless information on the transfection procedure, and does not contain information on scientific background or interpretation of the study (hence 2:No), or cell treatments (hence 7:No), but it does mention for the first time "HEK293T" as the name of a cell line used in the study (hence 6:Yes, 1:Yes)
+Bob's answer:
+1:Yes 2:No 3:No 4:No 5:No 6:Yes 7:No ###END
+
+Sentence:
+Plasmids used were: HySp5-420, ZfSp5-377, HySp5-ΔDBD-337, ZfSp5-ΔDBD-289, 3666 ng.
+Bob's explanation:
+This sentence provides information on plasmids used in the study. Although the plasmids themselves are not of interest, the names they have been given here appear highly informative as to the factors they cause transfected cells to misexpress (e.g. "HySp5", likely the "Sp5" gene in Hydra) and as to the genetic modifications these factors carry (ΔDBD: deletion of a DNA-binding domain), hence 1:Yes and 6:Yes
+Bob's answer:
+1:Yes 2:No 3:No 4:No 5:No 6:Yes 7:No ###END
+
+Sentence:
+HEK293T cells, a kind gift from the laboratory of Ariel Ruiz i Altaba (University of Geneva Medical School), were maintained in DMEM High Glucose + 1mM Na pyruvate + 6mM L-glutamine + 10% fetal bovine serum.
+Bob's explanation:
+The sentence provides useless information on general cell maintenance procedures and on the provider of the cell line, and the name of the cell line was already known (hence "No" to all).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:Yes 7:No ###END

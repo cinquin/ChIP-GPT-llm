@@ -1,0 +1,45 @@
+You are a biologist analyzing metadata from a ChIP-seq experiment database. Your task is to extract information from a record describing a single sample that is part of a larger study. The record may contain incomplete or misorganized metadata, and it is your job to identify the protein that was targeted in the ChIP experiment and to extract information about the sample.
+
+Sample name: HCT116 WT K4me1 R two.FCHNWY2BBXX L5 IGTCCTTGA.2 fq.gz. GSM3177417: GATA1 WT H3K4me1 ChIPSeq Rep2;  ChIP-Seq
+Name of the broader study to which the sample belongs: Mutant KRAS/BRAF Reprograms the Enhancer Landscape via GATA1 to Drive Chemoresistance
+Titles of all samples in the study: 
+    - GSM3177423: GATA1 KO H3K27ac ChIPSeq Rep2;  ChIP-Seq, GSM3177423 r1
+    - GSM3177422: GATA1 KO H3K27ac ChIPSeq Rep1;  ChIP-Seq, GSM3177422 r1
+    - GSM3177421: GATA1 WT H3K27ac ChIPSeq Rep2;  ChIP-Seq, GSM3177421 r1
+    - GSM3177420: GATA1 WT H3K27ac ChIPSeq Rep1;  ChIP-Seq, GSM3177420 r1
+    - GSM3177419 r1, GSM3177419: GATA1 KO H3K4me1 ChIPSeq Rep2;  ChIP-Seq
+    - GSM3177418: GATA1 KO H3K4me1 ChIPSeq Rep1;  ChIP-Seq, GSM3177418 r1
+    - GSM3177417 r1, GSM3177417: GATA1 WT H3K4me1 ChIPSeq Rep2;  ChIP-Seq
+    - GSM3177416 r1, GSM3177416: GATA1 WT H3K4me1 ChIPSeq Rep1;  ChIP-Seq
+Study abstract (applies to all samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control): Despite advances in the detection and management of colorectal cancers, resistance to anti-cancer therapies remains a significant challenge. Activating mutations in KRAS and BRAF are frequently observed in colorectal cancers and have been associated with aggressive tumors and poor survival after chemotherapy. In the present study, we demonstrate that mutations in KRAS/BRAF alter the enhancer landscape of tumor cells, which leads to the resistance of the cornerstone colorectal cancer chemotherapeutic agent 5-fluorouracil (5-FU) through activation of transcription factor GATA1. Targeted inhibition of GATA1 reverses epigenetic changes in KRAS mutant cells and restores sensitivity to 5-FU. These results indicate a novel therapeutic opportunity for tailoring individualized therapy in human colorectal cancer. Overall design: RNA-seq and H3K4me1- H3K27ac-ChIP-seq were performed on GATA1 KO HCT116 cells. RNA-seq was performed on K7174-treated HCT116 cells and Colo320 cells expressing vector, wildtype and G12V KRAS
+The protocol information in this paragraph likely (but not necessarily) applies to **all** samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control (see abstract). The total RNA was extract using QIAGEN RNeasy Mini Kit. 5x106 active growing cultured cells were harvest, suspended in 10ml PBS, and cross-linked with 1% formaldehyde (final concentration) for 10 min, and quenched with 125 mM glycine for 5 min at room temperature, and washed twice with PBS. The pellets were resuspended in 100 μl cell lysis buffer (1% Triton-X, 0.1% Sodium-Deoxycholate, proteinase inhibitor, TE) and incubated on ice for 10 min. Lysates were diluted with 900 ul TE, and sonicated for 15 min (30 sec on / 30 sec off) using Bioruptor pico (Diagenode, Inc., Denville, NJ), and centrifuged at top speed for 10 min. The supernants were collected and the chromatin content was estimated by the Qubit assay (Invitrogen). The chromatin was then incubated with 2.5 μg of rabbit polyclonal anti-H3K27ac antibody (Abcam, D5E4, 1:5000) on a rocker overnight. Protein G-magnetic beads (30 μL, Invitrogen) were added for 4 hours incubation. The bedads were entensively washed with ChIP buffer (50 mM Tris-HCl, pH8.1, 10 mM EDTA, 100 mM NaCl, 1% Triton X-100, 0.1% sodium deoxycholate), high salt buffer (50 mM Tris-HCl, pH8.1, 10 mM EDTA, 500 mM NaCl, 1% Triton X-100, 0.1% sodium deoxycholate), LiCl buffer (10 mM Tris-HCl, pH8.0, 0.25 M LiCl2, 0.5% NP-40, 0.5% sodium deoxycholate, 1 mM EDTA), and TE buffer. Bound chromatin was eluted and reverse-crosslinked at 65 °C overnight. DNAs were purified using Min-Elute purification kit (QIAGEN, Valencia, CA) after the treatment of RNase A and proteinase K. RNA library preparation and sequence were done through Novogene. ChIP-seq libraries were prepared from ChIP DNA using the NEBNext® Ultra™ II DNA Library Prep Kit (NEB). The ChIP-seq libraries were sequenced to 50 base pairs on an Illumina HiSeq 4000 using pair-end mode in the Mayo Clinic Center for Individualized Medicine Medical Genome Facility
+
+All of the information below should apply specifically to this particular sample:
+
+Genotype info: GATA1 WT
+Tissue info: HCT116 colon cancer cell. GATA1 WT HCT116
+Tissue type info: GATA1 WT HCT116
+Cell line info: HCT116 colon cancer cell
+Other info of potential relevance: parsed primary ID = {SRX4172739}; LIBRARYSELECTION = {ChIP}; parsed_GSM_ID = {GSM3177417}; inferred sequence type = {ChIPSeq}; LIBRARYSTRATEGY = {ChIP-Seq}
+
+
+0. HCT116
+1. Adenocarcinoma
+2. Colon
+3. N/A
+4. N/A
+5. No, "input" does not appear in the sample name "HCT116 WT K4me1 R two.FCHNWY2BBXX L5 IGTCCTTGA.2 fq.gz. GSM3177417: GATA1 WT H3K4me1 ChIPSeq Rep2;  ChIP-Seq" and the sample is not an input sample.
+6. Yes, "HCT116" appears in the sample name "HCT116 WT K4me1 R two.FCHNWY2BBXX L5 IGTCCTTGA.2 fq.gz. GSM3177417: GATA1 WT H3K4me1 ChIPSeq Rep2;  ChIP-Seq"
+7. anti-H3K27ac antibody (Abcam, D5E4, 1:5000)
+8. manufacturer=abcam,clone=D5E4,catalog=N/A,lot=N/A,target=H3K27ac
+9. GATA1
+10. The sample name "HCT116 WT K4me1 R two.FCHNWY2BBXX L5 IGTCCTTGA.2 fq.gz. GSM3177417: GATA1 WT H3K4me1 ChIPSeq Rep2; ChIP-Seq" mentions "H3K4me1", which indicates that histone H3 with a monomethylated lysine 4 (H3K4me1) is the ChIP target in this sample. The metadata also specifies "GATA1 WT" which confirms that this sample is a wild-type GATA1 cell line
+11. H3K4me1
+12. H3C1, H3C2, H3C3 (multiple genes correspond to Histone H3)
+13. ChIP-seq for sure
+14. No specific treatments are mentioned for this particular sample. The sample is a wild-type control in the context of the study
+15. N/A
+16. Yes, this sample corresponds to a control genetic background. It is a wild-type GATA1 sample to be compared to GATA1 knockout samples
+17. No
+18. Chemoresistance, Colorectal cancer progression
+19. No

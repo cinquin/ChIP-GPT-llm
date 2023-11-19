@@ -1,0 +1,86 @@
+You are a biologist analyzing metadata from a ChIP-seq experiment database. Your task is to extract information from a record describing a single sample that is part of a larger study. The record may contain incomplete or misorganized metadata, and it is your job to identify the protein that was targeted in the ChIP experiment and to extract information about the sample.
+
+Sample name: P4 AR DSG.bam. GSM3149057: P4 AR DSG;  ChIP-Seq
+Name of the broader study to which the sample belongs: Optimized ChIP-seq procedure facilitates hormone receptor profiling in human tumors
+Titles of all samples in the study: 
+    - GSM3149120 r1, GSM3149120: G Input;  ChIP-Seq
+    - GSM3149119: E Input FA;  ChIP-Seq, GSM3149119 r1
+    - GSM3149118: E Input DSG;  ChIP-Seq, GSM3149118 r1
+    - GSM3149117: B Input FA;  ChIP-Seq, GSM3149117 r1
+    - GSM3149116: B Input DSG;  ChIP-Seq, GSM3149116 r1
+    - GSM3149115: P Input FA;  ChIP-Seq, GSM3149115 r1
+    - GSM3149114: P Input DSG;  ChIP-Seq, GSM3149114 r1
+    - GSM3149113 r1, GSM3149113: MCF7 Input;  ChIP-Seq
+    - GSM3149112: LNCAP Input;  ChIP-Seq, GSM3149112 r1
+    - GSM3149111 r1, GSM3149111: G2 H3K27ac DSG;  ChIP-Seq
+    - GSM3149110 r1, GSM3149110: G2 FOXA1 DSG;  ChIP-Seq
+    - GSM3149109: G2 AR DSG;  ChIP-Seq, GSM3149109 r1
+    - GSM3149108: G1 H3K27ac DSG;  ChIP-Seq, GSM3149108 r1
+    - GSM3149107: G1 FOXA1 DSG;  ChIP-Seq, GSM3149107 r1
+    - GSM3149106 r1, GSM3149106: G1 AR DSG;  ChIP-Seq
+    - GSM3149105: E3 H3K27ac DSG;  ChIP-Seq, GSM3149105 r1
+    - GSM3149104 r1, GSM3149104: E3 H3K27ac FA;  ChIP-Seq
+    - GSM3149103 r1, GSM3149103: E3 ER DSG;  ChIP-Seq
+    - GSM3149102 r1, GSM3149102: E3 ER FA;  ChIP-Seq
+    - GSM3149101 r1, GSM3149101: E2 H3K27ac DSG;  ChIP-Seq
+    - GSM3149100: E2 H3K27ac FA;  ChIP-Seq, GSM3149100 r1
+    - GSM3149099 r1, GSM3149099: E2 ER DSG;  ChIP-Seq
+    - GSM3149098 r1, GSM3149098: E2 ER FA;  ChIP-Seq
+    - GSM3149097 r1, GSM3149097: E1 H3K27ac DSG;  ChIP-Seq
+    - GSM3149096: E1 H3K27ac FA;  ChIP-Seq, GSM3149096 r1
+    - GSM3149095: E1 ER DSG;  ChIP-Seq, GSM3149095 r1
+    - GSM3149094 r1, GSM3149094: E1 ER FA;  ChIP-Seq
+    - GSM3149093: B4 H3K27ac DSG;  ChIP-Seq, GSM3149093 r1
+    - GSM3149092: B4 H3K27ac FA;  ChIP-Seq, GSM3149092 r1
+    - GSM3149091: B4 H3K4me3 DSG;  ChIP-Seq, GSM3149091 r1
+    - GSM3149090: B4 H3K4me3 FA;  ChIP-Seq, GSM3149090 r1
+    - GSM3149089: B4 FOXA1 DSG;  ChIP-Seq, GSM3149089 r1
+    - GSM3149088 r1, GSM3149088: B4 FOXA1 FA;  ChIP-Seq
+    - GSM3149087 r1, GSM3149087: B4 ER DSG;  ChIP-Seq
+    - GSM3149086 r1, GSM3149086: B4 ER FA;  ChIP-Seq
+    - GSM3149085 r1, GSM3149085: B3 H3K27ac DSG;  ChIP-Seq
+    - GSM3149084: B3 H3K27ac FA;  ChIP-Seq, GSM3149084 r1
+    - GSM3149083 r1, GSM3149083: B3 H3K4me3 DSG;  ChIP-Seq
+    - GSM3149082 r1, GSM3149082: B3 H3K4me3 FA;  ChIP-Seq
+    - GSM3149081: B3 FOXA1 DSG;  ChIP-Seq, GSM3149081 r1
+    - GSM3149080: B3 FOXA1 FA;  ChIP-Seq, GSM3149080 r1
+    - GSM3149079 r1, GSM3149079: B3 ER DSG;  ChIP-Seq
+    - GSM3149078 r1, GSM3149078: B3 ER FA;  ChIP-Seq
+    - GSM3149077 r1, GSM3149077: B2 H3K27ac DSG;  ChIP-Seq
+    - GSM3149076 r1, GSM3149076: B2 H3K27ac FA;  ChIP-Seq
+    - GSM3149075 r1, GSM3149075: B2 H3K4me3 DSG;  ChIP-Seq
+    - GSM3149074 r1, GSM3149074: B2 H3K4me3 FA;  ChIP-Seq
+    - GSM3149073 r1, GSM3149073: B2 FOXA1 DSG;  ChIP-Seq
+    - GSM3149072 r1, GSM3149072: B2 FOXA1 FA;  ChIP-Seq
+    - GSM3149071: B2 ER DSG;  ChIP-Seq, GSM3149071 r1
+    - ...
+Study abstract (applies to all samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control): Performing ChIP-seq analyses in clinical specimens has remained largely challenging due to multiple technical limitations and low quantities of starting material, resulting in low enrichments and poor signal-to-noise ratio. Here, we refined the original protocols for transcription factor ChIP-seq analyses in breast, prostate, and endometrial tumor tissue. In addition to the standard fixative formaldehyde, a second crosslinker Disuccinimidyl glutarate (DSG) was included in the procedure. Overall design: AR, FOXA1, ERa, H3K27ac & H3K4me3 ChIP-seq data with and without double croslinking in celllines (LNCAP & MCF-7) and in human tissues (Prostate, Breast, Endometrium and Prostate samples from core needle biopsies)
+The protocol information in this paragraph likely (but not necessarily) applies to **all** samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control (see abstract). Chromatin immunoprecipitations were performed as described previously with minor changes (Zwart et al., 2013). Samples were crosslinked in solution A with 2mM DSG (CovaChem) for 25 minutes at room temperature. After 25 minutes, 1% formaldehyde was added for 20 minutes and subsequently quenched with glycine. Samples were lysed as described (Schmidt et al., 2009) and sonicated for at least 10 cycles of 30s on, 30s off using a Diagenode Bioruptor Pico. For each ChIP, 5ug of antibody was conjugated with 50ul Protein A magnetic beads. Antibodies used were AR (sc-816, Santa Cruz), H3K27ac (39133, Active Motif), H3K4me3 (Ab8580, Abcam) and H3K27me3 (39155, Active Motif). Immunoprecipitated DNA was processed for library preparation (Part# 0801-0303, KAPA biosystems kit). Immunoprecipitated DNA was processed for library preparation (Part# 0801-0303, KAPA biosystems kit). Surgical resections from Prostate, breast and endometrium tumors. fresh frozen material
+
+All of the information below should apply specifically to this particular sample:
+
+Antibody info:AR (Santa Cruz; sc-816)
+Tissue info: primary prostate cancer
+Other info of potential relevance: parsed primary ID = {SRX4116020}; LIBRARYSELECTION = {ChIP}; molecule-type = {genomic DNA}; parsed_GSM_ID = {GSM3149057}; inferred sequence type = {ChIPSeq}; case/control = {DSG}; LIBRARYSTRATEGY = {ChIP-Seq}; patient id = {P4_AR_DSG}; sample-type = {SRA}
+
+
+0. primary tumor
+1. prostate cancer
+2. prostate
+3. N/A
+4. N/A
+5. No, "input" does not appear in the sample name "P4 AR DSG.bam. GSM3149057: P4 AR DSG;  ChIP-Seq" and the sample is not an input control.
+6. Unsure; "P4" may be a reference to the patient who donated the primary tumor
+7. AR (sc-816, Santa Cruz), H3K27ac (39133, Active Motif), H3K4me3 (Ab8580, Abcam) and H3K27me3 (39155, Active Motif)
+8. manufacturer=santa_cruz,clone=N/A,catalog=sc-816,lot=N/A,target=AR; manufacturer=active_motif,clone=N/A,catalog=39133,lot=N/A,target=H3K27ac; manufacturer=abcam,clone=N/A,catalog=Ab8580,lot=N/A,target=H3K4me3; manufacturer=active_motif,clone=N/A,catalog=39155,lot=N/A,target=H3K27me3
+9. AR, FOXA1, ERa
+10. The "Antibody info" in the sample-specific section designates AR (Androgen Receptor) as the immunoprecipitation target, consistent with "AR" in the sample name "P4 AR DSG". The presence of "DSG" in the sample name refers to the use of Disuccinimidyl glutarate (DSG) as a crosslinker in the ChIP experiment
+11. AR
+12. AR
+13. ChIP-seq for sure
+14. No specific treatments are mentioned for this particular sample (other than the use of the DSG crosslinker, which has to do with the ChIP procedure and is thus irrelevant here)
+15. N/A
+16. No
+17. No
+18. Androgen receptor signaling pathway, Prostate cancer progression
+19. No

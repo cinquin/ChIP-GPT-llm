@@ -1,0 +1,35 @@
+You are a biologist analyzing metadata from a ChIP-seq experiment database. Your task is to extract information from a record describing a single sample that is part of a larger study. The record may contain incomplete or misorganized metadata, and it is your job to identify the protein that was targeted in the ChIP experiment and to extract information about the sample.
+
+Sample name: GSM4569888: FOXA1 NKI 27 T;  ChIP-Seq. NKI 27 FOXA1 Tumor
+Name of the broader study to which the sample belongs: Charting the prostate epigenomic landscape from transformation to progression
+Study abstract (applies to all samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control): We generate transcription factor, histone modification and ATAC cistromes in nomal prostate epithelium, primary prostate tumor and metastatic prostate cancer human specimens Overall design: ChIP-seq for AR, FOXA1, HOXB13, H3K27Ac, H3K4me2, H3K4me3, H3K27me3 and ATAC-seq
+The protocol information in this paragraph likely (but not necessarily) applies to **all** samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control (see abstract). NKI_27_FOXA1_Tumor. One (histone ChIP) or three (transcription factor ChIP) 2 mm2 frozen cores were pulverized using the Covaris CryoPrep system. Tissue was fixed using 1% formaldehyde and chromatin sheared to 300-500 bp in size using the Covaris E220 ultrasonicator. Resulting chromatin was incubated overnight with indicated antibodies. Purified immunoprecipitates were isolated and quantified by Qubit fluorometer. DNA sequencing libraries were prepared using the ThruPLEX-FD Prep kit (Rubicon Genomics). Libraries were sequenced using 75-bp reads on the Illumina platform at the Dana-Farber Cancer Institute
+
+All of the information below should apply specifically to this particular sample:
+
+Antibody info:Abcam. FOXA1
+Tissue info: Patient localized prostate tissue
+Other info of potential relevance: parsed primary ID = {SRX8406509}; LIBRARYSELECTION = {ChIP}; molecule-type = {genomic DNA}; parsed_GSM_ID = {GSM4569888}; inferred sequence type = {ChIPSeq}; LIBRARYSTRATEGY = {ChIP-Seq}; sample-type = {SRA}
+
+
+Barb's answers are as follows:
+0. primary tumor
+1. prostate cancer
+2. prostate
+3. N/A
+4. N/A (the record does not mention any genetic modifications)
+5. No, the string "input" does not appear in the sample name "GSM4569888: FOXA1 NKI 27 T;  ChIP-Seq. NKI 27 FOXA1 Tumor". The sample is not an input control
+6. No, there is no obvious reference to the cells used in the sample name "GSM4569888: FOXA1 NKI 27 T;  ChIP-Seq. NKI 27 FOXA1 Tumor" (other than "tumor" and perhaps the "T" standing for tumor as well; "NKI 27" may be a patient reference)
+7. Abcam. FOXA1
+8. manufacturer=abcam,clone=N/A,catalog=N/A,lot=N/A,target=FOXA1
+9. AR, FOXA1, HOXB13
+10. The rationale for ChIP target identification in this particular sample is provided by the "Antibody info" section, which mentions "Abcam. FOXA1" as the antibody used for ChIP. This indicates that the ChIP target is FOXA1, a transcription factor. This is consistent with the sample name "GSM4569888: FOXA1 NKI 27 T;  ChIP-Seq. NKI 27 FOXA1 Tumor" where "FOXA1" is the only protein name and where "input" does not appear. FOXA1 as the target is also consistent with the study abstract, which mentions FOXA1 as one of the ChIP-seq targets
+11. FOXA1
+12. FOXA1
+13. ChIP-seq for sure
+14. The record does not mention any notable treatments applied to this particular sample other than the ChIP-seq experiment itself
+15. N/A
+16. No, this sample does not correspond to a control genetic modification or control genetic background
+17. No, this sample does not correspond to a control treatment
+18. "Androgen receptor signaling pathway," "Prostate cancer progression"
+19. No

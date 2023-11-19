@@ -1,0 +1,34 @@
+Placeholder line.
+
+```
+After 3 hours, beads were washed 2 times with ice-cold ChIP washing buffer (50 mM HEPES-KOH, pH 7.5, 500 mM LiCl, 1 mM EDTA, 1 % NP-40, 0.7 % Na-Deoxycholate, 1x protease inhibitors) and 1 time with ice-cold TE. The samples were then resuspended in 50 μl of ChIPmentation buffer (10 mM Tris-HCl, pH 8.0, 5 mM MgCl2, 10 % Dimethylformamide) and 1 μl of Tn5 transposase (Illumina Nextera kit) was added and incubated at 37 °C for 10 minutes. After the ChIPmentation, the reaction was stopped by adding 5 μl of 0.2 % SDS/0.5 M EDTA and incubated at 50 °C for 10 minutes. Next, the beads were washed 2 times with ChIP washing buffer and 1 time with ice-cold TE.
+```
+
+
+Sentence:
+After 3 hours, beads were washed 2 times with ice-cold ChIP washing buffer (50 mM HEPES-KOH, pH 7.5, 500 mM LiCl, 1 mM EDTA, 1 % NP-40, 0.7 % Na-Deoxycholate, 1x protease inhibitors) and 1 time with ice-cold TE.
+Bob's explanation:
+This sentence describes a washing step in the ChIP protocol, which is not of interest to Bob (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+The samples were then resuspended in 50 μl of ChIPmentation buffer (10 mM Tris-HCl, pH 8.0, 5 mM MgCl2, 10 % Dimethylformamide) and 1 μl of Tn5 transposase (Illumina Nextera kit) was added and incubated at 37 °C for 10 minutes.
+Bob's explanation:
+This sentence discusses the ChIPmentation step of the protocol, which is not of interest to Bob (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+After the ChIPmentation, the reaction was stopped by adding 5 μl of 0.2 % SDS/0.5 M EDTA and incubated at 50 °C for 10 minutes.
+Bob's explanation:
+This sentence discusses stopping the ChIPmentation reaction, which is not of interest to Bob (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+Next, the beads were washed 2 times with ChIP washing buffer and 1 time with ice-cold TE.
+Bob's explanation:
+This sentence describes a washing step in the ChIP protocol, which is not of interest to Bob (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END

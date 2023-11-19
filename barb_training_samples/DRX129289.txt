@@ -1,0 +1,35 @@
+You are a biologist analyzing metadata from a ChIP-seq experiment database. Your task is to extract information from a record describing a single sample that is part of a larger study. The record may contain incomplete or misorganized metadata, and it is your job to identify the protein that was targeted in the ChIP experiment and to extract information about the sample.
+
+Sample name: ATAC-seq H1299 24h E11 Benidipine hydrochloride 2.  SAMD00124684. DRR136551
+Name of the broader study to which the sample belongs: Multi-omics characterization of drug perturbations in lung cancer cell lines
+Study abstract (applies to all samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control): In this study, we constructed comprehensive transcriptome and epigenome catalogues of responses to various well-annotated compounds in 23 lung cancer cell lines. We selected 95 compounds including approved receptor tyrosine kinase inhibitors and epigenetic targeting drugs. To obtain profiles of transcriptome and epigenome changes by drug administration, we depeloved a high-throughtput sequencing platform of RNA-seq and ATAC-seq. We generated 3,240 RNA-seq and 3,393 ATAC-seq datasets from cells treated with the compounds. The data comprise two kinds of datasets: the datasets obtained from five cell lines treated with four concentrations of 23 selected compounds at three time points (24, 48, 72h) (dataset-1); and the datasets obtained from 23 cell lines treated with one concentration of 95 compounds for 24h (dataset-2). Furthermore, we integrated multi-omics information based on transcriptome modules and investigated whether the drugs could control transcriptome and epigenome patterns of the modules and finally regulate phenotypic responses such as cellular survival of lung cancers. Here we demonstrated multi-omics characterization of drug perturbations and module-based regulation of lung cancer cells
+The protocol information in this paragraph likely (but not necessarily) applies to **all** samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control (see abstract). ATAC-seq library is constructed according to the original ATAC-seq protocol (Buenrostro et al. 2013) with some modifications
+
+All of the information below should apply specifically to this particular sample:
+
+Cell line info: H1299
+Other info of potential relevance: sample_name = {ATAC-seq_H1299_24h_E11_Benidipine hydrochloride_2}; parsed primary ID = {DRX129289}; LIBRARYSELECTION = {other}; inferred sequence type = {ATAC}; LIBRARYSTRATEGY = {ATAC-seq}
+
+
+
+Barb's answers are as follows:
+0. H1299
+1. adenocarcinoma
+2. lung
+3. N/A
+4. N/A (no genetic modifications are mentioned)
+5. No, the string "input" does not appear in the sample name "ATAC-seq H1299 24h E11 Benidipine hydrochloride 2.  SAMD00124684. DRR136551", and the sample is not an input control
+6. Yes, "H1299" appears in the sample name "ATAC-seq H1299 24h E11 Benidipine hydrochloride 2.  SAMD00124684. DRR136551"
+7. N/A
+8. N/A
+9. N/A
+10. The record does not mention ChIP-seq or identification of ChIP targets. The sample is an ATAC-seq sample, as indicated by the sample name "ATAC-seq H1299 24h E11 Benidipine hydrochloride 2.  SAMD00124684. DRR136551" and the library strategy "LIBRARYSTRATEGY = {ATAC-seq}."
+11. N/A (this is an ATAC-seq sample, not a ChIP-seq sample)
+12. N/A (this is an ATAC-seq sample, not a ChIP-seq sample)
+13. No, it may be ATAC-seq (actually it *is* ATAC-seq for sure)
+14. The sample name "ATAC-seq H1299 24h E11 Benidipine hydrochloride 2.  SAMD00124684. DRR136551" indicates that the sample was treated with Benidipine hydrochloride. This treatment is notable because the point of the study is to identify the effects of drugs such as benidipine on cancer cells. The protocol information mentions that the compounds were administered for 24h, but the specific concentration is not provided
+15. Benidipine hydrochloride (concentration=unknown, duration=24h, details=calcium_channel_blocker)
+16. No, this sample does not correspond to a control genetic modification or control genetic background
+17. No, this sample does not correspond to a control treatment: it was treated with Benidipine hydrochloride
+18. "Response to Benidipine hydrochloride"
+19. No

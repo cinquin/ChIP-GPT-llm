@@ -1,0 +1,36 @@
+You are a biologist analyzing metadata from a ChIP-seq experiment database. Your task is to extract information from a record describing a single sample that is part of a larger study. The record may contain incomplete or misorganized metadata, and it is your job to identify the protein that was targeted in the ChIP experiment and to extract information about the sample.
+
+Sample name: SLX-12998.D707 D501.HH772BBXX.s 2.r. GSM2747709: SLX-12998 Input Fulvestrant;  ChIP-Seq
+Name of the broader study to which the sample belongs: ChIP-seq Analysis of Estrogen Receptor-alpha on Treatment with Fulvestrant with internal and spike-in controls
+Study abstract (applies to all samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control): A key challenge in quantitative ChIP-seq is the normalisation of data in the presence of genome-wide changes. Data-based methods often rely on assumptions that do not hold true. Misapplication of these methods to ChIP-seq data results in the suppression of the biological signal or erroneous measurement of differential occupancy.     To develop methods that address this challenge, we generated three ChIP-seq datasets, each measuring Estrogen Receptor-alpha (ER) binding in MCF7 before and after 100 nm Fulvestrant treatment for 48 hours. The three methods were: a novel internal control using CTCF binding to normalise (SLX-14229 & SLX-14438); a spike-in control using H2av binding to D. Melanogaster chromatin (SLX-8047); and a spike-in control using the cross reactivity of ER antibody against M. Musculus chromatin (SLX-12998). Overall design: 3 ER ChIP-seq experiments implimenting internal or spike-in normalisation stratergies Please note that there is no processed data for one dataset (SLX-12998) as these form part of a study to evaluate multiple methods and it is concluded at an early stage that this method isn''t suitable, however the sequencing raw data is still relevant and provided for those who may be interested in re-evaluating the methods
+The protocol information in this paragraph likely (but not necessarily) applies to **all** samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control (see abstract). SLX-12998.D707_D501.HH772BBXX. Treated samples were exposed to 100 nM Fulvesterant for 48 hours. MCF7 cells were grown in T175 flast in DEM + 10% FBS + Pen/Strep + Glutamine. Lysates were clarified from sonicated nuclei and protein-DNA complexes were isolated with antibody. Libraries were prepared according to the Thruplex DNA-seq Kit Manual
+
+All of the information below should apply specifically to this particular sample:
+
+Antibody info:ER (sc-543, Santa Cruz)
+Tissue info: MCF7_ER_ER_Fulvestrant_HC11. mammary epithelial cells
+Cell line info: HC11. MCF7
+Phenotype info: Fulvestrant
+Other info of potential relevance: parsed primary ID = {SRX3110727}; replicate = {Input}; LIBRARYSELECTION = {ChIP}; molecule-type = {genomic DNA}; parsed_GSM_ID = {GSM2747709}; inferred sequence type = {ChIPSeq}; LIBRARYSTRATEGY = {ChIP-Seq}; experiment number = {SLX-12998}; spike-in organism = {mus musculus}; sample-type = {SRA}
+
+
+0. MCF7
+1. adenocarcinoma
+2. breast
+3. N/A (this study comprises no genetic modifications, or inclusion of samples with different genetic backgrounds)
+4. N/A
+5. Yes, the string "Input" appears in the sample name "SLX-12998.D707 D501.HH772BBXX.s 2.r. GSM2747709: SLX-12998 Input Fulvestrant;  ChIP-Seq". The sample is an input control
+6. No, "MCF7" does not appear in the sample name "SLX-12998.D707 D501.HH772BBXX.s 2.r. GSM2747709: SLX-12998 Input Fulvestrant;  ChIP-Seq"
+7. sc-543, Santa Cruz
+8. manufacturer=santa_cruz,clone=N/A,catalog=sc-543,lot=N/A,target=ER
+9. ESR1 (ER, estrogen receptor)
+10. The sample is a ChIP input control. An "Antibody info" section mentions "ER (sc-543, Santa Cruz)", but Barb knows that this antibody was not actually used for this particular sample since the record also contains "replicate = {Input}" in the section specific to this particular sample, and since the sample name "SLX-12998.D707 D501.HH772BBXX.s 2.r. GSM2747709: SLX-12998 Input Fulvestrant;  ChIP-Seq" also contains "Input"
+11. Input
+12. N/A (input control)
+13. ChIP-seq for sure (the record contains "LIBRARYSELECTION = {ChIP}", "LIBRARYSTRATEGY = {ChIP-Seq}", and other mentions of ChIP-seq in the sample name and study abstract and protocol, and no mention of an alternative technique)
+14. The sample was treated with 100 nM Fulvestrant for 48 hours, as shown by "Phenotype info: Fulvestrant" in the record (even if treatment with fulvestrant is technically not a "phenotype", a small mistake that Barb knows to overlook) and the presence of "Fulvestrant" in the sample name "SLX-12998.D707 D501.HH772BBXX.s 2.r. GSM2747709: SLX-12998 Input Fulvestrant;  ChIP-Seq"
+15. fulvestrant (concentration=100_nM, duration=48_hours, details=estrogen_inhibitor)
+16. No, this sample does not correspond to a control genetic modification or control genetic background
+17. No, this sample corresponds to an actual treatment (with fulvestrant), not to a control
+18. "Response to estrogen"
+19. No

@@ -1,0 +1,83 @@
+You are a biologist analyzing metadata from a ChIP-seq experiment database. Your task is to extract information from a record describing a single sample that is part of a larger study. The record may contain incomplete or misorganized metadata, and it is your job to identify the protein that was targeted in the ChIP experiment and to extract information about the sample.
+
+Sample name: GSM3937782: KARPAS-422 1.5uM CPI360 8 days Suz12 ChIP-seq;  ChIP-Seq. 21 2264CP KARPAS-422 EZH2i 8d Suz12 i86 filtered
+Name of the broader study to which the sample belongs: EZH2 inhibition results in genome-wide PRC2 redistribution in cancer cell models
+Titles of all samples in the study: 
+    - GSM3937817 r1, GSM3937817: SUDHL6 1.5uM Compound 1 4 days EZH2 ChIP-seq;  ChIP-Seq
+    - GSM3937816 r1, GSM3937816: SUDHL6 1.5uM Compound 1 4 days Input ChIP-seq;  ChIP-Seq
+    - GSM3937815: SUDHL6 1.5uM Compound 1 4 days H3K27me3 ChIP-seq;  ChIP-Seq, GSM3937815 r1
+    - GSM3937814: SUDHL6 DMSO  4 days H3K27me3 ChIP-seq;  ChIP-Seq, GSM3937814 r1
+    - GSM3937813 r1, GSM3937813: SUDHL6 DMSO  days EZH2 ChIP-seq;  ChIP-Seq
+    - GSM3937812 r1, GSM3937812: SUDHL6 DMSO 4 days Input ChIP-seq;  ChIP-Seq
+    - GSM3937811: RPMI8226 1.5uM CPI360 4 days Input ChIP-seq;  ChIP-Seq, GSM3937811 r1
+    - GSM3937810: RPMI8226 1.5uM CPI360 4 days EZH2 ChIP-seq;  ChIP-Seq, GSM3937810 r1
+    - GSM3937809 r1, GSM3937809: RPMI8226 1.5uM CPI360 4 days H3K27me3 ChIP-seq;  ChIP-Seq
+    - GSM3937808: RPMI8226 DMSO 4 days Input ChIP-seq;  ChIP-Seq, GSM3937808 r1
+    - GSM3937807 r1, GSM3937807: RPMI8226 DMSO 4 days EZH2 ChIP-seq;  ChIP-Seq
+    - GSM3937806: RPMI8226 DMSO 4 days H3K27me3 ChIP-seq;  ChIP-Seq, GSM3937806 r1
+    - GSM3937805 r1, GSM3937805: RL 5uM CPI169 10 days EZH2 ChIP-seq;  ChIP-Seq
+    - GSM3937804: RL 5uM CPI169 10 days H3K27me3 ChIP-seq;  ChIP-Seq, GSM3937804 r1
+    - GSM3937803 r1, GSM3937803: RL 5uM CPI169 10 days Input ChIP-seq;  ChIP-Seq
+    - GSM3937802 r1, GSM3937802: RL DMSO 10 days H3K27me3 ChIP-seq;  ChIP-Seq
+    - GSM3937801 r1, GSM3937801: RL DMSO 10 days EZH2 ChIP-seq;  ChIP-Seq
+    - GSM3937800: RL DMSO 10 days Input ChIP-seq;  ChIP-Seq, GSM3937800 r1
+    - GSM3937799 r1, GSM3937799: KMS28PE 1.5uM CPI360 4 days EZH2 ChIP-seq;  ChIP-Seq
+    - GSM3937798 r1, GSM3937798: KMS28PE 1.5uM CPI360 4 days H3K27me3 ChIP-seq;  ChIP-Seq
+    - GSM3937797: KMS28PE DMSO 4 days EZH2 ChIP-seq;  ChIP-Seq, GSM3937797 r1
+    - GSM3937796: KMS28PE DMSO 4 days H3K27me3 ChIP-seq;  ChIP-Seq, GSM3937796 r1
+    - GSM3937795: KMS28PE None 4 days Input ChIP-seq;  ChIP-Seq, GSM3937795 r1
+    - GSM3937794: KMS28BM 1.5um CPI360 4 days EZH2 ChIP-seq;  ChIP-Seq, GSM3937794 r1
+    - GSM3937793: KMS28BM 1.5uM CPI360 4 days H3K27me3 ChIP-seq;  ChIP-Seq, GSM3937793 r1
+    - GSM3937792: KMS28BM DMSO 4 days EZH2 ChIP-seq;  ChIP-Seq, GSM3937792 r1
+    - GSM3937791: KMS28BM DMSO 4 days H3K27me3 ChIP-seq;  ChIP-Seq, GSM3937791 r1
+    - GSM3937790: KMS28BM DMSO 4 days Input ChIP-seq;  ChIP-Seq, GSM3937790 r1
+    - GSM3937789 r1, GSM3937789: KARPAS-422 1.5uM CPI360 4 days H3K27me3 ChIP-seq;  ChIP-Seq
+    - GSM3937788: KARPAS-422 1.5uM CPI360 4 days H3K4me3 ChIP-seq;  ChIP-Seq, GSM3937788 r1
+    - GSM3937787 r1, GSM3937787: KARPAS-422 1.5uM CPI360 4 days Suz12 ChIP-seq;  ChIP-Seq
+    - GSM3937786 r1, GSM3937786: KARPAS-422 1.5uM CPI360 4 days EZH2 ChIP-seq;  ChIP-Seq
+    - GSM3937785: KARPAS-422 1.5uM CPI360 4 days H3K27ac ChIP-seq;  ChIP-Seq, GSM3937785 r1
+    - GSM3937784: KARPAS-422 1.5uM CPI360 8 days H3K27me3 ChIP-seq;  ChIP-Seq, GSM3937784 r1
+    - GSM3937783: KARPAS-422 1.5uM CPI360 8 days H3K4me3 ChIP-seq;  ChIP-Seq, GSM3937783 r1
+    - GSM3937782: KARPAS-422 1.5uM CPI360 8 days Suz12 ChIP-seq;  ChIP-Seq, GSM3937782 r1
+    - GSM3937781: KARPAS-422 1.5uM CPI360 8 days EZH2 ChIP-seq;  ChIP-Seq, GSM3937781 r1
+    - GSM3937780: KARPAS-422 1.5uM CPI360 8 days H3K27ac ChIP-seq;  ChIP-Seq, GSM3937780 r1
+    - GSM3937779: KARPAS-422 DMSO 8 days H3K27me3 ChIP-seq;  ChIP-Seq, GSM3937779 r1
+    - GSM3937778 r1, GSM3937778: KARPAS-422 DMSO 8 days H3K4me3 ChIP-seq;  ChIP-Seq
+    - GSM3937777: KARPAS-422 DMSO 8 days Suz12 ChIP-seq;  ChIP-Seq, GSM3937777 r1
+    - GSM3937776: KARPAS-422 DMSO 8 days EZH2 ChIP-seq;  ChIP-Seq, GSM3937776 r1
+    - GSM3937775 r1, GSM3937775: KARPAS-422 DMSO 8 days H3K27ac ChIP-seq;  ChIP-Seq
+    - GSM3937774: KARPAS-422 DMSO 8 days Input ChIP-seq;  ChIP-Seq, GSM3937774 r1
+Study abstract (applies to all samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control): Upon EZH2 inhibitor treatment, PRC2 components EZH2 and SUZ12 are redistributed across the genome towards a small number of genomic loci that are refractory to H3K27me3 loss. Focal PRC2 accumulation and H3K27me3 retention occur primarily at CpG islands and transcription start sites of genes, with enrichment at canonical PRC2 nucleation sites. EZH2 and SUZ12 are present at low levels at actively transcribed TSSs, and this signal is lost with EZH2 inhibition. Overall design: ChIP-seq of PRC2 components, H3K27me3, and H3K4me3 upon treatment with EZH2 inhibitor or a control, in DLBCL and multiple myeloma cell lines
+The protocol information in this paragraph likely (but not necessarily) applies to **all** samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control (see abstract). KARPAS-422 cells were treated for 4 and 8 days with 1.5 μM of CPI-360. SUDHL6 cells were treated for 4 days with 1.5uM of Compound 1. KMS28BM and KMS28PE cells were treated for 4 days with 1.5uM of CPI360. RL cells were treated for 10 days with 5uM of CPI169. KARPAS-422 cell line was grown in Roswell Park Memorial Institute (RPMI) GlutaMAX medium supplemented with 10% fetal bovine serum (FBS) and 1% penicillin/streptomycin (Invitrogen). SUDHL6 cell lines were grown in Roswell Park Memorial Institute (RPMI) GlutaMAX medium supplemented with 10% fetal bovine serum (FBS) and 1% penicillin/streptomycin (Invitrogen). For ChIP-seq, cells were pelleted, fixed in 1% formaldehyde for 10 mins, lysed and sonicated. Chromatin samples were precleared with Protein A Dynabeads (Life Technologies), and incubated overnight at 40C with anti-EZH2 (Millipore 07-689), anti-H3K27me3 (Cell Signaling Techonology 9730), anti-SUZ12 (Active Motif 39357), and anti-H3K4me3 (Abcam ab8580). Chromatin-antibody complexes were precipitated using Protein A Dynabeads followed by washes in RIPA buffer and Tris/ EDTA. Samples were digested with RNAase A, treated with Proteinase K and 10% SDS, followed by cross-link reversal at 650C. DNA was purified using MinElute PCR purification kits (Qiagen). DNA libraries for ChIP-seq were prepared using Ovation Ultralow DR Multiplex System kits (0330-32, NuGEN) followed by Illumina sequencing
+
+All of the information below should apply specifically to this particular sample:
+
+Antibody target: Suz12
+Other antibody info: Suz12. Active Motif 39357
+Treatment info: 1.5uM CPI360 8 days
+Tissue info: Diffuse large B cell lymphoma
+Cell line info: KARPAS-422
+Other info of potential relevance: parsed primary ID = {SRX6430563}; LIBRARYSELECTION = {ChIP}; molecule-type = {genomic DNA}; parsed_GSM_ID = {GSM3937782}; inferred sequence type = {ChIPSeq}; LIBRARYSTRATEGY = {ChIP-Seq}; sample-type = {SRA}
+
+
+Barb's answers are as follows:
+0. KARPAS-422
+1. Diffuse large B cell lymphoma
+2. Lymph node
+3. N/A
+4. No genetic modifications were introduced for this particular sample
+5. No, "input" does not appear in "GSM3937782: KARPAS-422 1.5uM CPI360 8 days Suz12 ChIP-seq;  ChIP-Seq. 21 2264CP KARPAS-422 EZH2i 8d Suz12 i86 filtered". The sample is not an input control.
+6. Yes, "KARPAS-422" appears in the sample name "GSM3937782: KARPAS-422 1.5uM CPI360 8 days Suz12 ChIP-seq;  ChIP-Seq. 21 2264CP KARPAS-422 EZH2i 8d Suz12 i86 filtered"
+7. anti-EZH2 (Millipore 07-689), anti-H3K27me3 (Cell Signaling Techonology 9730), anti-SUZ12 (Active Motif 39357), and anti-H3K4me3 (Abcam ab8580)
+8. manufacturer=Millipore,clone=N/A,catalog=07-689,lot=N/A,target=EZH2; manufacturer=cell_signaling_technology,clone=N/A,catalog=9730,lot=N/A,target=H3K27me3; manufacturer=active_motif,clone=N/A,catalog=39357,lot=N/A,target=SUZ12; manufacturer=abcam,clone=N/A,catalog=ab8580,lot=N/A,target=H3K4me3
+9. EZH2, SUZ12, PRC2 (Barb knows this is a protein complex rather than a single gene; Polycomb Repressive Complex 2)
+10. Both the "Antibody target" "Other antibody info" fields in the sample-specific section identify Suz12 as the target. The sample name "GSM3937782: KARPAS-422 1.5uM CPI360 8 days Suz12 ChIP-seq;  ChIP-Seq. 21 2264CP KARPAS-422 EZH2i 8d Suz12 i86 filtered" also contains "Suz12" and not "input". Therefore the target is Suz12
+11. Suz12
+12. SUZ12
+13. ChIP-seq for sure
+14. The treatment information is provided in the "Treatment info: 1.5uM CPI360 8 days" section. The sample was treated with 1.5uM CPI360 for 8 days. CPI is an EZH2 inhibitor
+15. CPI360 (concentration=1.5uM, duration=8_days, details=EZH2_inhibitor)
+16. No
+17. No
+18. "Response to EZH2 inhibitor treatment",  "Cell cycle regulation", "Regulation of DNA replication", "Regulation of cell proliferation", "Regulation of apoptosis", "Regulation of cellular response to DNA damage", "Regulation of cellular response to genotoxic stress", "Regulation of chromatin silencing" (these terms are inferred by Barb based on her knowledge of EZH@ and PRC2, even if not directly mentioned in the record; EZH2 and PRC2 have been implicated in various cellular responses, including the response to genotoxic stress and DNA damage)
+19. Yes (DNA damage)

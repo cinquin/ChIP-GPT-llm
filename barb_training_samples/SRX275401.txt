@@ -1,0 +1,74 @@
+You are a biologist analyzing metadata from a ChIP-seq experiment database. Your task is to extract information from a record describing a single sample that is part of a larger study. The record may contain incomplete or misorganized metadata, and it is your job to identify the protein that was targeted in the ChIP experiment and to extract information about the sample.
+
+Sample name: 06152012 C0VD4ACXX 4.TGACCA. GSM1133648: LY1 H3K4ME3 DMSO;  ChIP-Seq
+Name of the broader study to which the sample belongs: Discovery and Characterization of Super-Enhancer Associated Dependencies in Diffuse Large B-Cell Lymphoma
+Titles of all samples in the study: 
+    - GSM1133657 r1, GSM1133657 1, GSM1133657: LY1 BCL6 DMSO;  ChIP-Seq
+    - GSM1133656 r1, GSM1133656 1, GSM1133656: LY1 E2F1 DMSO;  ChIP-Seq
+    - GSM1133655: LY1 WCE JQ1;  ChIP-Seq, GSM1133655 1, GSM1133655 r1
+    - GSM1133654 1, GSM1133654 r1, GSM1133654: LY1 WCE DMSO;  ChIP-Seq
+    - GSM1133653 1, GSM1133653: LY1 RNA POL2 JQ1;  ChIP-Seq, GSM1133653 r1
+    - GSM1133652 1, GSM1133652 r1, GSM1133652: LY1 RNA POL2 DMSO;  ChIP-Seq
+    - GSM1133651 1, GSM1133651: LY1 BRD4 JQ1;  ChIP-Seq, GSM1133651 r1
+    - GSM1133650 r1, GSM1133650: LY1 BRD4 DMSO;  ChIP-Seq, GSM1133650 1
+    - GSM1133649: LY1 H3K4ME3 JQ1;  ChIP-Seq, GSM1133649 1, GSM1133649 r1
+    - GSM1133648 r1, GSM1133648 1, GSM1133648: LY1 H3K4ME3 DMSO;  ChIP-Seq
+    - GSM1133647 r1, GSM1133647 1, GSM1133647: LY1 H3K27AC JQ1;  ChIP-Seq
+    - GSM1133646 r1, GSM1133646: LY1 H3K27AC DMSO;  ChIP-Seq, GSM1133646 1
+    - GSM1254203: TOLEDO WCE;  ChIP-Seq, GSM1254203 r1
+    - GSM1254202: TOLEDO H3K27AC;  ChIP-Seq, GSM1254202 r1
+    - GSM1254201 r1, GSM1254201: LY4 WCE;  ChIP-Seq
+    - GSM1254200 r1, GSM1254200: LY4 H3K27AC;  ChIP-Seq
+    - GSM1254199 r1, GSM1254199: LY3 WCE;  ChIP-Seq
+    - GSM1254198: LY3 H3K27AC;  ChIP-Seq, GSM1254198 r1
+    - GSM1254197: HBL1 WCE;  ChIP-Seq, GSM1254197 r1
+    - GSM1254196: HBL1 H3K27AC;  ChIP-Seq, GSM1254196 r1
+    - GSM1254195 r1, GSM1254195: DHL6 WCE;  ChIP-Seq
+    - GSM1254194: DHL6 H3K27AC;  ChIP-Seq, GSM1254194 r1
+    - GSM1254217: P448 WCE;  ChIP-Seq, GSM1254217 r1
+    - GSM1254216 r1, GSM1254216: P448 H3K27AC;  ChIP-Seq
+    - GSM1254215: P397 WCE;  ChIP-Seq, GSM1254215 r1
+    - GSM1254214: P397 H3K27AC;  ChIP-Seq, GSM1254214 r1
+    - GSM1254213: P286 WCE;  ChIP-Seq, GSM1254213 r1
+    - GSM1254212: P286 H3K27AC;  ChIP-Seq, GSM1254212 r1
+    - GSM1254211 r1, GSM1254211: P265 WCE;  ChIP-Seq
+    - GSM1254210 r1, GSM1254210: P265 H3K27AC;  ChIP-Seq
+    - GSM1254209 r1, GSM1254209: P14A WCE;  ChIP-Seq
+    - GSM1254208: P14A H3K27AC;  ChIP-Seq, GSM1254208 r1
+    - GSM1254207: P107A WCE;  ChIP-Seq, GSM1254207 r1
+    - GSM1254206: P107A H3K27AC;  ChIP-Seq, GSM1254206 r1
+Study abstract (applies to all samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control): Diffuse Large B-Cell Lymphoma (DLBCL) is a biologically heterogeneous and clinically aggressive disease. Here, we explore the role of BET bromodomain proteins in DLBCL, using integrative chemical genetics and functional epigenomics. We observe highly asymmetric loading of BRD4 at enhancers, with approximately 33% of all BRD4 localizing to enhancers at 1.6% of occupied genes. These super-enhancers prove particularly sensitive to bromodomain inhibition, explaining the selective effect of BET inhibitors on oncogenic and lineage-specific transcriptional circuits. Functional study of genes marked by super-enhancers identifies DLBCLs dependent on OCA-B and suggests a strategy for discovering unrecognized cancer dependencies. Translational studies performed on a comprehensive panel of DLBCLs establish a therapeutic rationale for evaluating BET inhibitors in this disease. Overall design: ChIP-Seq for various transcription factors and histone modifications in diffuse large B-cell lymphoma cells
+The protocol information in this paragraph likely (but not necessarily) applies to **all** samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control (see abstract). Whole cell extracts were sonicated to solubilize the chromatin. The chromatin extracts containing DNA fragments with an average size of 500 bp were immunoprecipitated using different antibodies. Purified immunoprecipitated DNA were prepared for sequencing according to a modified version of the Solexa Genomic DNA protocol. Fragmented DNA was end repaired and subjected to 18 cycles of LM-PCR using oligos provided by Illumina. Amplified fragments between 150 and 300bp (representing shear fragments between 50 and 200nt in length and ~100bp of primer sequence) were isolated by agarose gel electrophoresis and purified. Chromatin IP against H3K4me3 in Ly1 + DMSO. Cells treated with DMSO for 24 hours. RPMI 1640+FBS
+
+All of the information below should apply specifically to this particular sample:
+
+Chip antibody: 07-473
+Other antibody info: 07-473. H3K4me3. Millipore
+Treatment info: DMSO
+Tissue info: Diffuse Large B-Cell Lymphoma
+Tissue type info: Diffuse Large B-Cell Lymphoma
+Cell line info: OC-LY1
+Description: Chromatin IP against H3K4me3 in Ly1 + DMSO
+Other info of potential relevance: parsed primary ID = {SRX275401}; concentration = {0.005%}; LIBRARYSELECTION = {ChIP}; molecule-type = {genomic DNA}; parsed_GSM_ID = {GSM1133648}; inferred sequence type = {ChIPSeq}; time = {24 hours}; LIBRARYSTRATEGY = {ChIP-Seq}; sample-type = {SRA}
+
+
+0. OC-LY1
+1. Diffuse Large B-Cell Lymphoma
+2. Lymph node
+3. N/A
+4. N/A
+5. No, "input" does not appear in "06152012 C0VD4ACXX 4.TGACCA. GSM1133648: LY1 H3K4ME3 DMSO;  ChIP-Seq". No, the sample is not an input control
+6. Yes, "LY1" appears in the sample name "06152012 C0VD4ACXX 4.TGACCA. GSM1133648: LY1 H3K4ME3 DMSO;  ChIP-Seq"
+7. 07-473. H3K4me3. Millipore
+8. manufacturer=millipore,clone=N/A,catalog=07-473,lot=N/A,target=H3K4me3
+9. BRD4
+10. The ChIP target for this particular sample can be identified as H3K4ME3 from "Other antibody info: 07-473. H3K4me3. Millipore" in the sample-specific section of the record. The sample name "GSM1133648: LY1 H3K4ME3 DMSO; ChIP-Seq" further confirms this. The presence of "H3K4ME3" in the sample name refers to the trimethylation of lysine 4 on histone 3, which is the target for this ChIP-seq experiment
+11. H3K4ME3
+12. H3C1, H3C2, H3C3 (multiple genes correspond to Histone H3)
+13. ChIP-seq for sure
+14. The treatment information can be identified from the sample name "GSM1133648: LY1 H3K4ME3 DMSO; ChIP-Seq" and the record entry "Treatment info: DMSO". The sample was treated with DMSO for 24 hours as noted in the "Other info of potential relevance" section. But this is not a notable treatment, in that it is just a control for JQ1 treatment
+15. N/A
+16. No, this sample does not correspond to a control genetic modification or control genetic background
+17. Yes, this sample corresponds to a control treatment for comparison with JQ1 treatment in the same experiment
+18. BET bromodomain protein function in Diffuse Large B-Cell Lymphoma, Discovery of cancer dependencies
+19. No

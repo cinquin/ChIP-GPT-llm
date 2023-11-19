@@ -1,0 +1,59 @@
+You are a biologist analyzing metadata from a ChIP-seq experiment database. Your task is to extract information from a record describing a single sample that is part of a larger study. The record may contain incomplete or misorganized metadata, and it is your job to identify the protein that was targeted in the ChIP experiment and to extract information about the sample.
+
+Sample name: GSM2916088: AB1 HS-SY-II parental line untagged HA-Tag;  ChIP-Seq. AB1-HSSHAIP-TS1-A10 ATCACG AH5J35BCXY L001 001.R1 trimmed.hg19.sorted.RmDup.bam
+Name of the broader study to which the sample belongs: The SS18-SSX oncoprotein hijacks KDM2B-PRC1.1 to drive synovial sarcoma [ChIP-seq]
+Titles of all samples in the study: 
+    - GSM2916114: AB9 REN. 713 BRG1;  ChIP-Seq, GSM2916114 r1
+    - GSM2916113: AB8 KDM2B. 4395 INPUT;  ChIP-Seq, GSM2916113 r1
+    - GSM2916112: AB7 SSX. 1274 HA-INPUT;  ChIP-Seq, GSM2916112 r1
+    - GSM2916111: AB6 REN. 713 INPUT;  ChIP-Seq, GSM2916111 r1
+    - GSM2916110: AB5 HS-SY-II parental line untagged INPUT;  ChIP-Seq, GSM2916110 r1
+    - GSM2916109 r1, GSM2916109: AB4 KDM2B. 4395 HA-tag (SS18-SSX);  ChIP-Seq
+    - GSM2916108 r1, GSM2916108: AB3 SSX. 1274 HA-tag (SS18-SSX);  ChIP-Seq
+    - GSM2916107 r1, GSM2916107: AB27 KDM2B. 4395 INPUT for BRG1 and KDM2B;  ChIP-Seq
+    - GSM2916106 r1, GSM2916106: AB26 SSX. 1274 HA-INPUT for BRG1 and KDM2B;  ChIP-Seq
+    - GSM2916105: AB25 REN. 713 INPUT for BRG1 and KDM2B;  ChIP-Seq, GSM2916105 r1
+    - GSM2916099 r1, GSM2916099: AB2 REN. 713 HA-tag (SS18-SSX);  ChIP-Seq
+    - GSM2916097: AB18 KDM2B. 4395 INPUT for K27me3;  ChIP-Seq, GSM2916097 r1
+    - GSM2916096: AB17 SSX. 1274 HA-INPUT for K27me3;  ChIP-Seq, GSM2916096 r1
+    - GSM2916095: AB16 REN. 713 INPUT for K27me3;  ChIP-Seq, GSM2916095 r1
+    - GSM2916094: AB15 KDM2B. 4395 H3K27me3;  ChIP-Seq, GSM2916094 r1
+    - GSM2916093: AB14 SSX. 1274 H3K27me3;  ChIP-Seq, GSM2916093 r1
+    - GSM2916092 r1, GSM2916092: AB13 REN. 713 H3K27me3;  ChIP-Seq
+    - GSM2916091: AB12 REN. 713 INPUT for KDM2B;  ChIP-Seq, GSM2916091 r1
+    - GSM2916090: AB11 REN. 713 KDM2B;  ChIP-Seq, GSM2916090 r1
+    - GSM2916089 r1, GSM2916089: AB10 REN. 713 INPUT for BRG1;  ChIP-Seq
+    - GSM2916088 r1, GSM2916088: AB1 HS-SY-II parental line untagged HA-Tag;  ChIP-Seq
+Study abstract (applies to all samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control): Gene fusions arising from chromosomal translocations are key oncogenic drivers in soft tissue sarcomas but little is known about how they exert their oncogenic effects. Our study explores the molecular mechanisms by which the SS18-SSX fusion oncoprotein subverts epigenetic mechanisms of gene regulation to drive synovial sarcoma. Using functional genomics, we identify KDM2B – a histone demethylase and core component of a non-canonical Polycomb Repressive Complex 1 (PRC1.1) – as selectively required for sustaining synovial sarcoma cell transformation. SS18-SSX physically interacts with PRC1.1 and co-associates with SWI/SNF and KDM2B complexes on unmethylated CpG islands genome-wide. Via KDM2B, SS18-SSX binds and aberrantly activates expression of a series of developmentally regulated transcription factors that would otherwise be targets of polycomb-mediated repression, which is restored upon KDM2B depletion leading to irreversible mesenchymal differentiation. Thus, SS18-SSX de-regulates developmental programs to drive transformation by hijacking a transcriptional repressive complex to aberrantly activate gene expression. Overall design: Chromatin occupancy by ChIP-Seq of endogenously tagged SS18-SSX (HA-tag), KDM2B, BRG1 and examination of H3K27me3 mark in human synovial sarcoma cells (HS-SY-II) in control cells (Ren.173) and upon knockdown of SS18-SSX1 (SSX.1274) or of KDM2B (KDM2B. 4395)
+The protocol information in this paragraph likely (but not necessarily) applies to **all** samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control (see abstract). For HA-tag, BRG1 and KDM2B ChIP 60-100 million cells were collected, pre-fixed with ethylene glycol bis(succinimidyl succinate) (EGS) for 30 min, and crosllinked with 1% formaldehyde for 15 min. For H3K27me3 ChIP about 10-20 million cells were crosslinkined with 1% formaldehyde for 15 min. Libraries were constructed using NEBNext® ChIP-Seq Library Prep Master Mix Set for Illumina accordingly with manufactor instructions.  6-10 samples were pooled per sequencing lane in order to generate 20-40 million reads per sample. Human sarcoma cells were transduced with lentiviral vectors expressing a control shRNA (Ren.713) and shRNAs against SS18-SSX1 (SSX.1274) or KDM2B (KDM2B. 4395). shRNA expression was induced with doxycyclin treatment and cells where collected 12 days later. Genome-wide maps of chromatin-binding proteins and state (H3K27me3) in a human synovial sarcoma cell line in control cells (Ren. 713), and upon knockdown of SS18-SSX1 (SSX.1274) or of KDM2B (KDM2B. 4395). ChIP-Seq_ AB1.  AB1-HSSHAIP-TS1-A10_ATCACG_AH5J35BCXY_L001_001
+
+All of the information below should apply specifically to this particular sample:
+
+Antibody info:HA-tag (Abcam, ab9110)
+Genotype info: no shRNA. HS-SY-II parental line untagged
+Tissue info: HS-SY-II parental line untagged
+Cell line info: Human Synovial sarcoma cells (HS-SY-II)
+Phenotype info: no shRNA
+Other info of potential relevance: parsed primary ID = {SRX3542478}; LIBRARYSELECTION = {ChIP}; molecule-type = {genomic DNA}; parsed_GSM_ID = {GSM2916088}; inferred sequence type = {ChIPSeq}; LIBRARYSTRATEGY = {ChIP-Seq}; sample-type = {SRA}
+
+
+0. HS-SY-II
+1. Synovial sarcoma
+2. Synovial cells
+3. N/A
+4. No genetic modifications
+5. "Input" does not appear in the sample name "GSM2916088: AB1 HS-SY-II parental line untagged HA-Tag;  ChIP-Seq. AB1-HSSHAIP-TS1-A10 ATCACG AH5J35BCXY L001 001.R1 trimmed.hg19.sorted.RmDup.bam", but the sample *is* in fact essentially an input control since it does not express the HA tag targeted by antibody "HA-tag (Abcam, ab9110)"
+6. Yes, "HS-SY-II" appears in the sample name
+7. HA-tag (Abcam, ab9110)
+8. manufacturer=abcam,clone=N/A,catalog=ab9110,lot=N/A,target=HA-Tag
+9. SS18-SSX, KDM2B, BRG1, PRC1.1 (Polycomb Repressive Complex 1), SWI/SNF
+10. The "Antibody info" in the sample-specific section specifies the HA-Tag as a target. The string "parental line untagged HA-Tag" in the sample name also mentions the HA tag, but "parental line untagged" also indicates that the tag is actually not expressed, meaning the sample is essentially an input control
+11. Input
+12. N/A
+13. ChIP-seq for sure
+14. The record does not provide any specific information on notable treatments applied to this particular sample, other than regular cell culture and ChIP-seq protocol steps
+15. N/A
+16. No (the absence of genetic modification for this sample makes it a ChIP input control, rather than a control for a genetic modification unrelated to tagging)
+17. No, this sample does not correspond to a control treatment
+18. Synovial sarcoma transformation, Mesenchymal differentiation
+19. No

@@ -1,0 +1,35 @@
+You are a biologist analyzing metadata from a ChIP-seq experiment database. Your task is to extract information from a record describing a single sample that is part of a larger study. The record may contain incomplete or misorganized metadata, and it is your job to identify the protein that was targeted in the ChIP experiment and to extract information about the sample.
+
+Sample name: GSM1975197: GCC077 mem;  ChIP-Seq
+Name of the broader study to which the sample belongs: Epigenomic Profiling of Primary Gastric Adenocarcinoma Reveals Super-enhancer Heterogeneity [ChIP-seq]
+Study abstract (applies to all samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control): Regulatory elements in cancer remain poorly characterized in primary solid tumors. Here we applied microscale histone modification profiling to delineate the landscape of somatic promoters and super-enhancers in primary gastric adenocarcinoma, analyzing 94 epigenomic  profiles of primary tumors, normal tissues, and cell lines Overall design: 14 gastric cancer tumor normal pairs and 14 GC lines are profiled in multiple number of chromatin marks. Study includes re-analysis of 132 primary gastric samples from GSE75898 and 35 primary gastric samples from GSE51776
+The protocol information in this paragraph likely (but not necessarily) applies to **all** samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control (see abstract). Fresh-frozen cancer and normal tissues were dissected using a razor blade in liquid nitrogen to obtain ~5mg sized piece for each ChIP. Tissue pieces were fixed in 1% formaldehyde/PBS buffer for 10 min at room temperature. Fixation was stopped by addition of glycine to a final concentration of 125 mM. Tissue pieces were washed 3 times with TBSE buffer, and wrapped tightly with foil. Foil wrapped tissue was snap frozen in liquid nitrogen for about 10 sec. The frozen tissue was immediately pulverized. Pelleted cells and pulverized tissues were lysed in 100 µl 1% SDS lysis buffer and sonicated to 300-500bp using a Bioruptor (Diagenode). ChIPs were performed using the following antibodies: H3K4me3 (07-473, Millipore); H3K4me1 (ab8895, Abcam); H3K27ac (ab4729, Abcam) using same chromatin preparation. Pelleted cells and pulverized tissues were lysed in 100 µl 1% SDS lysis buffer and sonicated to 300-500bp using a Bioruptor (Diagenode). ChIPs were performed using the following antibodies: H3K4me3 (07-473, Millipore); H3K4me1 (ab8895, Abcam); H3K27ac (ab4729, Abcam); H3K36me3 (ab9050, Abcam); H3K27me3 (07-449, Millipore), using same chromatin preparation. Fresh-frozen cancer and normal tissues were dissected using a razor blade in liquid nitrogen to obtain ~5mg sized pieces for each ChIP. Tissue pieces were fixed in 1% formaldehyde/PBS buffer for 10 min at room temperature. Fixation was stopped by addition of glycine to a final concentration of 125 mM. Tissue pieces were washed 3 times with TBSE buffer. For cell lines, 1 million fresh harvested cells were fixed in 1% formaldehyde/medium buffer for 10 minutes (min) at room temperature. Fixation was stopped by addition of glycine to a final concentration of 125 mM. Fixed cells were washed 3 times with TBSE buffer, and centrifuged (5,000 r.p.m., 5 min). Pelleted cells and pulverized tissues were lysed in 100 µl 1% SDS lysis buffer and sonicated to 300-500bp using a Bioruptor (Diagenode). ChIP was performed using the following antibodies: H3K4me3 (07-473, Millipore); H3K4me1 (ab8895, Abcam); H3K27ac (ab4729, Abcam).  library construction protocol: 30ng of amplified DNA was used for each sequencing library preparation (New England Biolabs). 8 libraries were multiplexed (New England Biolabs) and sequenced on 2 lanes of a Hiseq2500 sequencer (Illumina) to an average depth of 20-30 million reads per library
+
+All of the information below should apply specifically to this particular sample:
+
+Antibody info:H3K27Ac
+Tissue info: Gastric Primary Sample
+Other info of potential relevance: parsed primary ID = {SRX1491599}; LIBRARYSELECTION = {ChIP}; molecule-type = {genomic DNA}; file name = {SRR3032837. SRR3032838}; parsed_GSM_ID = {GSM1975197}; inferred sequence type = {ChIPSeq}; LIBRARYSTRATEGY = {ChIP-Seq}; sample-type = {SRA}
+
+
+Barb's answers are as follows:
+0. Primary
+1. Adenocarcinoma
+2. Stomach
+3. N/A
+4. N/A (no genetic modifications are mentioned)
+5. No, the string "input" does not appear in the sample name "GSM1975197: GCC077 mem;  ChIP-Seq". The sample is not an input control
+6. No abbreviation of the cells used appears in the sample name
+7. H3K4me3 (07-473, Millipore); H3K4me1 (ab8895, Abcam); H3K27ac (ab4729, Abcam); H3K36me3 (ab9050, Abcam); H3K27me3 (07-449, Millipore)
+8. manufacturer=millipore,clone=N/A,catalog=07-473,lot=N/A,target=H3K4me3; manufacturer=abcam,clone=N/A,catalog=ab8895,lot=N/A,target=H3K4me1; manufacturer=abcam,clone=N/A,catalog=ab4729,lot=N/A,target=H3K27ac; manufacturer=abcam,clone=N/A,catalog=ab9050,lot=N/A,target=H3K36me3; manufacturer=millipore,clone=N/A,catalog=07-449,lot=N/A,target=H3K27me3
+9. N/A
+10. The ChIP target for this particular sample can be identified from the "Antibody info" in the sample-specific section, which mentions "H3K27Ac" (also mentioned in the protocol section). This indicates that the ChIP target is the histone modification H3K27Ac
+11. H3K27Ac
+12. H3C1, H3C2, H3C3 (multiple genes correspond to Histone H3)
+13. ChIP-seq for sure
+14. The record does not mention any notable treatments applied to this particular sample other than the ChIP-seq experiment itself
+15. N/A
+16. No, this sample does not correspond to a control genetic modification or control genetic background
+17. No, this sample does not correspond to a control treatment
+18. "Gastric cancer progression"
+19. No

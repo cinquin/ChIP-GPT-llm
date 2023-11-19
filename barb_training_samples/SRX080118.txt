@@ -1,0 +1,34 @@
+You are a biologist analyzing metadata from a ChIP-seq experiment database. Your task is to extract information from a record describing a single sample that is part of a larger study. The record may contain incomplete or misorganized metadata, and it is your job to identify the protein that was targeted in the ChIP experiment and to extract information about the sample.
+
+Sample name: HepG2 UNCFAIRESeq re.fixed. GSM748517: HepG2 FAIRE REP1
+Name of the broader study to which the sample belongs: GSE30225: Open chromatin defined by DNaseI and FAIRE identifies regulatory elements that shape cell-type identity [FAIRE_seq]
+Study abstract (applies to all samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control): Summary: The human body contains thousands of unique cell types, each with specialized functions. Cell identity is governed in large part by gene transcription programs, which are determined by regulatory elements encoded in DNA. To identify regulatory elements active in seven cell lines representative of diverse human cell types, we used DNase-seq and FAIRE-seq to map â??open chromatinâ?. Over 870,000 DNaseI or FAIRE sites, which correspond largely to nucleosome depleted regions (NDRs), were identified across the seven cell lines, covering nearly 9% of the genome. The combination of DNaseI and FAIRE is more effective than either assay alone in identifying likely regulatory elements, as judged by coincidence with transcription factor binding locations determined in the same cells. Open chromatin common to all seven cell types tended to be at or near transcription start sites and encompassed more CTCF binding sites, while open chromatin sites found in only one cell type were typically located away from transcription start sites, and contained DNA motifs recognized by regulators of cell-type identity. As one example of its ability to identify functional DNA, we show that open chromatin regions bound by CTCF are potent insulators. We identified clusters of open regulatory elements (COREs) that were physically near each other and whose appearance was coordinated among one or more cell types. Gene expression and RNA Pol II binding data support the hypothesis that COREs control gene activity required for the maintenance of cell-type identity. This publicly available atlas of regulatory elements may prove valuable in identifying non-coding DNA sequence variants that are causally linked to human disease.  Overall Design: DNase-seq, FAIRE-seq, and ChIP-seq were performed on seven human cell lines: GM12878 (lymphoblastoid), K562 (leukemia), HepG2 (hepatocellular carcinoma), HelaS3 (cervical carcinoma), HUVEC (human umbilical vein endothelial cells), NHEK (keratinocytes), and   H1-ES (embryonic stem cells). For each cell line, two or three replicates were independently grown and split into three, one for each of the three experimental methods.  Control ChIP experiments were performed on five of the cell lines with NHEK and H1-ES being excluded due to lack of material. 
+
+All of the information below should apply specifically to this particular sample:
+
+Tissue info: liver carcinoma cells
+Tissue type info: liver carcinoma cells
+Cell line info: liver carcinoma cells. HepG2
+Other info of potential relevance: parsed primary ID = {SRX080118}; SubmissionDate = {2011-06-28T14:52:00Z}; LIBRARYSELECTION = {ChIP}; parsed_GSM_ID = {GSM748517}; inferred sequence type = {ChIPSeq}; LIBRARYSTRATEGY = {ChIP-Seq}
+
+
+0. HepG2
+1. hepatocellular carcinoma
+2. liver
+3. N/A
+4. N/A
+5. No, "input" does not appear in "HepG2 UNCFAIRESeq re.fixed. GSM748517: HepG2 FAIRE REP1". The sample is not an input control.
+6. Yes, HepG2 appears in "HepG2 UNCFAIRESeq re.fixed. GSM748517: HepG2 FAIRE REP1"
+7. N/A
+8. N/A
+9. CTCF, RNA Pol II
+10. The sample name "HepG2 UNCFAIRESeq re.fixed. GSM748517: HepG2 FAIRE REP1" indicates that this particular sample is a FAIRE-seq experiment performed on HepG2 cells. FAIRE-seq is used to map open chromatin regions, which are generally nucleosome-depleted regions (NDRs) and can help identify regulatory elements. The broader study used both DNase-seq and FAIRE-seq to identify these regulatory elements in seven cell lines. The sample name does not explicitly mention a specific protein target for ChIP
+11. N/A
+12. Unsure
+13. No, it may be FAIRE-seq
+14. There is no mention of notable treatments applied to this particular sample in the provided information. The experiment is focused on mapping open chromatin regions using FAIRE-seq
+15. N/A
+16. No
+17. No
+18. N/A
+19. No

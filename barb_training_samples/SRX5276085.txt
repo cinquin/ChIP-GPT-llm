@@ -1,0 +1,36 @@
+You are a biologist analyzing metadata from a ChIP-seq experiment database. Your task is to extract information from a record describing a single sample that is part of a larger study. The record may contain incomplete or misorganized metadata, and it is your job to identify the protein that was targeted in the ChIP experiment and to extract information about the sample.
+
+Sample name: GSM3573850: A751C5: GFP-NLS2 ChIPSeq;  ChIP-Seq
+Name of the broader study to which the sample belongs: Nuclear GFP ChIP-seq from human Monocyte Derived Dendritic Cells transduced with GFP-NLS-cGAS or GFP-NLS
+Study abstract (applies to all samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control): Cytosolic DNA activates cyclic GMP-AMP (cGAMP) synthase (cGAS), an innate immune sensor pivotal in anti-microbial defense, senescence, auto-immunity and cancer. cGAS is considered a sequence-independent DNA sensor with limited access to nuclear DNA because of compartmentalization. However, the nuclear envelope is a dynamic barrier and cGAS is present in the nucleus. Here, we identify determinants of nuclear cGAS localization and activation. We show that nuclear-localized cGAS synthesizes cGAMP and induces innate immune activation of dendritic cells, but cGAMP levels are 200-fold lower than following transfection with exogenous DNA. Using cGAS ChIP-seq and a GFP-cGAS knock-in mouse, we find nuclear cGAS enrichment on centromeric satellite DNA, confirmed by imaging, and to a lesser extent with LINE elements. The non-enzymatic N-terminal domain of cGAS determines nucleo-cytoplasmic localization, enrichment on centromeres and activation of nuclear-localized cGAS. These results reveal a preferential functional association of nuclear cGAS with centromeres. Overall design: Three independent donors were analyzed. Donor 1 was transduced only with GFP-NLS-cGAS. Donor 2 and 3 were transduced with GFP-NLS-cGAS and GFP-NLS
+The protocol information in this paragraph likely (but not necessarily) applies to **all** samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control (see abstract). Crosslinking and lysis. 10 million cells were cross-linked in medium with 1% formaldehyde for 8 min at RT on a slow shaker, quenched with freshly prepared 0.125M glycine, incubated 5min at RT on a slow shaker, then pelleted at 400g for 5 minutes at 4°C, washed three times with 30ml of ice cold PBS and then incubated for 20 minutes rotating at 4°C in 1mL of RIPA lysis buffer (10mM Tris-HCl pH 8.0, 1mM EDTA pH 8.0 (Invitrogen), 140mM NaCl, 1% (v/v) Triton X-100 (Euromedex), 0.1% (v/v) SDS and 0.1% sodium deoxycholate (SIGMA)). Nuclei were pelleted at 1350g for 5 minutes at 4°C, washed for 10 minutes rotating with 1ml of a buffer containing 10mM Tris, 200mM NaCl, 1mM EDTA (Invitrogen), 0.5 mM EGTA (Euromedex), pelleted and lysed in buffer containing 0.4% SDS (Euromedex), 10mM EDTA (Invitrogen), 50mM Tris-HCl pH 8.0 for 30min on ice (volume of buffer = 100µl/1.6 million cells). Lysates were sonicated on a Bioruptor Pico (Diagenode) sonication devices (11cycles 30 seconds ON, 30 second OFF) to reach fragments ranging from 150 to 500bp, and then centrifuged at 10,000g for 10 minutes at 4°C to remove debris. Samples were then snap-frozen in liquid nitrogen and stored at -80°C until immunoprecipitation. All buffers contained cOmplete EDTA free Protease inhibitor cocktail (Roche).  Immunoprecipitation. Lysates were pre-cleared for 15 minutes rotating using 30µl of Binding Control magnetic agarose beads (Chromotek). Chromatin was diluted four-fold in dilution buffer containing 20mM Tris-HCl pH 8.0, 1% Triton X-100 (Euromedex), 2mM EDTA (Invitrogen), 167mM NaCl.  1% of the diluted lysate was recovered and used as input. For GFP-trap and control beads, chromatin was incubated for 5 hours in the presence of 0.1% BSA (Euromedex) (30µl of beads (GFP-Trap_MA beads (Chromotek) or Control magnetic agarose beads (Chromotek)/600µl per Eppendorf tube of the diluted lysate). Lysates were washed on a 96 well plate magnet with low salt washing buffer (140mM NaCl) (5 times), high salt washing buffer (500mM NaCl) (2 times), high LiCl washing buffer (250mM LiCl) (2 times), TE Buffer (Invitrogen) (1 time). All wash buffers were diluted in RIPA buffer 10mM Tris-HCl pH 8.0, 1mM EDTA pH 8.0 (Invitrogen), 140mM NaCl, 1% (v/v) Triton X-100 (Euromedex), 0.1% (v/v) SDS and 0.1% sodium deoxycholate (SIGMA)) and contained cOmplete EDTA free Protease inhibitor cocktail (Roche).  DNA purification. DNA was eluted in elution buffer (1% SDS, 50 mM NaHCO3) by shacking 2h at 37°C (100µl of buffer/tube) with 10 μg/mL RNaseA (Thermo Fischer), then 4h with 0.2 μg/ml proteinase K. Beads were concentrated on the magnet and take out eluate. Samples were decrosslinked overnight at 65°C. Inputs were treated like ChIP samples. DNA was purified by phenol/chloroform/isoamyl alcohol (SIGMA) followed by purification on MinElute columns (Qiagen). DNA was eluted in 50µl of H2O and DNA concentration was measured with a Qubit fluorometer (Thermo Fischer). Traces of high molecular weight fragments were eliminated with SPRIselect beads (Beckman Coulter). Illumina TruSeqChIP library prep kit was used to prepare indexed libraries from IP and Input DNA. Libraries were pooled respecting equimolarity. Sequencing was performed on Illumina MiSeq sequencer in 150 bp paired-end reads (replicate 1 of input and GFP-NLS-cGAS IP), 100 bp single-end reads (replicates 2 and 3 of input, GFP-NLS and GFP-NLS-cGAS IP)
+
+All of the information below should apply specifically to this particular sample:
+
+Antibody info:Chromotek GFP-Trap® MA (cat#gtma-20)
+Genotype info: pTRIP-SFFV-EGFP-NLS
+Tissue info: Dendritic cells. Monocyte-derived dendritic cells
+Tissue type info: #2
+Other info of potential relevance: parsed primary ID = {SRX5276085}; LIBRARYSELECTION = {ChIP}; molecule-type = {genomic DNA}; file name = {A751C5. SRR8470231}; parsed_GSM_ID = {GSM3573850}; inferred sequence type = {ChIPSeq}; LIBRARYSTRATEGY = {ChIP-Seq}; sample-type = {SRA}
+
+Barb's answers are as follows:
+0. primary
+1. Dendritic (monocyte-derived)
+2. blood
+3. N/A
+4. pTRIP-SFFV-EGFP-NLS (GFP with a nuclear localization signal, under control of the SFFV promoter)
+5. The sample is similar to an input control in that it does not express GFP fused to the protein, cGAS, whose DNA binding properties are of interest
+6. No
+7. Chromotek GFP-Trap® MA (cat#gtma-20)
+8. manufacturer=chromotek,clone=N/A,catalog=gtma-20,lot=N/A,target=GFP
+9. cGAS (cyclic GMP-AMP (cGAMP) synthase)
+10. This sample uses the Chromotek GFP-Trap® MA antibody, which targets GFP. The GFP-NLS fusion protein was expressed in the cells, but it is not expected to bind DNA without cGAS; therefore this is a control similar to an "input" control
+11. Input
+12. N/A
+13. ChIP-seq for sure
+14. No specific treatment other than transduction with GFP-NLS is mentioned for this sample
+15. N/A
+16. Yes, it corresponds to a control genetic modification for comparison with GFP-NLS-cGAS
+17. No
+18. "innate immune activation", "nuclear cGAS localization", "centromere association"
+19. Yes (inflammation)

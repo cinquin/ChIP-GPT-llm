@@ -1,0 +1,36 @@
+You are a biologist analyzing metadata from a ChIP-seq experiment database. Your task is to extract information from a record describing a single sample that is part of a larger study. The record may contain incomplete or misorganized metadata, and it is your job to identify the protein that was targeted in the ChIP experiment and to extract information about the sample.
+
+Sample name: ERR1814489. NT697491O. 17880 4#2.cram
+Name of the broader study to which the sample belongs: _Genetics_of_gene_expression_in_macrophage_immune_response_Open_access
+Study abstract (applies to all samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control): We differentiated human induced pluripotent stem cells from 86 individuals into macrophages and profiled their gene expression (RNA-seq) and chromatin accessibility in four experimental contions (naive, Salmonella infection, IFNg stimulation, Salmonella infection + IFNg stimulation). This study contains the data from open access samples. 1) This data is part of a pre-publication release. For information on the proper use of pre-publication data shared by the Wellcome Trust Sanger Institute please see. We differentiated macrophages from induced pluripotent stem cells in 86 unrelated, healthy individuals derived by the Human Induced Pluripotent Stem Cells Initiative (HIPSCI), and profiled gene expression and chromatin accessibility in four experimental conditions: naive, interferon-gamma (IFNy) treatment, Salmonella infection and IFNy treatment followed by Salmonella infection. We detected gene expression QTLs (eQTLs) for 5,383 genes, and chromatin accessibility QTLs (caQTLs) for 32,918 accessible regions, including hundreds of long-range interactions. We show that profiling even a small number of additional cellular states substantially increases the number of eQTLs that we can confidently colocalise with a known disease association, with approximately 30% new disease-eQTL pairs discovered in each additional state. Furthermore, we show that approximately 50% of stimulus-specific effects on gene expression manifest in naïve cells where they alter chromatin accessibility alone. Our results suggest that many disease-associated genetic variants lie in regulatory elements in a ‘primed’ state waiting for an appropriate environmental signal before regulating gene expression
+The protocol information in this paragraph likely (but not necessarily) applies to **all** samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control (see abstract). Pre-quality controlled. Macrophages derived from induced pluripotent stem cell HPSI1013i-hiaf_2 day 34 after start of differentiation, treated with interferon gamma. Illumina sequencing of library NT697491O, constructed from sample accession SAMEA103885388 for study accession ERP020977.  This is part of an Illumina multiplexed sequencing run (17880_4).  This submission includes reads tagged with the sequence TAAGGCGACTCTCTAT
+
+All of the information below should apply specifically to this particular sample:
+
+Antibody info:We differentiated human induced pluripotent stem cells from 86 individuals into macrophages and profiled their gene expression (RNA-seq) and chromatin accessibility in four experimental contions (naive, Salmonella infection, IFNg stimulation, Salmonella infection + IFNg stimulation). This study contains the data from open access samples. 1) This data is part of a pre-publication release. For information on the proper use of pre-publication data shared by the Wellcome Trust Sanger Institute please see http://www.sanger.ac.uk/datasharing/
+Treatment info: interferon gamma
+Tissue info: macrophage. iPSC derived cell line
+Phenotype info: normal
+Other info of potential relevance: Sample Name = {HPSI1013i-hiaf_2 derived macrophage day 34 with IFNg}; ENA-LAST-UPDATE = {2018-11-16}; parsed primary ID = {ERX1877026}; differentiation start date = {2015/06/18}; LIBRARYSELECTION = {PCR}; sampling date = {2015-07-22}; Material = {cell line}; inferred sequence type = {ATAC}; LIBRARYSTRATEGY = {ATAC-seq}; time point = {day 34}; ethnicity = {White - White British}; project = {HipSci}; ENA-FIRST-PUBLIC = {2017-01-31}
+
+
+0. HPSI1013i-hiaf_2
+1. macrophage
+2. N/A (the record does not specify the organ of origin)
+3. N/A (the record does not specify the location within the organ of origin)
+4. N/A (the record does not mention any genetic modifications)
+5. No, the string "input" does not appear in the sample name "ERR1814489. NT697491O. 17880 4#2.cram". The sample is not an input control
+6. No, the sample name "ERR1814489. NT697491O. 17880 4#2.cram" does not contain an abbreviation of the cells used
+7. N/A
+8. N/A
+9. IFNG
+10. The record does not mention a ChIP target, and there is no indication that the sample is an input control. The sample name "ERR1814489. NT697491O. 17880 4#2.cram" does not contain any reference to a ChIP target or to "input". But the sample is identified as ATAC-seq by "LIBRARYSTRATEGY = {ATAC-seq}", meaning that there is no ChIP target
+11. N/A (this is an ATAC-seq sample)
+12. N/A (this is an ATAC-seq sample)
+13. No, it may be ATAC-seq (actually it is ATAC-seq for sure; the record mentions "inferred sequence type = {ATAC}" and "LIBRARYSTRATEGY = {ATAC-seq}" for this sample)
+14. The sample was treated with interferon gamma (IFNg), as indicated in the "Treatment info" section. The "day 34" information seems to correspond to the time after induction of differentiation of human induced pluripotent stem cell line HPSI1013i-hiaf_2, rather than to the duration of IFNg treatment. The duration of IFNg treatment seems to be unspecified. 
+15. IFNg (concentration=unknown, duration=unknown)
+16. No (the record does not mention any genetic modifications)
+17. No (the sample was treated with interferon gamma, as indicated in the "Treatment info" section)
+18. "Response to interferon-gamma," "Immune response," "Macrophage immune response"
+19. Yes (the sample is related to immune response and inflammation)

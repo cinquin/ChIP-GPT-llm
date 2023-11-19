@@ -1,0 +1,32 @@
+You are a biologist analyzing metadata from a ChIP-seq experiment database. Your task is to extract information from a record describing a single sample that is part of a larger study. The record may contain incomplete or misorganized metadata, and it is your job to identify the protein that was targeted in the ChIP experiment and to extract information about the sample.
+
+Sample name:  Human H3K4me2 genomic fragment library
+Name of the broader study to which the sample belongs: High-resolution profiling of histone methylations in the human genome
+Study abstract (applies to all samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control): Histone modifications are implicated in influencing gene expression. We have generated high-resolution maps for the genome-wide distribution of 20 histone lysine and arginine methylations as well as histone variant H2A.Z, RNA polymerase II, and the insulator binding protein CTCF across the human genome using the Solexa 1G sequencing technology. Typical patterns of histone methylations exhibited at promoters, insulators, enhancers, and transcribed regions are identified. The monomethylations of H3K27, H3K9, H4K20, H3K79, and H2BK5 are all linked to gene activation, whereas trimethylations of H3K27, H3K9, and H3K79 are linked to repression. H2A.Z associates with functional regulatory elements, and CTCF marks boundaries of histone methylation domains. Chromosome banding patterns are correlated with unique patterns of histone modifications. Chromosome breakpoints detected in T cell cancers frequently reside in chromatin regions associated with H3K4 methylations. Our data provide new insights into the function of histone methylation and chromatin organization in genome function
+The protocol information in this paragraph likely (but not necessarily) applies to **all** samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control (see abstract). Human histone H3 di-methylated at lysine 4 (H3K4me2) in human blood CD4+ T cells, targeted using Abcam antibody ab7766. CD4+ T cells were purified from human blood using human CD4+ T cell isolation kit II kits (Miltenyi). The cells were digested with MNase to generate mainly mononucleosomes with minor fraction of dinucleosomes for histone modification mapping. For mapping enzyme target sites, the cells were crosslinked with formaldehyde treatment and chromatin fragmented to 200 to 300 bp by sonication. Chromatin from 2.0E+7 cells was used for each ChIP experiment, which yielded approximately 200 ng of DNA. The ChIP DNA ends were repaired using PNK and Klenow enzyme, followed by treatment with Taq polymerase to generate a protruding 3' A base used for adaptor ligation. Following ligation of a pair of Solexa adaptors to the repaired ends, the ChIP DNA was amplified using the adaptor primers for 17 cycles and the fragments around 220 bp (mononucleosome + adaptors) isolated from agarose gel. The purified DNA was used directly for cluster generation and sequencing analysis using the Solexa 1G Genome Analyzer following manufacturer protocols
+
+All of the information below should apply specifically to this particular sample:
+
+Other info of potential relevance: parsed primary ID = {SRX000147}; LIBRARYSELECTION = {ChIP}; file name = {SRR001449. SRR001465. SRR001466}; inferred sequence type = {ChIPSeq}; LIBRARYSTRATEGY = {ChIP-Seq}
+
+Barb's answers are as follows:
+0. Primary
+1. CD4+ T cells
+2. Blood
+3. N/A
+4. N/A (no genetic modifications are mentioned)
+5. No, "input" does not appear in the sample name "Human H3K4me2 genomic fragment library"
+6. No abbreviation of the cells used appears in the sample name "Human H3K4me2 genomic fragment library"
+7. Abcam antibody ab7766
+8. Manufacturer=abcam,clone=N/A,catalog=ab776,lot=N/A,target=H3K4me2
+9. H2A.Z, RNA polymerase II, CTCF
+10. The sample name "Human H3K4me2 genomic fragment library" suggests that the ChIP target is the histone modification H3K4me2. The protocol information confirms that the ChIP experiment was targeting H3K4me2 in human blood CD4+ T cells, using Abcam antibody ab7766
+11. H3K4me2
+12. H3C1, H3C2, H3C3 (multiple genes correspond to Histone H3)
+13. ChIP-seq for sure
+14. The record does not mention any notable treatments applied to this particular sample other than the ChIP experiment itself
+15. N/A
+16. No (there are no genetic modifications or genetic backgrounds mentioned)
+17. No (there are no mentions of notable treatments, for this or any other sample in the study)
+18. "T cell activation"
+19. No

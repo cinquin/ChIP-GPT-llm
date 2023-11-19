@@ -1,0 +1,35 @@
+You are a biologist analyzing metadata from a ChIP-seq experiment database. Your task is to extract information from a record describing a single sample that is part of a larger study. The record may contain incomplete or misorganized metadata, and it is your job to identify the protein that was targeted in the ChIP experiment and to extract information about the sample.
+
+Sample name: GSM2065898: Input MYC pool1;  ChIP-Seq. SR.bz2
+Name of the broader study to which the sample belongs: A Scalable Epitope Tagging Approach for High Throughput ChIP-seq Analysis
+Study abstract (applies to all samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control): A Scalable Epitope Tagging Approach for High Throughput ChIP-seq Analysis Overall design: ChIP-seq comparison between CRISPR editing cells using epitope antibody and non-editing cells using endogeneous TF antibody
+The protocol information in this paragraph likely (but not necessarily) applies to **all** samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control (see abstract). SRC187. The ChIP-seq has been carried out as previously described6,7. Briefly, 2 million cells were crosslinked with 1% formadehyde for 10 min at RT. The reaction was quenched by adding 125 mM of Glycine and incubating for 5 min at RT. Cells were lysed in RIPA buffer (10 mM Tris-HCl pH 8.0, 140 mM NaCl, 1 mM EDTA, 1% Triton X-100, 0.1% SDS, 0.1% sodium deoxycholate) supplemented with protease inhibitor (Roche). And chromatin was sonicated into short fragments (300-700 bp). The fragmented chromatin was incubated with antibodies to pull down the specific DNA bound TFs or histones. After intensive wash, DNA was purified and prepared as sequencing library using illumina Truseq LT kit. TruSeq
+
+All of the information below should apply specifically to this particular sample:
+
+Genotype info: C-terminal Flag tagging of MYC, pool 1
+Tissue info: HCT116
+Other info of potential relevance: parsed primary ID = {SRX1591704}; LIBRARYSELECTION = {ChIP}; molecule-type = {genomic DNA}; parsed_GSM_ID = {GSM2065898}; inferred sequence type = {ChIPSeq}; LIBRARYSTRATEGY = {ChIP-Seq}; sample-type = {SRA}
+
+Barb's answers are as follows:
+0. HCT116
+1. adenocarcinoma
+2. colon
+3. N/A
+4. C-terminal Flag tagging of MYC
+5. Yes, the string "input" appears in the sample name "GSM2065898: Input MYC pool1;  ChIP-Seq. SR.bz2". Yes, the sample is an input control
+6. No mention of the cells used appears in the sample name "GSM2065898: Input MYC pool1;  ChIP-Seq. SR.bz2"
+7. N/A
+8. N/A
+9. MYC
+10. The sample name "GSM2065898: Input MYC pool1;  ChIP-Seq. SR.bz2" indicates that this is an input control sample, as "input" appears in the sample name. Input control samples are used to account for background noise in ChIP-seq experiments and do not involve specific ChIP targets
+11. Input
+12. N/A (input control)
+13. ChIP-seq for sure
+14. There is no mention of any notable treatments applied to this particular sample other than genetic modifications and regular cell culture procedures
+15. N/A
+16. No, this sample does not correspond to a control genetic modification or control genetic background
+17. No, this sample does not correspond to a control treatment
+18. N/A
+19. No
+

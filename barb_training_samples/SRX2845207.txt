@@ -1,0 +1,33 @@
+You are a biologist analyzing metadata from a ChIP-seq experiment database. Your task is to extract information from a record describing a single sample that is part of a larger study. The record may contain incomplete or misorganized metadata, and it is your job to identify the protein that was targeted in the ChIP experiment and to extract information about the sample.
+
+Sample name: GSM2635977: CT84-wtSET-H3K4me1-170418;  ChIP-Seq. GEO accession GSM2635977 is currently private and is scheduled to be released on Mar 01, 2018.
+Name of the broader study to which the sample belongs: Histone H3K4 monomethylation catalyzed by Trr and mammalian COMPASS-like proteins at enhancers is dispensable for development and viability
+
+Study abstract (applies to all samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control): Histone H3 lysine 4 monomethylation (H3K4me1) is an evolutionarily conserved feature of enhancer chromatin catalyzed by the COMPASS-like methyltransferase family that includes Trr in Drosophila melanogaster and MLL3 (encoded by KMT2C) and MLL4 (encoded by KMT2D) in mammals. Here we demonstrate that Drosophila embryos expressing catalytically deficient Trr eclose and develop to productive adulthood. Parallel experiments with a trr allele that augments enzyme product specificity show that conversion of H3K4me1 at enhancers to H3K4me2 and H3K4me3 is also compatible with life and results in minimal changes in gene expression. Similarly, loss of the catalytic SET domains of MLL3 and MLL4 in mouse embryonic stem cells (mESCs) does not disrupt selfrenewal. Drosophila embryos with trr alleles encoding catalytic mutants manifest subtle developmental abnormalities when subjected to temperature stress or altered cohesin levels. Collectively, our findings suggest that animal development can occur in the context of Trr or mammalian COMPASS-like proteins deficient in H3K4 monomethylation activity and point to a possible role for H3K4me1 on cis-regulatory elements in specific settings to fine-tune transcriptional regulation in response to environmental stress. Overall design: ChIP-seq and RNA-seq experiments were conducted in Drosophila wing imaginal discs and adult brain tissues from transgenic flies expressing either a catalytic-deficient (Trr-C2398A) or catalytic-hyperactive (Trr-Y2383F) Trr enzyme. ChIP-seq and RNA-seq were also conducted in mouse embryonic stem cells in which CRISPR-Cas9 was used to delete the SET domain of both MLL3 and MLL4 (MLL3/4-delSET)
+The protocol information in this paragraph likely (but not necessarily) applies to **all** samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control (see abstract). RNA was extracted using QIAGEN RNeasy kit. DNA after ChIP protocol was isolated using QIAGEN PCR purification kit. ChIP-sequencing libraries were prepared using the KAPA HTP Library Preparation Kit complemented with NEXTflex DNA Barcodes from Bioo Scientific. 10 ng of DNA was used as starting material for input and ip samples. Libraries were amplified using 13 cycles on the thermocycler. Post amplification libraries were size selected at 250- 450bp in length using Agencourt AMPure XP beads from Beckman Coulter. Libraries were validated using the Agilent High Sensitivity DNA Kit. RNA-sequencing  libraries were prepared using the Illumina TruSeq Stranded Total RNA Preparation Kit with  Ribo-Depletion. Input RNA quality was validated using the Agilent RNA 6000 Nano Kit. 200ng-1 µg  of total RNA was used as starting material. Libraries were validated using the Agilent DNA  1000 Kit
+
+All of the information below should apply specifically to this particular sample:
+
+Other info of potential relevance: parsed primary ID = {SRX2845207}; LIBRARYSELECTION = {ChIP}; file name = {CT84-wtSET-H3K4me1-170418. SRR5587604. SRR5587605. SRR5587606. SRR5587607}; parsed_GSM_ID = {GSM2635977}; inferred sequence type = {ChIPSeq}; LIBRARYSTRATEGY = {ChIP-Seq}
+
+
+0. N/A
+1. Embryonic stem cells
+2. Embryo
+3. N/A
+4. No genetic modifications were introduced for this particular sample (the sample name contains "wtSET", denoting the wildtype version of SET)
+5. No, the string "input" does not appear in the sample name, and it is not an input control
+6. No abbreviation of the cells used appears in the sample name "GSM2635977: CT84-wtSET-H3K4me1-170418;  ChIP-Seq. GEO accession GSM2635977 is currently private and is scheduled to be released on Mar 01, 2018."
+7. N/A
+8. N/A
+9. KMT2C (MLL3), KMT2D (MLL4), COMPASS
+10. The ChIP target for this particular sample was Histone H3K4me1, as indicated in the sample name "GSM2635977: CT84-wtSET-H3K4me1-170418;  ChIP-Seq. GEO accession GSM2635977 is currently private and is scheduled to be released on Mar 01, 2018." The information is not explicitly provided in the record, but H3K4me1 is a histone modification commonly targeted with ChIP, and wtSET denotes the wildtype genetic background for SET. This makes H3K4me1 the ChIP target with high certainty.
+11. H3K4me1
+12. H3C1, H3C2, H3C3 (multiple genes correspond to Histone H3)
+13. ChIP-seq for sure
+14. No notable treatments were applied to this particular sample, other than those related to crosslinking, library preparation and sequencing, regular cell culture, etc. No words in the sample name suggest the presence of a treatment control or any treatment-related abbreviation
+15. N/A
+16. Yes: the study abstract mentions "delSET" as a genetic background for some of the samples, which corresponds to a deletion of SET. The present genetic background "wtSET" would serve as a control for the "delSET" mutants.
+17. No
+18. Response to Environmental Stress
+19. No

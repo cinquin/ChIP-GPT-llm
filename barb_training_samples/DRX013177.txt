@@ -1,0 +1,32 @@
+You are a biologist analyzing metadata from a ChIP-seq experiment database. Your task is to extract information from a record describing a single sample that is part of a larger study. The record may contain incomplete or misorganized metadata, and it is your job to identify the protein that was targeted in the ChIP experiment and to extract information about the sample.
+
+Sample name: DLD1 H3K27Ac. DRR014657
+Name of the broader study to which the sample belongs: Construction of Mate Pair Full-length cDNAs Libraries and Characterization of Transcriptional Start Sites and Termination Sites
+Study abstract (applies to all samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control): To identify and characterize transcript structures ranging from the transcriptional start sites (TSSs) to the termination sites (TTSs), we constructed and analyzed TSS/TTS mate pair full-length cDNA libraries from 18 kinds of human cell types. Furthermore, we applied the similar strategy to construct cDNA libraries in which 3’-end mate pairs distribute randomly over the transcripts. We show the TSS/Random libraries were useful to assembly internal structure of the previously uncharacterized alternative promoter products as well as intergenic transcripts. This novel method to analyze full-length cDNAs should be useful to complement currently RNA Seq analyses and genome annotations
+
+All of the information below should apply specifically to this particular sample:
+
+Other info of potential relevance: sample_name = {DRS012976}; parsed primary ID = {DRX013177}; LIBRARYSELECTION = {ChIP}; inferred sequence type = {ChIPSeq}; sample comment = {ChIP seq library. DLD-1 cell line, H3K27Ac IP}; LIBRARYSTRATEGY = {ChIP-Seq}
+
+
+0. DLD-1
+1. Adenocarcinoma
+2. Colon
+3. N/A
+4. N/A
+5. No
+6. Yes, "DLD1" is an abbreviation for the DLD-1 cell line used in the sample
+7. N/A
+8. N/A
+9. N/A
+10. The rationale for ChIP target identification is provided in the sample comment, which states "H3K27Ac IP". This means that the ChIP-seq experiment targeted the H3K27Ac histone modification in the DLD-1 cell line
+11. H3K27Ac
+12. H3C1, H3C2, H3C3 (multiple genes correspond to Histone H3)
+13. ChIP-seq for sure
+14. The record does not provide information about any notable treatments applied to this particular sample, other than the ChIP-seq experiment itself
+15. N/A
+16. No
+17. No
+18. N/A
+19. No
+

@@ -1,0 +1,38 @@
+You are a biologist analyzing metadata from a ChIP-seq experiment database. Your task is to extract information from a record describing a single sample that is part of a larger study. The record may contain incomplete or misorganized metadata, and it is your job to identify the protein that was targeted in the ChIP experiment and to extract information about the sample.
+
+Sample name: ENCFF438MMK. GSM2534185: ChIP-seq from A673 (ENCLB244JDS);  ChIP-Seq. ENCFF213GKU. ENCODE biosample ENCBS615MBV: Cell line is A673; this is a purchasable public domain cell type per Miguel Rivera, M.D.
+Name of the broader study to which the sample belongs: GSE59395: Genome-wide map of regulatory interactions in the human genome
+Study abstract (applies to all samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control): Summary: We generated a genome-wide interaction map of regulatory elements in human cells (K562, GM12878) using Chromatin Interaction Analysis by Paired-End Tag sequencing (ChIA-PET) experiments targeting six broadly distributed factors.  For data usage terms and conditions, please refer to  and  Overall Design: Chromatin interactions identified by ChIA-PET for 4 different histone modifications, RAD21 and RNAPII in K562 cell line, two biological replicates each
+The protocol information in this paragraph likely (but not necessarily) applies to **all** samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control (see abstract). general protocol:. Homo sapiens A673 immortalized cell line. Cell line is A673; this is a purchasable public domain cell type per Miguel Rivera, M.D. .  ***************.  biological replicate number: 1.  technical replicate number: 1.  description:.  experiment encode accession: ENCSR581PUR.  assay title: ChIP-seq.  assembly: GRCh38, hg19.  possible controls: ENCSR196CXJ.  encode release date: 2016-05-06.  lab: Bradley Bernstein, Broad.  library encode accession: ENCLB244JDS.  size range: 200-600
+
+All of the information below should apply specifically to this particular sample:
+
+Antibody info:H3K36me3. narrowPeak. https://www.encodeproject.org/experiments/ENCSR581PUR/.  ***************.  biological replicate number: 1.  technical replicate number: 1.  description:.  experiment encode accession: ENCSR581PUR.  assay title: ChIP-seq.  assembly: GRCh38, hg19.  possible controls: ENCSR196CXJ.  encode release date: 2016-05-06.  lab: Bradley Bernstein, Broad.  library encode accession: ENCLB244JDS.  size range: 200-600
+Treatment info: EFO:0002106. cell line. A673
+Tissue type info: pseudoreplicated peaks. signal p-value. Homo sapiens A673 immortalized cell line. immortalized cell line. ENCDO027VXA
+Cell line info: A673
+Other info of potential relevance: parsed primary ID = {SRX2636039}; LIBRARYSELECTION = {ChIP}; molecule-type = {genomic DNA}; sample type = {immortalized cell line}; dev stage = {unknown}; Audit NOT_COMPLIANT = {200-600}; Audit ERROR = {1, 2}; biosample encode accession = {ENCBS615MBV (SAMN06464460)}; Biosample term id = {GRCh38}; Project = {H3K36me3-human}; Biosample term name = {ENCSR581PUR}; Biosample organism = {/human-donors/ENCDO027VXA/}; Biosample type = {Histone ChIP-seq}; parsed_GSM_ID = {GSM2534185}; inferred sequence type = {ChIPSeq}; LIBRARYSTRATEGY = {ChIP-Seq}; dbxrefs = {2016-05-06}; Experiment accession = {bigBed. bigWig. bed}; RBNS protein concentration = {DNA}; sample-type = {SRA}
+
+
+
+Barb's answers are as follows:
+0. A673
+1. immortalized cell line
+2. N/A (the record does not provide enough information to infer the organ of origin)
+3. N/A (the record does not provide enough information to infer the more detailed location within the organ of origin)
+4. N/A (no genetic modifications are mentioned)
+5. No
+6. Yes, "A673" appears in the sample name "ENCFF438MMK. GSM2534185: ChIP-seq from A673 (ENCLB244JDS);  ChIP-Seq. ENCFF213GKU. ENCODE biosample"
+7. N/A
+8. N/A
+9. RAD21, RNAPII
+10. The antibody info in the sample-specific section mentions "H3K36me3" as the target for this particular sample. The sample name "GSM2534185: ChIP-seq from A673 (ENCLB244JDS); ChIP-Seq" does mention ChIP-seq, but without specifying a target, and thus does not contradict H3K36me3 being the target. The protocol information mentions "ChIA-PET" experiments targeting six broadly distributed factors, but this does not apply to this particular sample
+11. H3K36me3
+12. H3C1, H3C2, H3C3 (multiple genes correspond to Histone H3)
+13. ChIP-seq for sure
+14. The "Treatment info" section mentions "cell line" and "A673" as the treatment applied to this particular sample. But these do not appear to be actual treatments, and this is most likely just a mixup in the record, especially since none of the sample name, abstract section, or protocol section mention any treatments. It appears there were no treatments
+15. N/A
+16. No
+17. No
+18. N/A
+19. No

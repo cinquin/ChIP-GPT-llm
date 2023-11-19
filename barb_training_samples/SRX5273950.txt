@@ -1,0 +1,34 @@
+You are a biologist analyzing metadata from a ChIP-seq experiment database. Your task is to extract information from a record describing a single sample that is part of a larger study. The record may contain incomplete or misorganized metadata, and it is your job to identify the protein that was targeted in the ChIP experiment and to extract information about the sample.
+
+Sample name: WY10 HAP1 ChIP-seq MTHFD1KO C8 BRD4 new-ab 1.file1.bam. WY10 HAP1 ChIP-seq MTHFD1KO C8 BRD4 new-ab 1.file0.bam. GSM3573291: ChIP-seq in HAP1 cell line with MTHFD1KO, clone C8 for BRD4, antibody 2;  ChIP-Seq
+Name of the broader study to which the sample belongs: MTHFD1 links folate metabolism to BRD4-mediated transcriptional regulation
+Study abstract (applies to all samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control): The histone acetyl-reader BRD4 is an important regulator of chromatin structure and transcription, yet factors modulating its activity have remained elusive. Here we describe two complementary screens for functional regulators and physical interactors of BRD4, which converge on the folate pathway enzyme MTHFD1. We show that a fraction of MTHFD1 resides in the nucleus, where it is recruited to distinct genomic loci by direct interaction with BRD4. Inhibition of either BRD4 or MTHFD1 results in similar changes in nuclear metabolite composition and gene expression, and pharmacologic inhibitors of the two pathways synergize to impair cancer cell viability in vitro and in vivo. Our finding that MTHFD1 and other metabolic enzymes are chromatin-associated suggests a direct role for nuclear metabolism in the control of gene expression. Overall design: 35 ChIP-seq samples for BRD4, MTHFD1 and H3K27ac were produced, along with the respective IgG controls in HAP1 cells treated with dBET6 or DMSO. 93 RNA-seq samples for WT, MTHFD1KO or treated cell were produced
+The protocol information in this paragraph likely (but not necessarily) applies to **all** samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control (see abstract). For each immunoprecipitation 30 million nuclei were isolated. Cells were fixed with 1% paraformaldehyde for 10 min at room temperature. The fixation was stopped by addition of glycine. The collected pellet was sonicated using a Covaris S220 sonicator for 43 minutes to fragment the DNA to 200-700 bp. For immunoprecipitation, the sonicated chromatin was added to antibody-conjugated Protein A or G beads (Life Technologies) and incubated rotating at 4°C overnight. Used antibodies were: anti-MTHFD1 (C3, Santa Cruz), anti-BRD4 ((A301‐985A, Bethyl Labs), anti-H3K27Ac (ab4729, Abcam) and mouse IgG (sc-2025, Santa Cruz). RNA extraction was performed with Qiagen RNeasy Mini Kit (Cat No. 74106) according to the manufacturer's instructions. Tagmentation was performed by resuspending the magnetic beads in 100 μl tagmentation reaction mix (10 mM Tris pH 8.0, 5 mM MgCl2, 10 % v/v dimethylformamide) containing 2 μl Tagment DNA Enzyme from the Nextera DNA Sample Prep Kit (Illumina) followed by an incubation for 3 min at 37°C. Subsequently, formaldehyde crosslinks were reverted by incubation in elution buffer (0.5% SDS, 300 mM NaCl, 5 mM EDTA and 10 mM Tris-HCl pH 8.0) containing 2 µl of Proteinase K for 1 h at 55°C, and then at 65°C overnight. The DNA was purified using the QIAquick PCR Purification kit (Qiagen). The enrichment of the libraries was performed in a 50 µl-reaction using Kapa HiFi HotStart ReadyMix (Kapa Biosystems) and 0.75 μM primers. Each DNA library was purified and size selected for a fragment length of 200-400 bp using SPRI AMPure XP beads (Beckman Coulter). Total RNA was quantified using Qubit 2.0 Fluorometric Quantitation system (Life Technologies) and the RNA integrity number (RIN) was determined using Experion Automated Electrophoresis System (Bio-Rad). RNA-seq libraries were prepared with TruSeq Stranded mRNA LT sample preparation kit (Illumina) using Sciclone and Zephyr liquid handling robotics (PerkinElmer). Library amount was quantified using Qubit 2.0 Fluorometric Quantitation system (Life Technologies) and the size distribution was assessed using Experion Automated Electrophoresis System (Bio-Rad). For sequencing libraries were pooled, diluted and sequenced on Illumina HiSeq 3000 using 50 bp single-read chemistry
+
+All of the information below should apply specifically to this particular sample:
+
+Tissue info: HAP1 cell line
+Tissue type info: HAP1 cell line
+Other info of potential relevance: parsed primary ID = {SRX5273950}; knockout = {MTHFD1, clone C8}; LIBRARYSELECTION = {ChIP}; sample_type = {cell_line}; parsed_GSM_ID = {GSM3573291}; inferred sequence type = {ChIPSeq}; LIBRARYSTRATEGY = {ChIP-Seq}; cell linw = {HAP1}; processing_batch = {WY10}
+
+
+0. HAP1
+1. CML (chronic myelogenous leukemia) (Barb knows HAP1 cells were derived from the KBM-7 CML line)
+2. blood (myeloid progenitors)
+3. N/A
+4. MTHFD1 knockout (as indicated by the "knockout" field in the sample-specific section of the record)
+5. No, "input" does not appear in the sample name, and the sample is not an input control
+6. Yes, "HAP1" appears in the sample name "WY10 HAP1 ChIP-seq MTHFD1KO C8 BRD4 new-ab 1.file1.bam. WY10 HAP1 ChIP-seq MTHFD1KO C8 BRD4 new-ab 1.file0.bam. GSM3573291: ChIP-seq in HAP1 cell line with MTHFD1KO, clone C8 for BRD4, antibody 2;  ChIP-Seq"
+7. anti-MTHFD1 (C3, Santa Cruz), anti-BRD4 ((A301‐985A, Bethyl Labs), anti-H3K27Ac (ab4729, Abcam) and mouse IgG (sc-2025, Santa Cruz)
+8. manufacturer=santa_cruz,clone=C3,catalog=N/A,lot=N/A,target=MTHFD1; manufacturer=bethyl_labs,clone=N/A,catalog=A301‐985A,lot=N/A,target=BRD4; manufacturer=abcam,clone=N/A,catalog=ab4729,lot=N/A,target=H3K27Ac; manufacturer=santa_cruz,clone=N/A,catalog=sc-2025,lot=N/A,target=N/A_mouse_IgG
+9. MTHFD1, BRD4
+10. The record states that the ChIP-seq targets were BRD4, MTHFD1, and H3K27ac, and the sample name includes the terms "BRD4" and "MTHFD1KO," indicating that this sample was likely prepared for ChIP-seq of BRD4 in HAP1 cells that had been modified to knock out MTHFD1
+11. BRD4
+12. BRD4
+13. ChIP-seq for sure
+14. No notable treatments are mentioned for this sample (the study abstract mentions that some samples have been treated with dBET6 or DMSO, but there is no indication of this applying to the present sample)
+15. N/A
+16. No
+17. No
+18. folate metabolism, nuclear metabolism
+19. No

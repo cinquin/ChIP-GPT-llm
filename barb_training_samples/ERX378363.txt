@@ -1,0 +1,36 @@
+You are a biologist analyzing metadata from a ChIP-seq experiment database. Your task is to extract information from a record describing a single sample that is part of a larger study. The record may contain incomplete or misorganized metadata, and it is your job to identify the protein that was targeted in the ChIP experiment and to extract information about the sample.
+
+Sample name: MOLM-1 extract 5. ERR411995. H3K4ME1 MOL. MOLM1 H3K4ME1
+Name of the broader study to which the sample belongs: ChIP-seq for the identification of enhancer and super enhancers in Acute Myeloid Leukemia cells with a 3q-aberration
+Study abstract (applies to all samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control): To infer enhancers and super enhancers in Acute Myeloid Leukemia (AML) Cell lines with a 3q-aberration we determined regions enriched for H3K27AC, H3K4ME3, H3K4ME1, P300, and BRD4 in MOLM1. Additionally we determined regions enriched for P300 and BRD4 in the cell line Mutz3 which also harbors a 3q-aberration. As an control we performed Chip-Seq to determine enrichment for BRD4 in K562, which overexpresses the proto-oncogene EVI1, but has no apparent 3q-aberration. Ultimately, the ChipSeq experiments were utilized to infer which enhancer or super enhancer drives the overexpression of EVI1 in AMLs with a 3q-aberration. Finally, the effect of the compound JQ1 on the inferred super enhancers and the overexpression of EVI1 is tested by treating the cell line MOLM1 for 6 hours and determining the residual binding of BRD4
+The protocol information in this paragraph likely (but not necessarily) applies to **all** samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control (see abstract). ChIP-seq for the identification of enhancer and super enhancers in Acute Myeloid Leukemia cells with a 3q-aberration. Protocols: Cell lines were cultured using media conditions as follows. MUTZ-3: 60% alpha-MEM (Life Technologies), 20% FBS (PAA), 20% conditioned medium of cell line 5637, and 10 ng/ml hrGM-CSF (Amgen); K562, MOLM-1, and U937: 90% RPMI and 10% FBS. All cultures contained 50 U/ml penicillin and 50 μg/ml streptomycin (Sigma). JQ1 sensitivity was measured by mitochondrial dehydrogenase (MTT assay) after 6, 24, 48, and 72 h of exposure with JQ1 (5, 50, 500, or 1,000 nM) or vehicle control (DMSO, 0.05%). The cell line MOLM1 was treated for 6 hours with 1,000 nM of JQ1. Subsequently, a BRD4 Chip-Seq was performed on these cells to determine the effect of JQ1 treatment of enhancers and super enhancers. Immunoprecipitated material was de-crosslinked and was amplified using a Whole Genome Amplification kit (WGA2/WGA3; Sigma-Aldrich, Zwijndrecht, The Netherlands). Subsequently, the fragments were sheared by a Covaris shearing device (Covaris S2) and size selected by an agrose gel. ChIP experiments were performed as previously described (Bindels et al., 2012; doi: ). Immunoprecipitation of cross-linked chromatin was performed with antibodies directed against Histone H3K4me1, H3K4me3, H3K27ac, p300, and BRD4, or an equal amount of isotype IgG as background control. Three independent experiments were performed and the amount of immunoprecipitated DNA was represented relative to cross-linked input DNA
+
+All of the information below should apply specifically to this particular sample:
+
+Antibody info:inv(3)(q21q26)x2. MOLM-1. H3K4ME1. Protocols: Cell lines were cultured using media conditions as follows. MUTZ-3: 60% alpha-MEM (Life Technologies), 20% FBS (PAA), 20% conditioned medium of cell line 5637, and 10 ng/ml hrGM-CSF (Amgen); K562, MOLM-1, and U937: 90% RPMI and 10% FBS. All cultures contained 50 U/ml penicillin and 50 μg/ml streptomycin (Sigma). JQ1 sensitivity was measured by mitochondrial dehydrogenase (MTT assay) after 6, 24, 48, and 72 h of exposure with JQ1 (5, 50, 500, or 1,000 nM) or vehicle control (DMSO, 0.05%). The cell line MOLM1 was treated for 6 hours with 1,000 nM of JQ1. Subsequently, a BRD4 Chip-Seq was performed on these cells to determine the effect of JQ1 treatment of enhancers and super enhancers. Immunoprecipitated material was de-crosslinked and was amplified using a Whole Genome Amplification kit (WGA2/WGA3; Sigma-Aldrich, Zwijndrecht, The Netherlands). Subsequently, the fragments were sheared by a Covaris shearing device (Covaris S2) and size selected by an agrose gel. ChIP experiments were performed as previously described (Bindels et al., 2012; doi: http://dx.doi.org/10.1182/blood-2011-11-393827). Immunoprecipitation of cross-linked chromatin was performed with antibodies directed against Histone H3K4me1, H3K4me3, H3K27ac, p300, and BRD4, or an equal amount of isotype IgG as background control. Three independent experiments were performed and the amount of immunoprecipitated DNA was represented relative to cross-linked input DNA.
+Genotype info: wild type
+Tissue info: myeloblast
+Cell line info: MOLM-1
+Other info of potential relevance: sample name = {E-MTAB-2224:MOLM1_H3K4ME1}; parsed primary ID = {ERX378363}; ENA-LAST-UPDATE = {2018-11-16}; LIBRARYSELECTION = {ChIP}; specimen with known storage state = {frozen specimen}; inferred sequence type = {ChIPSeq}; chromosome aberration = {3q-aberration}; LIBRARYSTRATEGY = {ChIP-Seq}; External Id = {SAMEA2335250}; ENA-FIRST-PUBLIC = {2014-04-03}
+
+Barb's answers are as follows:
+0. MOLM-1
+1. myeloblast
+2. blood
+3. N/A
+4. 3q-aberration
+5. No, the string "input" does not appear in the sample name "MOLM-1 extract 5. ERR411995. H3K4ME1 MOL. MOLM1 H3K4ME1", and the sample is not an input control
+6. Yes, "MOLM1" appears in the sample name "MOLM-1 extract 5. ERR411995. H3K4ME1 MOL. MOLM1 H3K4ME1"
+7. N/A
+8. N/A
+9. EVI1, BRD4, P300
+10. The "Antibody info" field in the sample-specific section contains "inv(3)(q21q26)x2. MOLM-1. H3K4ME1", where "H3K4ME1" is the only potential target. The study abstract lists H3K4me1, H3K4me3, H3K27ac, p300, and BRD4 as targets included in this study, a list which does contain "H3K4ME1". The sample name "MOLM-1 extract 5. ERR411995. H3K4ME1 MOL. MOLM1 H3K4ME1" further confirms that the ChIP target is H3K4ME1
+11. H3K4me1
+12. H3C1, H3C2, H3C3 (multiple genes correspond to Histone H3)
+13. ChIP-seq for sure
+14. The sample was treated for 6 hours with 1,000 nM of JQ1, as mentioned in the "All of the information below should apply specifically to this particular sample" section. This treatment is notable because Barb knows it inhibits BET family member BRD4, one of the proteins of interest in this study, which in turn affects recruitment of factors controlling histone modifications such as H3K4me1
+15. JQ1 (concentration=1000nM, duration=6_hours, details=BET_inhibitor)
+16. No, this sample does not correspond to a control genetic modification or control genetic background (the record mentions "wild type" genotype, but this is not a control genotype)
+17. No (1,000 nM JQ1 treatment is not a control treatment, since it effects a change of interest in the treated cells)
+18. "Response to JQ1 treatment," "AML progression," "3q-aberration driven overexpression of EVI1"
+19. No

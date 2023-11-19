@@ -1,0 +1,36 @@
+You are a biologist analyzing metadata from a ChIP-seq experiment database. Your task is to extract information from a record describing a single sample that is part of a larger study. The record may contain incomplete or misorganized metadata, and it is your job to identify the protein that was targeted in the ChIP experiment and to extract information about the sample.
+
+Sample name: ERR3137099. ERDox3 p
+Name of the broader study to which the sample belongs: The ETS transcription factor ELF5 modulates estrogen action in breast cancer via participation in FOXA1-ER driven transcription.
+Study abstract (applies to all samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control): The ETS transcription factor ELF5 drives mammary alveolar development in preparation for lactation by forcing differentiation within the progenitor cell population. In luminal A breast cancer, early disease progression is predicted by high levels of ELF5, and in preclinical models elevated ELF5 is associated with its two key features, the acquisition of resistance to endocrine therapy and increased metastasis. We first created an MCF7 cell line with doxycycline-inducible ELF5 and then examined with ChIP-seq differences in genomic binding of FOXA1, ER and H3K4me3 upon doxycycline treatment, compared to vehicle. In addition we performed RNA-seq experiments to examine changes in gene expression upon induction of ELF5 expression. Here we demonstrate that ELF5 binding overlaps with FOXA1 and ER at enhancers and promoters, and when elevated causes FOXA1 and ER to bind to new regions of the genome involved in resistance to endocrine therapy. RNA-seq demonstrated that these changes altered gene expression to diminish estrogen influence, and that ELF5 regulated the expression of ER transcription-complex genes. These data show that ELF5 modulated estrogen-driven transcription in breast cancer by directing FOXA1 and ER to new genomic locations, and by interaction with, and regulation of, members of the ER transcriptional complex. This provides a mechanistic basis for the influence of ELF5 on the progression of luminal breast cancer to endocrine insensitivity
+The protocol information in this paragraph likely (but not necessarily) applies to **all** samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control (see abstract). The ETS transcription factor ELF5 modulates estrogen action in breast cancer via participation in FOXA1-ER driven transcription. Protocols: ELF5 Isoform 2 cell lines were created and maintained as described in Kalyuga et al. 2012. Cells were fixed in 1% formaldehyde, at 37°C for 10 min, washed 2× with cold PBS, scraped into 600 µl PBS with protease inhibitors (P8340, Sigma), spun 2 min at 6,000 g, washed as before, and snap frozen in liquid nitrogen. Puromycin (Sigma-Aldrich, St Louis, Missouri, USA) at 1ug/mL was used to maintain selection. Doxycycline (Dox, Sigma-Aldrich) at 0.1ug/mL in water was used daily to induce ELF5. Four independent replicates for ER, FOXA1, ELF5-V5 and H3K4me3 ChIP-seq were performed according to the protocols described in published in “Chromatin Immunoprecipitation-Sequencing (ChIP-seq) for Mapping of Estrogen Receptor-Chromatin Interactions in Breast Cancer” by Holmes, Brown and Carroll 2016 (), and our previous publications in Hurtado et al. 2011 and Kalyuga et al. 2012. DNA purification following IP was performed using phenol:chloroform:isoamyl alcohol and Phase Lock Gel tubes. Libraries were prepared using the TruSeq ChIP Sample Preparation Kit (A) from Illumina, with AMPure XP bead double-sided size selection
+
+All of the information below should apply specifically to this particular sample:
+
+Antibody info:Doxycyclin. FOXA1. Protocols: ELF5 Isoform 2 cell lines were created and maintained as described in Kalyuga et al. 2012. Cells were fixed in 1% formaldehyde, at 37°C for 10 min, washed 2× with cold PBS, scraped into 600 µl PBS with protease inhibitors (P8340, Sigma), spun 2 min at 6,000 g, washed as before, and snap frozen in liquid nitrogen. Puromycin (Sigma-Aldrich, St Louis, Missouri, USA) at 1ug/mL was used to maintain selection. Doxycycline (Dox, Sigma-Aldrich) at 0.1ug/mL in water was used daily to induce ELF5. Four independent replicates for ER, FOXA1, ELF5-V5 and H3K4me3 ChIP-seq were performed according to the protocols described in published in “Chromatin Immunoprecipitation-Sequencing (ChIP-seq) for Mapping of Estrogen Receptor-Chromatin Interactions in Breast Cancer” by Holmes, Brown and Carroll 2016 (https://link.springer.com/protocol/10.1007%2F978-1-4939-3127-9 8), and our previous publications in Hurtado et al. 2011 and Kalyuga et al. 2012. DNA purification following IP was performed using phenol:chloroform:isoamyl alcohol and Phase Lock Gel tubes. Libraries were prepared using the TruSeq ChIP Sample Preparation Kit (A) from Illumina, with AMPure XP bead double-sided size selection.
+Genotype info: MCF7-ELF5-Isoform2-V5
+Tissue info: BTO:0000093
+Cell line info: MCF-7
+Phenotype info: breast carcinoma
+Other info of potential relevance: sample name = {E-MTAB-7641:ERDox3}; parsed primary ID = {ERX3166330}; ENA-LAST-UPDATE = {2019-02-10}; LIBRARYSELECTION = {ChIP}; inferred sequence type = {ChIPSeq}; LIBRARYSTRATEGY = {ChIP-Seq}; organism part = {breast}; External Id = {SAMEA5313144}; ENA-FIRST-PUBLIC = {2020-01-06}; developmental stage = {Cancer cell line}; Unavailable = {true}
+
+0. MCF-7
+1. adenocarcinoma
+2. breast
+3. N/A
+4. Overexpression of ELF5 Isoform 2 tagged with V5 (MCF7-ELF5-Isoform2-V5)
+5. No, "input" does not appear in the two strings give as sample name "ERR3137099. ERDox3 p" and "E-MTAB-7641:ERDox3", and the sample is not an input control
+6. No, "MCF-7" does not appear in the sample names "ERR3137099. ERDox3 p" and "E-MTAB-7641:ERDox3" (nor does any other abbreviation of "MCF-7")
+7. N/A
+8. N/A
+9. ELF5, FOXA1, ER (estrogen receptor)
+10. The study abstract mentions ChIP-seq experiments for ER, FOXA1, and H3K4me3. The cell line used here has a V5 tag of ELF5 that would often identify the ChIP target as ELF5, but given that there are multiple possible targets, Barb carefully examines the "Antibody info" field that says "Doxycyclin. FOXA1" and concludes that the target is likely FOXA1
+11. FOXA1
+12. FOXA1
+13. ChIP-seq for sure
+14. The sample-specific information mentions the use of doxycycline (Dox) at 0.1ug/mL to induce ELF5 expression. But this is not a notable treatment, as it is part of the genetic modification protocol
+15. N/A
+16. No, this sample does not correspond to a control genetic modification or control genetic background
+17. No, this sample does not correspond to a control treatment (no notable treatment is mentioned in the abstract)
+18. "Estrogen receptor signaling pathway," "Resistance to endocrine therapy," "Metastasis"
+19. No

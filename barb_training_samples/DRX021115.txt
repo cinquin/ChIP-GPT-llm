@@ -1,0 +1,34 @@
+You are a biologist analyzing metadata from a ChIP-seq experiment database. Your task is to extract information from a record describing a single sample that is part of a larger study. The record may contain incomplete or misorganized metadata, and it is your job to identify the protein that was targeted in the ChIP experiment and to extract information about the sample.
+
+Sample name: 293T MeTA input (-7-29-11). DRR023061.  SAMD00020000
+Name of the broader study to which the sample belongs: The search for DNA methylation-based biomarkers in cancer
+Study abstract (applies to all samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control): Aberrant DNA hypermethylation, the most well defined epigenetic changes in cancer, is associated with inappropriate gene silencing and this feature is utilized to search for tumor-specific DNA methylation biomarkers. Methyl-CpG binding domain (MBD) proteins (MBPs) can elicit the repressive potential of methylated DNA and play a major role in gene silencing mechanisms. Therefore, if the genes governed by MBPs are specifically reactivated, it should be possible to uncover them. We developed a method termed methyl-CpG targeted transcriptional activation (MeTA) that employs a fusion gene comprised of the MBD from MBD2 and the NFKB transcriptional activation domain. Microarray coupled with MeTA (MeTA-array) provides not only the information about methylated genes but also the one about transcriptional repression in a single experiment. We first applied either MeTA or a conventional DNA demethylating agent, 5-aza-cytidine (Aza-CR), to a human embryonic kidney cell line 293T and analyzed gene expression profiles by microarray; 138 and 202 genes that are upregulated 5-fold or more were identified by MeTA and Aza-CR, respectively. ChIP-Seq analysis indicated that MeTA-inducing protein containing MBD binds to more than 80% of genes selected by MeTA-array. We found associations between expressional restorations by MeTA, methylation status, and NFKB (AD)-MBD fusion protein bindings in CpG islands (CGIs) around the transcription start site of the genes. Importantly, MeTA can upregulate genes meeting the stringent criteria of CGIs defined by Takai and Jones (Proc Natl Acad Sci USA 99: 3740-3745, 2002) at the promoter region at higher frequency; 109 of 138 (79.0%) genes in MeTA vs. 121 of 202 (59.9%) genes in Aza-CR. We further applied MeTA-array to 12 pancreatic cancer cell lines along with HPDE (normal pancreatic ductal epithelial cell line) and identified 31 candidate tumor-specific hypermethylated genes; 26 of them have never been reported previously using the conventional DNA demethylating agents. Seven genes, IRX4, LHX6, NEFH, NEFL, NEFM, NPTX2 and TMEM204 were further examined their methylation statuses by MSP, and we found that 100% (21/21) of IRX4, 62% (13/21) of LHX6, 100% (21/21) of NEFH, 100% (21/21) of NEFL, 100% (21/21) of NEFM, 100% (21/21) of NPTX2 and 95% (20/21) of TMEM204 were methylated in our series of pancreatic cancer cell lines. Furthermore, 68% (15/22) of IRX4, 55% (12/22) of LHX6, 55% (12/22) of NEFH, 59% (23/22) of NEFL, 82% (18/22) of NEFM and 82% (18/22) of NPTX2 were also hypermethylated in primary pancreatic cancer specimens in a tumor-specific manner. Our results suggest that MeTA-array is a highly efficient method to identify methylation-mediated transcriptionally silenced genes in human cancer
+The protocol information in this paragraph likely (but not necessarily) applies to **all** samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control (see abstract). HEK293T cells were transfected with pcDNA6-3xFLAG-NFkB(AD)-MBD plasmid and the input for ChIP was recovered
+
+All of the information below should apply specifically to this particular sample:
+
+Cell line info: HEK293
+Other info of potential relevance: sample_name = {293T MeTA input (-7-29-11)}; parsed primary ID = {DRX021115}; LIBRARYSELECTION = {ChIP}; inferred sequence type = {ChIPSeq}; LIBRARYSTRATEGY = {ChIP-Seq}
+
+
+
+0. 293T
+1. kidney cell line
+2. kidney
+3. N/A
+4. The cells were transfected with pcDNA6-3xFLAG-NFkB(AD)-MBD plasmid, which expresses a fusion gene comprised of the MBD from MBD2 and the NFKB transcriptional activation domain. This fusion gene is used in the MeTA (methyl-CpG targeted transcriptional activation) method
+5. Yes, the string "input" appears in the sample name "293T MeTA input (-7-29-11). DRR023061.  SAMD00020000", and the sample is an input control
+6. Yes, 293T appears in the sample name "293T MeTA input (-7-29-11). DRR023061.  SAMD00020000"
+7. N/A
+8. N/A
+9.  MBD2, NFKB, IRX4, LHX6, NEFH, NEFL, NEFM, NPTX2, and TMEM204
+10. This sample is an input control, as indicated by the word "input" in the sample name. Input controls are used to account for background noise in ChIP-seq experiments and do not involve specific ChIP targets. The input sample represents the total chromatin before immunoprecipitation and is used for normalization purposes
+11. Input
+12. N/A (input control sample)
+13. ChIP-seq for sure (the record mentions "ChIP-Seq analysis" and "LIBRARYSTRATEGY = {ChIP-Seq}")
+14. There is no mention of any specific treatments applied to this particular sample other than genetic modifications
+15. N/A
+16. No (this sample carries a genetic modification in that it expresses the MBD2-NFKB fusion; this modification is not a control modification)
+17. No (the study mentions treatment with the agent Aza-CR, which was not applied to this sample, but the record does not mention the present sample being used as a control)
+18. "DNA methylation-based biomarkers in cancer", "Identification of methylation-mediated transcriptionally silenced genes in human cancer"
+19. No

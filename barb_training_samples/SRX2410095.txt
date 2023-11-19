@@ -1,0 +1,37 @@
+You are a biologist analyzing metadata from a ChIP-seq experiment database. Your task is to extract information from a record describing a single sample that is part of a larger study. The record may contain incomplete or misorganized metadata, and it is your job to identify the protein that was targeted in the ChIP experiment and to extract information about the sample.
+
+Sample name: GSM2421438: ChIP-seq from A549 (ENCLB745SQD);  ChIP-Seq. ENCODE biosample ENCBS130SLA. ENCFF985MPY
+Name of the broader study to which the sample belongs: Genomics of Gene Regulation Project
+Study abstract (applies to all samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control): The goal of the Genomics of Gene Regulation (GGR) project is to develop better methods to construct predictive, accurate gene regulatory network models using genomic data. (Gene regulatory networks are computer models that predict the activity of genes by building a mathematical relationship between genes, the regulatory elements that control those genes, and the signals to which the regulatory elements respond.)
+The protocol information in this paragraph likely (but not necessarily) applies to **all** samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control (see abstract). general protocol:.  extraction protocol:.  treatment protocol:.  general protocol:. Homo sapiens A549 immortalized cell line treated with 100 nM dexamethasone for 12 hours. .  ***************.  biological replicate number: 2.  technical replicate number: 1.  description: FOSL2 ChIP-seq on A549 cell line treated with 100 nM dexamethasone for 12 hours.  experiment encode accession: ENCSR067XTW.  assay title: ChIP-seq.  assembly: GRCh38.  possible controls: ENCSR005CRY.  encode release date: 2016-10-27.  lab: Tim Reddy, Duke.  library encode accession: ENCLB745SQD.  size range: >200.  nucleic acid starting quantity: 7.  nucleic acid starting quantity units: ng
+
+All of the information below should apply specifically to this particular sample:
+
+Antibody info:FOSL2. narrowPeak. https://www.encodeproject.org/experiments/ENCSR067XTW/.  ***************.  biological replicate number: 2.  technical replicate number: 1.  description: FOSL2 ChIP-seq on A549 cell line treated with 100 nM dexamethasone for 12 hours.  experiment encode accession: ENCSR067XTW.  assay title: ChIP-seq.  assembly: GRCh38.  possible controls: ENCSR005CRY.  encode release date: 2016-10-27.  lab: Tim Reddy, Duke.  library encode accession: ENCLB745SQD.  size range: >200.  nucleic acid starting quantity: 7.  nucleic acid starting quantity units: ng
+Treatment info: EFO:0001086. cell line. treatment_term_id: CHEBI:41879; treatment_term_name: dexamethasone; treatment_type: chemical; duration: 12; duration_units: hour;. A549
+Tissue type info: IDR thresholded peaks. signal p-value. Homo sapiens A549 immortalized cell line treated with 100 nM dexamethasone for 12 hours. immortalized cell line. ENCDO000AAZ
+Cell line info: A549
+Other info of potential relevance: parsed primary ID = {SRX2410095}; LIBRARYSELECTION = {ChIP}; Genome annotation = {GGR}; Biosample genetic modifications gene targets = {12 hour}; molecule-type = {genomic DNA}; sample type = {immortalized cell line}; Paired end = {formaldehyde}; dev stage = {adult}; Audit NOT_COMPLIANT = {>200}; Audit ERROR = {1, 2, 3}; biosample encode accession = {ENCBS130SLA (SAMN06121604)}; Biosample term id = {GRCh38}; Project = {FOSL2-human}; Biosample genetic modifications categories = {dexamethasone}; Biosample term name = {ENCSR067XTW}; Biosample genetic modifications targets = {100 nM}; Biosample organism = {/human-donors/ENCDO000AAZ/}; Biosample type = {TF ChIP-seq}; parsed_GSM_ID = {GSM2421438}; inferred sequence type = {ChIPSeq}; LIBRARYSTRATEGY = {ChIP-Seq}; dbxrefs = {2016-10-27}; Experiment accession = {bed. bigBed. bigWig}; RBNS protein concentration = {DNA}; sample-type = {SRA}
+
+Barb's answers are as follows:
+0. A549
+1. adenocarcinoma
+2. lung (inferred by Barb, who knows the origin of the A549 cell line)
+3. N/A
+4. N/A
+5. No, the string "input" does not appear in the sample name "GSM2421438: ChIP-seq from A549 (ENCLB745SQD);  ChIP-Seq. ENCODE biosample ENCBS130SLA. ENCFF985MPY". The sample is not an input control
+6. Yes, "A549" appears in the sample name "GSM2421438: ChIP-seq from A549 (ENCLB745SQD);  ChIP-Seq. ENCODE biosample ENCBS130SLA. ENCFF985MPY"
+7. N/A
+8. N/A
+9. FOSL2
+10. The sample name "GSM2421438: ChIP-seq from A549 (ENCLB745SQD);  ChIP-Seq. ENCODE biosample ENCBS130SLA. ENCFF985MPY" does not mention the ChIP target. But that does not matter because the sample-specific antibody info section identifies "FOSL2" as the antibody used for ChIP-seq, and therefore as the ChIP target
+11. FOSL2
+12. FOSL2
+13. ChIP-seq for sure
+14. The treatment information section mentions that the cell line was treated with 100 nM dexamethasone for 12 hours. This treatment is notable because it is used to study the effects of dexamethasone on gene regulation
+15. dexamethasone (concentration=100_nM, duration=12_hours)
+16. No, this sample does not correspond to a control genetic modification or control genetic background
+17. No, this sample does not correspond to a control treatment
+18. "Response to dexamethasone"
+19. No
+

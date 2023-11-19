@@ -1,0 +1,36 @@
+You are a biologist analyzing metadata from a ChIP-seq experiment database. Your task is to extract information from a record describing a single sample that is part of a larger study. The record may contain incomplete or misorganized metadata, and it is your job to identify the protein that was targeted in the ChIP experiment and to extract information about the sample.
+
+Sample name: GSM2740388: Control17;  ChIP-Seq
+Name of the broader study to which the sample belongs: Genome-wide H3K27ac profiles in post-mortem entorhinal cortex samples from Alzheimer's disease cases and controls
+Study abstract (applies to all samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control): We quantified genome-wide levels of H3K27ac in post-mortem entorhinal cortex tissue samples, identifying widespread Alzheimer's disease (AD)-associated acetylomic variation. Differentially acetylated peaks were identified in the vicinity genes implicated in both tau and amyloid neuropathology (MAPT, APP, PSEN1, PSEN2), as well as genomic regions containing variants associated with sporadic late-onset AD (CR1, TOMM40). Both MAPT and PSEN2 are characterized by an extended hyperacetylated region upstream of the TSS  mapping to enhancers in the brain. We show that genes annotated to AD-associated hyper- and hypoacetylated peaks are enriched for brain- and neuropathology-related  functions. Overall design: Examination of variable H3K27ac across 47 individuals using ChIP-seq
+The protocol information in this paragraph likely (but not necessarily) applies to **all** samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control (see abstract). Lysates were clarified from sonicated nuclei and histone-DNA complexes were isolated with antibody. Libraries were prepared using the MicroPlex Library Preparation kit v2 (Diagenode, Cat #C05010013) according to the manufacturer’s protocol.  Libraries were sequenced on the on an Illumina HiSeq-2500 using single-end sequencing and a read length of 50bp
+
+All of the information below should apply specifically to this particular sample:
+
+Antibody info:H3K27ac (Diagenode, catalog #C15410196, lot# A1723-0041D)
+Tissue info: Entorhinal cortex
+Phenotype info: C
+Other info of potential relevance: parsed primary ID = {SRX3088202}; LIBRARYSELECTION = {ChIP}; molecule-type = {genomic DNA}; file name = {Contro. SRR5927879}; parsed_GSM_ID = {GSM2740388}; inferred sequence type = {ChIPSeq}; LIBRARYSTRATEGY = {ChIP-Seq}; neuronal proportion estimate = {0.33267815}; sample-type = {SRA}
+
+
+
+0. Primary
+1. Neuronal (unsure, as the record does not provide specific information about the cell type within the entorhinal cortex tissue)
+2. Brain
+3. Entorhinal cortex
+4. N/A (the record does not mention any genetic modifications, and the samples are unmodified primary tissue samples.)
+5. No, the string "input" does not appear in the sample name "GSM2740388: Control17;  ChIP-Seq". The sample is not an input control
+6. Yes, "Entorhinal cortex" appears in the sample name
+7. Diagenode, catalog #C15410196, lot# A1723-0041D
+8. manufacturer=diagenode,clone=N/A,catalog=C15410196,lot=A1723-0041D,target=H3K27ac
+9. MAPT, APP, PSEN1, PSEN2, CR1, TOMM40
+10. The ChIP target is identified based on the "Antibody info" provided specifically for this sample. The antibody used is H3K27ac, which indicates that the target of the ChIP experiment is the acetylation of lysine 27 on histone H3
+11. H3K27ac
+12. H3C1, H3C2, H3C3 (multiple genes correspond to Histone H3)
+13. ChIP-seq for sure  (the record explicitly mentions "ChIP-Seq" and "LIBRARYSTRATEGY = {ChIP-Seq}" for this sample.)
+14. The record does not mention any notable treatments applied to this sample or other samples, other than the ChIP-seq experiment itself
+15. N/A
+16. Unsure: although the record does not mention any genetic modification or genetic background, the sample title contains "control". We know that in this particular context "control" does not refer to ChIP-seq input control, since the H3K27ac antibody was used. When collecting human samples to study a disease, it is common to include affected and unaffected individuals. Perhaps this corresponds to an unaffected, "control" individual (also supported by "Phenotype: C"), but this may be based on phenotype rather than genotype
+17. No: the sample name does contain "Control17", but as detailed above this probably corresponds to the phenotype of the donor rather than a treatment
+18. Alzheimer's disease pathology, Tau neuropathology, Amyloid neuropathology
+19. No

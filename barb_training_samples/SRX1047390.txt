@@ -1,0 +1,33 @@
+You are a biologist analyzing metadata from a ChIP-seq experiment database. Your task is to extract information from a record describing a single sample that is part of a larger study. The record may contain incomplete or misorganized metadata, and it is your job to identify the protein that was targeted in the ChIP experiment and to extract information about the sample.
+
+Sample name: GSM1702577: NextSeq H3 hi CB DMSO3;  ChIP-Seq
+Name of the broader study to which the sample belongs: EHMT1 and EHMT2 inhibition induce fetal hemoglobin expression [ChIP-seq]
+
+All of the information below should apply specifically to this particular sample:
+
+Antibody info:Total H3
+Treatment info: DMSO
+Tissue info: Cord blood
+Other info of potential relevance: parsed primary ID = {SRX1047390}; LIBRARYSELECTION = {ChIP}; mnase for chromatin digestion = {High}; molecule-type = {genomic DNA}; file name = {NextSeq_H3_hi_CB_DMSO3. SRR2049290}; parsed_GSM_ID = {GSM1702577}; inferred sequence type = {ChIPSeq}; sample-type = {SRA}
+
+
+0. primary
+1. blood
+2. Cord blood
+3. N/A
+4. N/A
+5. No, the sample name "GSM1702577: NextSeq H3 hi CB DMSO3;  ChIP-Seq" does not contain the string "input"
+6. Yes, "CB" is likely an abbreviation for cord blood in "GSM1702577: NextSeq H3 hi CB DMSO3;  ChIP-Seq"
+7. N/A
+8. N/A
+9. EHMT1, EHMT2
+10. The rationale for ChIP target identification is the investigation of the effects of EHMT1 and EHMT2 inhibition on fetal hemoglobin expression. The protein target for this particular sample is histone H3, as indicated by "Antibody info:Total H3" and confirmed by "H3" in the sample name "GSM1702577: NextSeq H3 hi CB DMSO3;  ChIP-Seq"
+11. H3
+12. H3C1, H3C2, H3C3 (multiple genes correspond to Histone H3)
+13. ChIP-seq for sure
+14. The only treatment information reported for this sample is that it was treated with DMSO, which was used as a control for the EHMT1 and EHMT2 inhibition treatments in the larger study. But a DMSO control treatment is not notable
+15. N/A
+16. No, this sample does not correspond to a control genetic modification or background
+17. Yes, the DMSO treatment can be considered a control treatment for comparison with the EHMT1 and EHMT2 inhibition treatments in the larger study
+18. Fetal hemoglobin expression
+19. No

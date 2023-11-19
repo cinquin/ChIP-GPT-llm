@@ -1,0 +1,67 @@
+You are a biologist analyzing metadata from a ChIP-seq experiment database. Your task is to extract information from a record describing a single sample that is part of a larger study. The record may contain incomplete or misorganized metadata, and it is your job to identify the protein that was targeted in the ChIP experiment and to extract information about the sample.
+
+Sample name: GSM1715546: ha chip kless.wig;  ChIP-Seq
+Name of the broader study to which the sample belongs: Ubiquitin-dependent turnover of MYC promotes loading of the PAF complex on RNA Polymerase II to drive transcriptional elongation (ChIP-seq)
+Titles of all samples in the study: 
+    - GSM1715562: S5p WT EtOH.wig;  ChIP-Seq, GSM1715562 r1
+    - GSM1715561: S5p WT Dox.wig;  ChIP-Seq, GSM1715561 r1
+    - GSM1715560 r1, GSM1715560: S5p Kless EtOH.wig;  ChIP-Seq
+    - GSM1715559 r1, GSM1715559: S5p Kless Dox.wig;  ChIP-Seq
+    - GSM1715558 r1, GSM1715558: S2p WT EtOH.wig;  ChIP-Seq
+    - GSM1715557 r1, GSM1715557: S2p WT Dox.wig;  ChIP-Seq
+    - GSM1715556 r1, GSM1715556: S2p Kless EtOH.wig;  ChIP-Seq
+    - GSM1715555 r1, GSM1715555: S2p Kless Dox.wig;  ChIP-Seq
+    - GSM1715554: N20 WT EtOH.wig;  ChIP-Seq, GSM1715554 r1
+    - GSM1715553: N20 WT Dox.wig;  ChIP-Seq, GSM1715553 r1
+    - GSM1715552: N20 Kless EtOH.wig;  ChIP-Seq, GSM1715552 r1
+    - GSM1715551 r1, GSM1715551: N20 Kless Dox.wig;  ChIP-Seq
+    - GSM1715550: Input WT EtOH.wig;  ChIP-Seq, GSM1715550 r1
+    - GSM1715549: Input WT Dox.wig;  ChIP-Seq, GSM1715549 r1
+    - GSM1715548 r1, GSM1715548: Input Kless EtOH.wig;  ChIP-Seq
+    - GSM1715547: Input Kless Dox.wig;  ChIP-Seq, GSM1715547 r1
+    - GSM1715546 r1, GSM1715546: ha chip kless.wig;  ChIP-Seq
+    - GSM1715545 r1, GSM1715545: ha chip wt.wig;  ChIP-Seq
+    - GSM1715544 r1, GSM1715544: input.wig;  ChIP-Seq
+    - GSM1948655 r1, GSM1948655: S5p MG;  ChIP-Seq
+    - GSM1948654: S5p EtOH;  ChIP-Seq, GSM1948654 r1
+    - GSM1948653: S2p MG;  ChIP-Seq, GSM1948653 r1
+    - GSM1948652: S2p EtOH;  ChIP-Seq, GSM1948652 r1
+    - GSM1948651: S5p K52o EtOH;  ChIP-Seq, GSM1948651 r1
+    - GSM1948650: S5p K52o Dox;  ChIP-Seq, GSM1948650 r1
+    - GSM1948649 r1, GSM1948649: S2p K52o EtOH;  ChIP-Seq
+    - GSM1948648 r1, GSM1948648: S2p K52o Dox;  ChIP-Seq
+    - GSM1948647: N20 K52o EtOH;  ChIP-Seq, GSM1948647 r1
+    - GSM1948646 r1, GSM1948646: N20 K52o Dox;  ChIP-Seq
+    - GSM1948645: Input K52o EtOH;  ChIP-Seq, GSM1948645 r1
+    - GSM1948644 r1, GSM1948644: Input K52o Dox;  ChIP-Seq
+Study abstract (applies to all samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control): The MYC transcription factor is an unstable protein and its turnover is controlled by the ubiquitin system. Ubiquitination enhances MYC-dependent transactivation, but the underlying mechanism remains unresolved. Here we show that proteasomal turnover of MYC is dispensable for recruitment of RNA polymerase II (RNAPII), but is required to promote transcriptional elongation at MYC target genes. Degradation of MYC stimulates histone acetylation and recruitment of BRD4 and P-TEFb to target promoters, leading to phosphorylation of RNAPII CTD and the release of elongating RNAPII. In the absence of degradation, the RNA polymerase II-associated factor (PAF) complex associates with MYC via interaction of its CDC73 subunit with a conserved domain in the amino-terminus of MYC ("MYC box I"), suggesting that a MYC/PAF complex is an intermediate in transcriptional activation. Since histone acetylation depends on a second highly conserved domain in MYCs amino-terminus ("MYC box II"), we propose that both domains co-operate to transfer elongation factors onto paused RNAPII. Overall design: ChIP-Seq experiments for MYC-HA (HA-IP) and RNAPII (total,Ser2p,Ser5p) performed in IMEC primary breast epithelial cells. Input-samples were sequenced as controls. The following antibodies were used: HA (Abcam; ab 9110)/ total RNAPII (Santa Cruz; sc-899x)/ Ser2p RNAPII (Abcam; ab 5095)/ Ser5p RNAPII (Covance; MMS-128P)
+The protocol information in this paragraph likely (but not necessarily) applies to **all** samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control (see abstract). Where indicated, MYC was induced with doxycycline (pInducer samples) or treated with EtOH as solvent control. Cells were crosslinked with 1% formaldehyde at 37°C for 10min. Cells were lysed and after centrifugation nuclei were re-suspended in RIPA buffer. DNA was sonicated with a Branson sonifier to obtain DNA fragments at nucleosomal size. Chromatin bound to target proteins (HA-tag) was preciüitated by incubation with Protein A dynabeads beads overnight. After several washings chromatin was eluted with 1 % SDS and  crosslinking was reverted overnight. DNA was purified by Phenol/Chloroform extraction and enrichments were checked by qPCR. Libraries for ChIP-seq samples were contructed following manufactor's intructions using the NEBNext ChIP-Seq Library Prep Master Mix Set for Illumina (E6240). Briefly, ChIP DNA was end repaired,  A-tailed  and Illumina adaptors were ligated. DNA fragments of about 200 bps were cut out of a agarose gel and extracted with a Qiagen PCR purification column. Size-selected DNA was amplified with 18 PCR cycles
+
+All of the information below should apply specifically to this particular sample:
+
+Antibody info:HA
+Genotype info: pRRL-MYC-Kless-HA
+Tissue info: IMEC cell line
+Other info of potential relevance: parsed primary ID = {SRX1065301}; LIBRARYSELECTION = {ChIP}; molecule-type = {genomic DNA}; file name = {ha_chip_kless. SRR2070008}; parsed_GSM_ID = {GSM1715546}; inferred sequence type = {ChIPSeq}; LIBRARYSTRATEGY = {ChIP-Seq}; generation of cells = {primary breast epithelial cells}; sample-type = {SRA}
+
+
+0. IMEC
+1. primary breast epithelial
+2. breast
+3. N/A
+4. Expression of pRRL-MYC-Kless-HA (MYC with a possible "K-less" mutation, indicating lysine residues removed or modified, and an HA tag). However, it is uncertain whether the expression of this construct is inducible by doxycycline (Dox) or constitutive
+5. No, "input" does not appear in "GSM1715546: ha chip kless.wig;  ChIP-Seq" and the sample is not an input control
+6. No
+7. HA (Abcam; ab 9110)/ total RNAPII (Santa Cruz; sc-899x)/ Ser2p RNAPII (Abcam; ab 5095)/ Ser5p RNAPII (Covance; MMS-128P)
+8. manufacturer=abcam,clone=N/A,catalog=ab9110,lot=N/A,target=HA; manufacturer=santa_cruz,clone=N/A,catalog=sc-899x,lot=N/A,target=total_RNAPII; manufacturer=abcam,clone=N/A,catalog=ab5095,lot=N/A,target=Ser2p_RNAPII; manufacturer=covance,clone=N/A,catalog=MMS-128P,lot=N/A,target=Ser5p_RNAPII
+9. MYC, BRD4, CDC73, RNAPII, PAF, P-TEFb
+10. The sample name "GSM1715546: ha chip kless.wig; ChIP-Seq" suggests that the ChIP target is an HA-tagged protein. The "Antibody info:HA" field confirms that an HA antibody was used for ChIP. The "Genotype info: pRRL-MYC-Kless-HA" indicates that the cells may express a modified version of MYC with a possible "K-less" mutation (lysine residues removed or modified) and an HA tag. The protocol is ambiguous as to whether this particular construct is inducible by Dox or constitutively expressed (this sample does not appear to have been treated with Dox), but according to its name this sample seems to go with "GSM1715544 r1, GSM1715544: input.wig;  ChIP-Seq". Therefore, it is likely a MYC-Kless pulldown experiment rather than a control
+11. MYC-Kless
+12. MYC
+13. ChIP-seq for sure
+14. The protocol information mentions the use of doxycycline (pInducer samples) or EtOH as solvent control. None of these are a notable treatment to be reported here
+15. N/A
+16. No
+17. Unsure
+18. "Transcriptional elongation", "MYC-dependent transactivation", "Ubiquitin-dependent protein degradation", "RNA polymerase II recruitment", "Histone acetylation"
+19. No

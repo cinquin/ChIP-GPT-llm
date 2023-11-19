@@ -1,0 +1,36 @@
+You are a biologist analyzing metadata from a ChIP-seq experiment database. Your task is to extract information from a record describing a single sample that is part of a larger study. The record may contain incomplete or misorganized metadata, and it is your job to identify the protein that was targeted in the ChIP experiment and to extract information about the sample.
+
+Sample name: shCon-DHT-6-15-17 S8. GSM2818528: LNCaP shCON DHT Rep 1;  ATAC-seq
+Name of the broader study to which the sample belongs: Identification of the impact of RB status on chromatin accessibility [ATAC-seq]
+Study abstract (applies to all samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control): The retinoblastoma protein (RB) is preferentially lost in the progression to castrate resistant prostate cancer (CRPC). However, the alterations associated with such loss have been scantly described.  Current findings have identified a novel E2F1 associated cistrome and transcriptome that is associated with RB loss in PCa.  In order to determine the contribution of chromatin accessibility to alterations in E2F1 activity, ATAC-Seq was performed. Overall design: ATAC-Seq was performed on isogenic shCON and shRB LNCaP lines.  shCON cells were cultured and harvested in both hormone deficient and stimulated conditions, and shRB cells in hormone deficient conditions
+The protocol information in this paragraph likely (but not necessarily) applies to **all** samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control (see abstract). ATAC_shCON_DHT_Rep1and2_ppr.IDR0.1.filt_merged_scored.narrowPeak. LNCaP cells (either shCON or shRB) were cultured in hormone proficient media unless otherwise indicated. Cells were treated with CDT for 72 hours prior to harvest for CDT condition, and treated with DHT for 3 hours prior to harvest in DHT conditions. ATAC-Seq was performed as previously described (Buenrostro et al 2015). Briefly, cells plated and treated as indicated by the condition.  Next, 75,000 cells were collected and lysed in ATAC lysis buffer.  Cells were then re-suspended in the transposition reaction mix, and the transposition reaction incubated at 37oC for 30 minutes. Transposed DNA was purified using AMPure purification methods as specified by the manufacturer.  Purified DNA was then amplified utilizing custom barcoded Nextera primers as (previously listed and available in  (Buenrostro et al 2015)).  Library size and quality was validated using a Bioanalyzer and libraries sequenced on a NextSeq 500
+
+All of the information below should apply specifically to this particular sample:
+
+Treatment info: 72 hour CDT, 3 hour DHT
+Genotype info: shCON
+Tissue info: LNCaP Cell Line
+Other info of potential relevance: parsed primary ID = {SRX3296980}; LIBRARYSELECTION = {other}; molecule-type = {genomic DNA}; parsed_GSM_ID = {GSM2818528}; inferred sequence type = {ATAC}; LIBRARYSTRATEGY = {ATAC-seq}; sample-type = {SRA}
+
+
+Barb's answers are as follows:
+0. LNCaP
+1. adenocarcinoma
+2. prostate
+3. N/A
+4. shCON (short hairpin RNA control)
+5. No, the string "input" does not appear in the sample name "shCon-DHT-6-15-17 S8. GSM2818528: LNCaP shCON DHT Rep 1;  ATAC-seq", and the sample is not an input control
+6. Yes, "LNCaP" appears in the sample name "shCon-DHT-6-15-17 S8. GSM2818528: LNCaP shCON DHT Rep 1;  ATAC-seq"
+7. N/A
+8. N/A
+9. RB (Retinoblastoma protein), E2F1
+10. This sample is not a ChIP-seq experiment, but rather an ATAC-seq experiment. No ChIP target identification or protein tagging strategy is mentioned
+11. N/A (this is an ATAC-seq experiment, not a ChIP-seq experiment)
+12. N/A (this is an ATAC-seq experiment, not a ChIP-seq experiment)
+13. No, it may be ATAC-seq (actually it *is* ATAC-seq for sure)
+14. The sample was treated with CDT (charcoal dextran treatment) for 72 hours, but this is not a notable treatment because Barb knows it just serves to prepare the cells for the subsequent DHT (dihydrotestosterone) treatment. DHT treatment is notable. These treatments are mentioned in the "Treatment info" section
+15. DHT (concentration=unknown, duration=3_hours, details=dihydrotestosterone_androgen_receptor_agonist)
+16. Yes, this sample corresponds to a control genetic modification (shCON), which should be compared to shRB modification (short hairpin RNA targeting RB gene)
+17. No, this sample does not correspond to a control treatment
+18. "Androgen response", "Rb loss"
+19. No

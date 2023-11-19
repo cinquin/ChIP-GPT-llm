@@ -1,0 +1,58 @@
+Bob is an expert biologist analyzing sentences taken from a sequencing database record describing a ChIP-seq experiment. Bob's purpose is to distinguish sentences that contain information about ChIP targets, cells processed, or treatments applied to those cells from sentences that he's not interested in. This will help downstream text analysis to be performed in the future. Bob is not interested in fine technical detail, as his purpose is not to reproduce the experiments or to optimize them. Bob is also not **at all** interested in the technical aspect of the ChIP protocol; he does not care about general cell maintenance procedures, cell fixation or fixatives, crosslinking, washing, resuspension, elution, shearing, sonication, precipitation, library preparation protocols, sequencing protocols, sequencing platforms, or downstream analysis programs etc. To perform his task, Bob outputs a numbered list of Yes/No answers about each sentence:
+1. Is this sentence of interest to Bob?
+2. Does it correspond to scientific background of the study, or to interpretation of its results?
+3. Does it contain a file name with substrings (possibly abbreviated) that refer to sample-specific antibodies or their targets, cell line names, drugs, or treatment conditions? For example, "Yes" for "GSM2423903_HEK293_FLP_BRCA1_Empty_V5_GRCh38.bigWig", which refers to "HEK293" cells, the "FLP" recombinase, the "BRCA1" gene, the "V5" tag, and the "Empty [vector]" condition, but "No" for "GSM2423903_ENCFF471MBU_signal_p-value_GRCh38.bigWig" which only has GEO/SRA/Encode sample IDs.
+4. Does it pertain solely to metadata such as the date of the experiment, the institution or researcher who conducted the experiment, data availability or publication status, or file names with numeric IDs, etc. ?
+5. Does it mention the specific antibodies used for immunoprecipitation, their catalogue numbers or manufacturers, or how they were raised?
+6. Does it add **new** information (not already included in preceding sentences) about the cell line, tissue, or organ used for ChIP, or about the gene expression, overexpression or silencing status, or vectors the cells may contain?
+7. Does it mention "interesting" cell treatments including e.g. drug treatments, application of stress or stimuli, or drugs to induce expression? Bob is not interested in regular cell culture techniques or cell preparation for ChIP.
+
+Bob provides concise, professional, insightful, helpful, and truthful explanations for his answers -- as shown in the following examples.
+
+Sentence:
+Release of promoter-proximal paused RNA polymerase II (Pol II) during early elongation is a critical step in transcriptional regulation in metazoan cells.
+Bob's explanation:
+The sentence provides scientific background on the study (hence 1:No, 2:Yes).
+Bob's answer:
+1:No  2:Yes  3:No  4:No  5:No  6:No  7:No  ###END
+
+Sentence:
+The second day, after 2 washes with RIPA-0.5, 1 wash with RIPA-0.3, 1 wash with RIPA-0, 2 washes with LiCl buffer (10 mM Tris-HCl, 0.25 M LiCl, 0.25% NP-40, and 0,25% NaDOC, pH7.4), and 2 washes with TE buffer, bound protein-DNA complexes were resuspended in elution buffer (10 mM Tris-HCl, 1mM EDTA, and 1% SDS, pH7.4) supplemented with 10 µg/ml RNase A for elution and RNA digestion, and incubated at 55 °C for 1 hour.
+Bob's explanation:
+The sentence describes protocol details of no relevance (hence 1:No) and gives no information about antibodies (hence 5:No), or cell genetic background (hence 6:No), cell treatments (hence 7:No), etc.
+Bob's answer:
+1:No  2:No  3:No  4:No  5:No  6:No  7:No  ###END
+
+Sentence:
+We knocked down expression of NSD2 in B-ALL cell lines heterozygous for NSD2 EK (RS4;11, RCH-ACV, SEM).
+Bob's explanation:
+The sentence provides information unseen so far about gene expression manipulation and cell lines (hence 6:Yes).
+Bob's answer:
+1:Yes  2:No  3:No  4:No  5:No  6:Yes  7:No  ###END
+
+Bob now analyzes *one by one* all the sentences in the text below.
+```
+The protocol information in this paragraph likely (but not necessarily) applies to **all** samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control (see abstract). For RNA-seq samples, total RNA was extracted using TRIzol and subsequently continue to prepare RNA-Seq library. For ChIP-Seq samples, mono-nucleosomes were isolated by MNase digestion and sucrose gradient purification from stable cell lines.
+```
+
+
+Sentence:
+The protocol information in this paragraph likely (but not necessarily) applies to **all** samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control (see abstract).
+Bob's explanation:
+The sentence only refers to the general protocol information and doesn't provide specific details that Bob is interested in (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+For RNA-seq samples, total RNA was extracted using TRIzol and subsequently continue to prepare RNA-Seq library.
+Bob's explanation:
+The sentence is about RNA-seq library preparation, which is not relevant to Bob's interests (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+For ChIP-Seq samples, mono-nucleosomes were isolated by MNase digestion and sucrose gradient purification from stable cell lines.
+Bob's explanation:
+The sentence describes a ChIP-seq protocol detail, which is not of interest to Bob (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END

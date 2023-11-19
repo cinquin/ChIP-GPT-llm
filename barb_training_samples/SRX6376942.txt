@@ -1,0 +1,37 @@
+You are a biologist analyzing metadata from a ChIP-seq experiment database. Your task is to extract information from a record describing a single sample that is part of a larger study. The record may contain incomplete or misorganized metadata, and it is your job to identify the protein that was targeted in the ChIP experiment and to extract information about the sample.
+
+Sample name: catenin mutation 1. Wnt mutation
+Name of the broader study to which the sample belongs: HMG box mutation of TCF-4 in non-small cell lung cancer
+Study abstract (applies to all samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control): T-cell factor 4 (TCF-4) is determined to play a crucial role in Wnt/ß-catenin signaling pathway activation. The high mobility group (HMG) box domain of TCF-4 contributes to interacting with DNA motif for transcriptional regulation. Herein, we generated non-small cell lung cancer (NSCLC) cell line A549 with stably over-expressed TCF-4 with HMG box hot spot mutation (10th exon partial deletion), and conducted TCF-4 and ß-catenin ChIP-Seq to explore the differential genomic binding patterns. Our data determined the important role of TCF-4 in gene transcription controlling and provided the gain function evidence of TCF-4 caused by the TCF-4 mutation in NSCLC
+The protocol information in this paragraph likely (but not necessarily) applies to **all** samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control (see abstract). T-cell factor 4 (TCF-4) is determined to play a crucial role in Wnt/-catenin signaling pathway activation. To investigate the impact of the mutations within HMG box of TCF-4 on the genomic binding pattern. Wild type or HMG box mutation (10th exon partial deletion) TCF-4 with flag tag were transiently transfected into NSCLC A549 cells. Flag or -catenin antibodies were used to pull down the bound genomic fragment for deep sequencing. ChIP-seq were duplicated twice. Each IP of Flag or -catenin  refers to the same input
+
+All of the information below should apply specifically to this particular sample:
+
+Treatment info: catenin
+Genotype info: A caucasian with NSCLC
+Tissue info: epithelial. lung
+Cell line info: A549. A caucasian with NSCLC
+Phenotype info: NSCLC
+Other info of potential relevance: parsed primary ID = {SRX6376942}; replicate = {biological replicate 1}; LIBRARYSELECTION = {ChIP}; sample_type = {mutation}; inferred sequence type = {ChIPSeq}; LIBRARYSTRATEGY = {ChIP-Seq}
+
+
+0. A549
+1. adenocarcinoma
+2. lung
+3. N/A
+4. TCF-4 HMG box mutation (10th exon partial deletion)
+5. No, "input" does not appear in the sample name "catenin mutation 1. Wnt mutation", and the sample is not an input control.
+6. No
+7. N/A
+8. N/A
+9. CTNNB1 (ß-catenin), TCF-4 (T-cell factor 4), Wnt
+10. The sample is part of a study investigating TCF-4 and ß-catenin ChIP-Seq in the context of non-small cell lung cancer. The sample name "catenin mutation 1. Wnt mutation" suggests ß-catenin is the target for this ChIP experiment. The study involves the use of Flag or ß-catenin antibodies for ChIP, which supports the idea that ß-catenin is the target for this particular sample
+11. ß-catenin
+12. CTNNB1
+13. ChIP-seq for sure
+14. The treatment info states "catenin" for this particular sample, suggesting that it may have been treated with a compound or intervention targeting ß-catenin
+15. ß-catenin treatment (concentration=unknown, duration=unknown, details=unknown)
+16. No
+17. No
+18. Wnt/ß-catenin signaling pathway activation, Non-small cell lung cancer progression
+19. No

@@ -1,0 +1,75 @@
+Bob now analyzes *one by one* all the sentences in the text below.
+```
+The protocol information in this paragraph applies to **all** samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control (see abstract). Libraries were prepared using the Apollo Prep System (Wafergen, PrepX ILMN 32i, 96 sample kit) and standard Illumina multiplexing adapters following the manufacturer's protocol up to pre-PCR amplification Protein-DNA immunocomplexes were isolated from sonicates using antibodies against the relevant proteins. Cells were transfected for 24h with the relevant plasmid DNA using Fugene HD. processed data file:. ForceCalledPeaks_ChIPHA_ZCWPW1-HA+chimpPRDM9-V5_vs_Input_ZCWPW1-HA_AND_Input_ZCWPW1-HA+humanPRDM9-V5_AT_100bpWindows.bed.gz. ForceCalledPeaks_ChIPHA_ZCWPW1-HA_vs_Input_ZCWPW1-HA_AND_Input_ZCWPW1-HA+humanPRDM9-V5_AT_100bpWindows.bed.gz.  SingleBasePeaks.ChIPHA_ZCWPW1-HA+chimpPRDM9-V5_vs_Input_ZCWPW1-HA+humanPRDM9-V5.p0.000001.sep250.ALL.bed.gz.  SingleBasePeaks.ChIPHA_ZCWPW1-HA+chimpPRDM9-V5_vs_Input_ZCWPW1-HA_AND_Input_ZCWPW1-HA+humanPRDM9-V5.p0.000001.sep250.ALL.bed.gz. HEK293T cells were cultured in DMEM medium supplemented with 10% FBS, 2 mM L-Glutamine, 100 U/ml penicillin and 100 μg/ml streptomycin
+
+```
+
+Sentence:
+The protocol information in this paragraph applies to **all** samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control (see abstract).
+Bob's explanation:
+The sentence provides no specific information about the ChIP targets, cells processed, or treatments applied, and it focuses on the protocol information (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+Libraries were prepared using the Apollo Prep System (Wafergen, PrepX ILMN 32i, 96 sample kit) and standard Illumina multiplexing adapters following the manufacturer's protocol up to pre-PCR amplification.
+Bob's explanation:
+The sentence refers to the library preparation protocol, which is not of interest (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+Protein-DNA immunocomplexes were isolated from sonicates using antibodies against the relevant proteins.
+Bob's explanation:
+The sentence mentions the use of antibodies, but it lacks specific information on the antibodies themselves or their targets (hence 1:No, 5:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+Cells were transfected for 24h with the relevant plasmid DNA using Fugene HD.
+Bob's explanation:
+The sentence provides information about a treatment (transfection) applied to the cells (hence 1:No, 7:Yes).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:Yes ###END
+
+Sentence:
+processed data file:.
+Bob's explanation:
+The sentence is a placeholder for the processed data files and does not contain any relevant information (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+ForceCalledPeaks_ChIPHA_ZCWPW1-HA+chimpPRDM9-V5_vs_Input_ZCWPW1-HA_AND_Input_ZCWPW1-HA+humanPRDM9-V5_AT_100bpWindows.bed.gz.
+Bob's explanation:
+This is a file name that contains gene names PRDM9 and ZCWPW1, indicates protein tags (chimp PRDM9 appears to be tagged with V5, and ZCWPW1 with the HA tag), and contains the string "input" that might indicate a ChIP control. Because of these characteristics, the file name is of strong interest to Bob (3: Yes), especially since the gene names and "input" conditions in the protocol description.
+Bob's answer:
+1:Yes 2:No 3:Yes 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+ForceCalledPeaks_ChIPHA_ZCWPW1-HA_vs_Input_ZCWPW1-HA_AND_Input_ZCWPW1-HA+humanPRDM9-V5_AT_100bpWindows.bed.gz.
+Bob's explanation:
+This is a file name that contains gene names PRDM9 and ZCWPW1, indicates protein tags (chimp PRDM9 appears to be tagged with V5, and ZCWPW1 with the HA tag), and contains the string "input" that might indicate a ChIP control. Because of these characteristics, the file name is of strong interest to Bob (3: Yes), especially since the gene names and "input" conditions in the protocol description.
+Bob's answer:
+1:Yes 2:No 3:Yes 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+SingleBasePeaks.ChIPHA_ZCWPW1-HA+chimpPRDM9-V5_vs_Input_ZCWPW1-HA+humanPRDM9-V5.p0.000001.sep250.ALL.bed.gz.
+Bob's explanation:
+This is a file name that contains gene names PRDM9 and ZCWPW1, indicates protein tags (chimp PRDM9 appears to be tagged with V5, and ZCWPW1 with the HA tag), and contains the string "input" that might indicate a ChIP control. Because of these characteristics, the file name is of strong interest to Bob (3: Yes), especially since the gene names and "input" conditions in the protocol description.
+Bob's answer:
+1:Yes 2:No 3:Yes 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+SingleBasePeaks.ChIPHA_ZCWPW1-HA+chimpPRDM9-V5_vs_Input_ZCWPW1-HA_AND_Input_ZCWPW1-HA+humanPRDM9-V5.p0.000001.sep250.ALL.bed.gz.
+Bob's explanation:
+This is a file name that contains gene names PRDM9 and ZCWPW1, indicates protein tags (chimp PRDM9 appears to be tagged with V5, and ZCWPW1 with the HA tag), and contains the string "input" that might indicate a ChIP control. Because of these characteristics, the file name is of strong interest to Bob (3: Yes), especially since the gene names and "input" conditions in the protocol description.
+Bob's answer:
+1:Yes 2:No 3:Yes 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+HEK293T cells were cultured in DMEM medium supplemented with 10% FBS, 2 mM L-Glutamine, 100 U/ml penicillin and 100 μg/ml streptomycin.
+Bob's explanation:
+The sentence provides **new** information about the cell line used (the name HEK293T does not appear anywhere else in the record) but refers to general cell maintenance procedures (including antibiotic selection) that are not of interest (hence 7:No). Overall the newly-provided reference to the cell line makes the sentence of interest (hence 1:Yes).
+Bob's answer:
+1:Yes 2:No 3:No 4:No 5:No 6:Yes 7:No ###END

@@ -1,0 +1,69 @@
+Placeholder line.
+
+```
+After 3 hours, beads were washed 2 times with ice-cold ChIP washing buffer (50 mM HEPES-KOH, pH 7.5, 500 mM LiCl, 1 mM EDTA, 1 % NP-40, 0.7 % Na-Deoxycholate, 1x protease inhibitors) and 1 time with ice-cold TE. The samples were then resuspended in 50 μl of ChIPmentation buffer (10 mM Tris-HCl, pH 8.0, 5 mM MgCl2, 10 % Dimethylformamide) and 1 μl of Tn5 transposase (Illumina Nextera kit) was added and incubated at 37 °C for 10 minutes. After the ChIPmentation, the reaction was stopped by adding 5 μl of 0.2 % SDS/0.5 M EDTA and incubated at 50 °C for 10 minutes. Next, the beads were washed 2 times with ChIP washing buffer and 1 time with ice-cold TE. Chromatin-antibody complexes were eluted by adding 100 μl of elution buffer (50 mM Tris-HCl, pH 8.0, 10 mM EDTA, 1 % SDS) and incubating for 30 minutes at 65 °C. Samples were then treated with 2 μl of RNase A (10 mg/ml, Thermo Fisher) and 2 μl of proteinase K (20 mg/ml, Thermo Fisher) and incubated at 55 °C for 1 hour. ChIP DNA was then purified using the QIAquick PCR Purification Kit (Qiagen) following the manufacturer's instructions. Library preparation and sequencing were performed using the Illumina Nextera XT DNA Library Preparation Kit and sequenced on the Illumina HiSeq 4000 platform. Sequencing data were processed and analyzed using the following pipeline: raw reads were trimmed using Trimmomatic, aligned to the reference genome using Bowtie2, and peak calling was performed using MACS2.
+```
+
+
+Sentence:
+After 3 hours, beads were washed 2 times with ice-cold ChIP washing buffer (50 mM HEPES-KOH, pH 7.5, 500 mM LiCl, 1 mM EDTA, 1 % NP-40, 0.7 % Na-Deoxycholate, 1x protease inhibitors) and 1 time with ice-cold TE.
+Bob's explanation:
+This sentence describes a washing step in the ChIP protocol, which is not of interest to Bob (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+The samples were then resuspended in 50 μl of ChIPmentation buffer (10 mM Tris-HCl, pH 8.0, 5 mM MgCl2, 10 % Dimethylformamide) and 1 μl of Tn5 transposase (Illumina Nextera kit) was added and incubated at 37 °C for 10 minutes.
+Bob's explanation:
+This sentence discusses the ChIPmentation step of the protocol, which is not of interest to Bob (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+After the ChIPmentation, the reaction was stopped by adding 5 μl of 0.2 % SDS/0.5 M EDTA and incubated at 50 °C for 10 minutes.
+Bob's explanation:
+This sentence discusses stopping the ChIPmentation reaction, which is not of interest to Bob (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+Next, the beads were washed 2 times with ChIP washing buffer and 1 time with ice-cold TE.
+Bob's explanation:
+This sentence describes a washing step in the ChIP protocol, which is not of interest to Bob (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+Chromatin-antibody complexes were eluted by adding 100 μl of elution buffer (50 mM Tris-HCl, pH 8.0, 10 mM EDTA, 1 % SDS) and incubating for 30 minutes at 65 °C.
+Bob's explanation:
+This sentence describes the elution step in the ChIP protocol, which is not of interest to Bob (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+Samples were then treated with 2 μl of RNase A (10 mg/ml, Thermo Fisher) and 2 μl of proteinase K (20 mg/ml, Thermo Fisher) and incubated at 55 °C for 1 hour.
+Bob's explanation:
+This sentence discusses RNase A and proteinase K treatment in the ChIP protocol, which is not of interest to Bob (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+ChIP DNA was then purified using the QIAquick PCR Purification Kit (Qiagen) following the manufacturer's instructions.
+Bob's explanation:
+This sentence discusses ChIP DNA purification, which is not of interest to Bob (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+Library preparation and sequencing were performed using the Illumina Nextera XT DNA Library Preparation Kit and sequenced on the Illumina HiSeq 4000 platform.
+Bob's explanation:
+This sentence discusses library preparation and sequencing, which is not of interest to Bob (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+Sequencing data were processed and analyzed using the following pipeline: raw reads were trimmed using Trimmomatic, aligned to the reference genome using Bowtie2, and peak calling was performed using MACS2.
+Bob's explanation:
+This sentence discusses the data analysis pipeline, which is not of interest to Bob (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END

@@ -1,0 +1,36 @@
+You are a biologist analyzing metadata from a ChIP-seq experiment database. Your task is to extract information from a record describing a single sample that is part of a larger study. The record may contain incomplete or misorganized metadata, and it is your job to identify the protein that was targeted in the ChIP experiment and to extract information about the sample.
+
+Sample name: GSM1819865: dCas9 KRAB FLAG rep1;  ChIP-Seq. KRAB 1 FLAG
+Name of the broader study to which the sample belongs: Epigenome Editing by CRISPR/Cas9 Repressors for Silencing of Distal Regulatory Elements
+Study abstract (applies to all samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control): Epigenome editing with the CRISPR/Cas9 platform is a promising technology to modulate gene expression to direct cell phenotype and to dissect the causal epigenetic mechanisms that direct gene regulation.  Fusions of the nuclease-inactive dCas9 to the KRAB repressor domain (dCas9-KRAB) can effectively silence target gene expression.  We targeted dCas9-KRAB to the HS2 enhancer, a distal regulatory element that orchestrates the expression of multiple globin genes. Genome-wide analyses demonstrated that localization of dCas9-KRAB to HS2 specifically induced H3K9 tri-methylation (H3K9me3) at that enhancer and reduced the chromatin accessibility of both the enhancer and its promoter targets.  Targeted epigenetic modification of HS2 silenced the expression of multiple globin genes, with minimal off-target changes in gene expression. These results demonstrate that repression mediated by dCas9-KRAB is sufficiently specific to disrupt the activity of individual enhancers via local modification of the epigenome. This approach enables precise modulation of epigenetic function without modifying the underlying genome sequence. Overall design: K562 cells were transduced with in triplicate lentivirus encoding dCas9-KRAB with gRNA targeted to the HS2 globin enhancer.  Cells transduced with dCas9-KRAB without gRNA or dCas9 with gRNA targeted to the HS2 globin enhancer were included as controls.  RNA-seq was used to identify differential expression at on-target and off-target sites. ChIP-seq was used to identify dCas9-KRAB occupancy and H3K9me3 changes, and DNase-seq was used to identify changes in chromatin accessibility
+The protocol information in this paragraph likely (but not necessarily) applies to **all** samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control (see abstract). K562 cells were obtained from the American Tissue Collection Center (ATCC) through the Duke University Cel Culture Facilities and were maintained in RPMI1640 supplemented with 10% fetal bovine serum and 1% penicillin/streptomycin at 37°C with 5% CO2. K562 cells were transduced with lentivirus to stably express dCas9 or dCas9-KRAB and HS2 targeted gRNA.  To facilitate transduction, the cationic polymer polybrene was added at a concentration of 4 µg/mL to the viral media.  The lentivirus contained a puromycin resistance gene, and 1 µg/ml puromycin was used to initiate selection for transduced cells approximately 96 hours after transduction. For each replicate, 2 ×10^7 nuclei were re-suspended in 1 mL of RIPA buffer (1% NP-40, 0.5% sodium deoxycholate, 0.1% SDS in PBS at pH 7.4). Samples were sonicated using a Diagenode Bioruptor XL sonicator at 4°C to fragment chromatin to 200-500 bp segments. Insoluble  components were removed by centrifugation for 15 min at 15000 rpm. We conjugated 5  µg of anti-FLAG (Sigma-Aldrich, F1804), or anti-H3K9me3 (Abcam,  ab8898) to 200 µl of either sheep anti-rabbit or sheep anti-mouse IgG magnetic beads  (Life Technologies 11203D/11201D). Sheared chromatin in RIPA was then added to the  antibody-conjugated beads and incubated on a rotator overnight at 4°C. After incubation,  beads were washed five times with a LiCl wash buffer (100 mM Tris at pH 7.5, 500 mM  LiCl, 1% NP-40, 1% sodium deoxycholate), and remaining ions were removed with a  single wash with 1 mL of TE (10 mM Tris-HCl at pH 7.5, 0.1 mM Na2EDTA) at 4°C.  Chromatin and antibodies were eluted from beads by incubating for 1 h at 65°C in IP  elution buffer (1% SDS, 0.1 M NaHCO3), followed by incubating overnight at 65°C to  reverse formaldehyde cross-links. DNA was purified using MinElute DNA purification  columns (Qiagen). Illumina TruSeq adapted libraries were constructed using an Apollo 324 NGS Library  Prep System with a PrepX Complete ILMN DNA Library Kit (WaferGen Biosystems  Inc). ChIP products were amplified with 15 cycles of PCR, and fragments 150-700 bp in  length were selected using an AxyPrep MAG PCR Clean-Up Kit (Axygen MAG-PCRCL-50).  Libraries were sequenced using single end 50 bp reads on an Illumina HiSeq
+
+All of the information below should apply specifically to this particular sample:
+
+Antibody info:Sigma-Aldrich. anti-FLAG
+Genotype info: globin HS2 enhancer
+Tissue info: Cultured K562 cells_dCas9_KRAB_FLAG
+Cell line info: K562
+Other info of potential relevance: parsed primary ID = {SRX1092376}; LIBRARYSELECTION = {ChIP}; molecule-type = {genomic DNA}; parsed_GSM_ID = {GSM1819865}; inferred sequence type = {ChIPSeq}; LIBRARYSTRATEGY = {ChIP-Seq}; transduced gene = {dCas9-KRAB}; sample-type = {SRA}
+
+
+0. K562
+1. Myeloid leukemia
+2. Blood
+3. N/A
+4. Expression of dCas9-KRAB fusion protein with gRNA targeting it to the HS2 globin enhancer (where it acts as a repressor)
+5. No, the string "input" does not appear in the sample name. The sample is not an input control
+6. No, "K562" does not appear in the sample name (nor does any other abbreviation of the cells used)
+7. Sigma-Aldrich. anti-FLAG
+8. manufacturer=sigma_aldrich,clone=N/A,catalog=N/A,lot=N/A,target=FLAG
+9. HS2, KRAB
+10. The "Antibody info" field indicates that an anti-FLAG antibody was used. The sample name "GSM1819865: dCas9 KRAB FLAG rep1; ChIP-Seq. KRAB 1 FLAG" indicates that the ChIP target is the FLAG-tagged dCas9-KRAB fusion protein. The FLAG tag is used for immunoprecipitation with an anti-FLAG antibody.
+11. dCas9-KRAB
+12. N/A (dCas9-KRAB is a fusion protein created for experimental purposes and does not have an official HGNC gene name)
+13. ChIP-seq for sure
+14. The lentiviral transduction and puromycin treatment correspond to the genetic modifications already reported above, and other treatments are regular cell culture treatments of no interest to Barb
+15. N/A
+16. No, this sample corresponds to a sample with a specific genetic modification applied in full (expression of dCas9-KRAB fusion protein as well as guide RNA)
+17. No (in any case there does not seem to be any treatment to control for as part of this experiment, with the possible exception of the genetic modifications dealt with in separate questions)
+18. "Epigenome editing," "Silencing of distal regulatory elements"
+19. No

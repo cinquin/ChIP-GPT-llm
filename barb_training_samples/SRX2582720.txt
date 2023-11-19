@@ -1,0 +1,36 @@
+You are a biologist analyzing metadata from a ChIP-seq experiment database. Your task is to extract information from a record describing a single sample that is part of a larger study. The record may contain incomplete or misorganized metadata, and it is your job to identify the protein that was targeted in the ChIP experiment and to extract information about the sample.
+
+Sample name: GSM2500244: Control situation Replicate 2;  ChIP-Seq. siControl yH2AX
+Name of the broader study to which the sample belongs: ?H2AX-ChIP-Seq in cells depleted for the telomeric protein TRF2
+Study abstract (applies to all samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control): We show the enrichment of yH2AX in BJ-HELT cells when the telomeric protein TRF2 is downregulated (siTRF2 minus siControl). We generated genome-wide maps of the enriched profile of reads and found an accumulation of yH2AX reads at the pericentromeric regions of chromosomes and at large regions of chromosomes 3, 8, 11 and 16. Overall design: Identification of yH2AX-rich regions after TRF2 inhibition
+The protocol information in this paragraph likely (but not necessarily) applies to **all** samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control (see abstract). antibody: yH2AX antibody (Abcam;ab2893).  siControl-B-γH2AX. Cells were transfected for 72 hrs with either siControl or siTRF2. Cells were grown in DMEM media supplemented with 10% fetal calf serums. Lysates were clarified from sonicated nuclei and yH2AX-DNA complexes were isolated with antibody. Libraries were prepared according to standards Illumina's instructions. yH2AX antibody from Abcam (ab2893), rabbit polyclonal
+
+All of the information below should apply specifically to this particular sample:
+
+Genotype info: siControl
+Tissue info: Primary fibroblast transformed with hTERT and SV40 early region. human foreskin fibroblast
+Cell line info: BJ-HELT
+Other info of potential relevance: parsed primary ID = {SRX2582720}; LIBRARYSELECTION = {ChIP}; molecule-type = {genomic DNA}; parsed_GSM_ID = {GSM2500244}; inferred sequence type = {ChIPSeq}; LIBRARYSTRATEGY = {ChIP-Seq}; sample-type = {SRA}
+
+
+Barb's answers are as follows:
+0. BJ-HELT
+1. fibroblast
+2. foreskin
+3. N/A
+4. No genetic modifications were introduced for this particular sample (the record mentions "siControl" but this is a control condition for the siRNA experiment, not an actual genetic modification)
+5. No, the string "input" does not appear in the sample name "GSM2500244: Control situation Replicate 2;  ChIP-Seq. siControl yH2AX". The sample is not an input control
+6. No abbreviation of the cells used appears in the sample name
+7. yH2AX antibody (Abcam;ab2893)
+8. manufacturer=Abcam,clone=N/A,catalog=ab2893,lot=N/A,target=yH2AX
+9. H2AFX, TRF2
+10. The rationale for ChIP target identification for this particular sample comes from the sample name "GSM2500244: Control situation Replicate 2;  ChIP-Seq. siControl yH2AX". The "siControl" part indicates that the sample is an siRNA control, as the protocol information also mentions "siControl or siTRF2" as possible treatments. The "yH2AX" part indicates that this sample was treated with the yH2AX antibody for ChIP-seq (ab2893), as the protocol information mentions the "yH2AX antibody" as the only antibody used in the study for immunoprecipitation
+11. yH2AX
+12. H2AFX
+13. ChIP-seq for sure
+14. The treatment applied to this particular sample can be identified from the sample name "GSM2500244: Control situation Replicate 2;  ChIP-Seq. siControl yH2AX". The sample is an siRNA control ("siControl"), indicating that it was treated with siRNA that does not target an actual gene. This is a control for a genetic modification
+15. N/A
+16. Yes, this sample corresponds to a control genetic modification, as indicated by the presence of "siControl" in the sample name, to be compared with an "siTRF2" sample in which TRF2 expression is knocked down
+17. No, this sample does not correspond to a control treatment. No treatments were included in the study, other than the **genetic** modification consisting of TRF2 knockdown (applied to another sample)
+18. "Response to TRF2 depletion", "Telomere maintenance"
+19. Yes (DNA damage, as indicated by the presence of yH2AX)

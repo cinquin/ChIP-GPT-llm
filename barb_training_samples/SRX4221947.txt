@@ -1,0 +1,36 @@
+You are a biologist analyzing metadata from a ChIP-seq experiment database. Your task is to extract information from a record describing a single sample that is part of a larger study. The record may contain incomplete or misorganized metadata, and it is your job to identify the protein that was targeted in the ChIP experiment and to extract information about the sample.
+
+Sample name: XSUVI-3 Ctl input DNA.bam. GSM3192347: XSUVI-3 Ctl input DNA;  ChIP-Seq
+Name of the broader study to which the sample belongs: H3.3 K27M depletion increases differentiation and extends latency of diffuse intrinsic pontine glioma growth in vivo [ChIP-Seq]
+Study abstract (applies to all samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control): Xenografts from human pediatric brainstem gliomas bearing K27M in H3F3A were transduced with non silencing or H3F3A shRNA to assess the impact of the K27M on tumor growth, gene expression and epigenetics Overall design: RNA-seq and ChIP-seq for H3K27me3 and H3K4me3 for knock-down or control tumors from three different human xenografts. Multiple tumors tested for each xenograft line
+The protocol information in this paragraph likely (but not necessarily) applies to **all** samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control (see abstract). SUDIPGVIm5704-input_DNA. human xenografts grown as implants in nude mouse brain. Xenografts dissected from mouse brain, cells dissociated and for each experiment, the same pool of cells was transduced with lentivirus expressing non-silencing control or specific shRNA, then cultured for 12 days under puro selection. Transduced cells were reimplanted into multiple mouse brains for each shRNA construct. The resulting tumors were dissected for ChIP-seq and RNAseq. ChIP and library construction for SJDIPGX7 xenografts using H3K27me3 (Millipore 07-449), H3K27ac (Active Motif 39133) and H3K4me3 (Active Motif 39159) was performed by Active Motif.  All other ChIP was performed at St. Jude using the following method.  Xenograft tumors were snap frozen and ground to a powder before fixation.  Single cell suspensions were generated from cultured cells then fixed. For histone ChIP, samples were fixed for 5 minutes with 1% paraformaldehyde in PBS (from a frozen stock) at room temperature.  For BMI1 and RNF2 ChIP, samples were fixed with 2mM disuccinimidyl glutarate in PBS for 45 minutes at room temperature followed by 1% paraformaldehyde in PBS for 15 minutes at room temperature following the method established in Gargiulo et al. (van Lohuizen lab, 2013 Cancer Cell 23:660-676). Bare nuclei were sheared on a Covaris M220.  For histone mark ChIPs, the reads arising from mouse cells entrapped within the xenograft to normalize the post ChIP samples to the human/mouse read ratio obtained for the pre-ChIP material (input library).  For some experiments, chromatin from drosophila S2 cells was also spiked-in and used to validate the use of mouse reads for normalization.  ChIP reactions were performed using a modified Upstate Biotechnology protocol. Antibodies used were (μl antibody per IP shown): H3K27me3 (Cell Signaling 9733, lot 8; 4 μl), H3K27ac (Cell Signaling 8173, lot 1; 4 μl), H3K4me3 (Cell Signaling 9751, lot 8; 5 μl), BMI1 (Bethyl A301-694A, lot 4; 5 μl) and RNF2 (Bethyl A302-869A, lot 1; 5 μl). Libraries were prepared from 5-10 ng of DNA using the NEBNext ChIP-Seq Library Prep Reagent Set for Illumina with NEBNext Q5 Hot Start HiFi PCR Master Mix according to the manufacturer's instructions (New England Biolabs) with the following modifications: a second 1:1 Ampure cleanup was added after adaptor ligation. The Ampure size selection step prior to PCR was eliminated. Completed libraries were analyzed for insert size distribution on a 2100 BioAnalyzer High Sensitivity kit (Agilent) or Caliper LabChip GX DNA High Sensitivity Reagent Kit (Perkin Elmer).  Libraries were quantified using the Quant-iT PicoGreen dsDNA assay (Life Technologies), Kapa Library Quantification kit (Kapa Biosystems) or low pass sequencing on a MiSeq Nano v2 run (Illumina)
+
+All of the information below should apply specifically to this particular sample:
+
+Antibody info:none
+Genotype info: non silencing shRNA. miRE
+Tissue info: SU-DIPGVI (established as neurospheres in vitro, implanted in brain for this experiment)
+Tissue type info: in vivo xenograft dissected from mouse brain
+Other info of potential relevance: parsed primary ID = {SRX4221947}; LIBRARYSELECTION = {ChIP}; molecule-type = {genomic DNA}; parsed_GSM_ID = {GSM3192347}; experiment id = {SUVI_in_vivo}; inferred sequence type = {ChIPSeq}; LIBRARYSTRATEGY = {ChIP-Seq}; sample-type = {SRA}
+
+
+0. SU-DIPGVI
+1. glioma
+2. brain
+3. pediatric brainstem
+4. control shRNA knockdown/silencing (the sample-specific section of the record mentions "non silencing shRNA. miRE", and the sample title contains "Ctl" that does not follow "input", and no silecing information, suggesting that the sample is a silencing control *in addition* to being a ChIP input control)
+5. Yes, the string "input" appears in the sample name "XSUVI-3 Ctl input DNA.bam. GSM3192347: XSUVI-3 Ctl input DNA;  ChIP-Seq", and the sample-specific "Antibody info" record says "none". Yes, the sample is an input control
+6. No, "SU-DIPGVI" does not appear in the sample name "XSUVI-3 Ctl input DNA.bam. GSM3192347: XSUVI-3 Ctl input DNA;  ChIP-Seq"
+7. H3K27me3 (Cell Signaling 9733, lot 8; 4 μl), H3K27ac (Cell Signaling 8173, lot 1; 4 μl), H3K4me3 (Cell Signaling 9751, lot 8; 5 μl), BMI1 (Bethyl A301-694A, lot 4; 5 μl) and RNF2 (Bethyl A302-869A, lot 1; 5 μl)
+8. manufacturer=cell_signaling,clone=N/A,catalog=9733,lot=8,target=H3K27me3; manufacturer=cell_signaling,clone=N/A,catalog=8173,lot=1,target=H3K27ac; manufacturer=cell_signaling,clone=N/A,catalog=9751,lot=8,target=H3K4me3; manufacturer=bethyl,clone=N/A,catalog=A301-694A,lot=4,target=BMI1; bethyl,clone=N/A,catalog=A302-869A,lot=1,target=RNF2
+9. H3F3A, BMI1, RNF2
+10. The sample-specific "Antibody info" record says "none", the string "input" appears in the sample name, and there is not other mention of a potential ChIP target for this particular sample. Therefore, it is a ChIP input control and does not have a specific target
+11. Input
+12. N/A (input)
+13. ChIP-seq for sure ("LIBRARYSTRATEGY = {ChIP-Seq}", "LIBRARYSELECTION = {ChIP}", and the rest of the record mentions ChIP-seq and no alternative technique)
+14. The record does not mention any specific treatments applied to this particular sample other than [control] genetic modifications and regular cell culture procedures. The xenograft preparation, puromycin selection, injection, and dissection are part of sample preparation and do not count as a notable treatment
+15. N/A
+16. Yes, the sample corresponds to a control genetic modification with non-silencing shRNA, which should be compared to the knockdown of H3F3A with specific shRNA
+17. No (there are no notable treatments as part of this study)
+18. "Response to H3.3 K27M depletion"
+19. No

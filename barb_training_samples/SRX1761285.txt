@@ -1,0 +1,35 @@
+You are a biologist analyzing metadata from a ChIP-seq experiment database. Your task is to extract information from a record describing a single sample that is part of a larger study. The record may contain incomplete or misorganized metadata, and it is your job to identify the protein that was targeted in the ChIP experiment and to extract information about the sample.
+
+Sample name: 109 R1.h. GSM2152591: K562 ChIP H3K9me2 exp. 3;  ChIP-Seq
+Name of the broader study to which the sample belongs: Genome-wide mapping of histone H3 lysine 9 dimethylation in normal myeloid cells and acute myeloid leukemia
+Study abstract (applies to all samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control): Histone H3 lysine 9 (H3K9) is a target for posttranslational histone methylation associated with gene repression. Most of H3K9me2 modification in mammalian cells is mediated by histone methyltransferase G9a that is essential for mouse embryo development and plays an oncogenic role in acute myeloid leukemia (AML), a highly malignant blood cancer. In this study,  ChIP-sequencing was used to conduct a detailed whole-genomic characterization of the localization and expression of H3K9me2 and to identify epigenetic changes associated with normal myeloid differentiation and AML.  Genome-wide computational analysis using hidden Markov model was employed to map multiple associations of chromatin modification topographies with transcription in leukemia and define chromosomal domains undergoing epigenetic changes in AML Overall design: ChIP-Seq with antibodies against H3K9me2 was used with normal human granulocytes (2 samples), CD34+ hematopoietic progenitors (2 samples), K562 cells (2 intact samples and 2 samples  treated with G9a inhibitor UNC0638), and primary myeloblasts from 8 different acute myeloid leukemia samples. Each H3K9me2 ChIP-seq was repeated twice. In addition, control experiments for antibody specificity were conducted with ChIP input DNA (16 samples), and ChIP-seq with antibodies against histone H3K9me3 (4 samples), histone H3K4me2 (1 sample), and nonmodified histone H3 C-tail (2 samples)
+The protocol information in this paragraph likely (but not necessarily) applies to **all** samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control (see abstract). Some K562 samples (K562-UNC0638) were grown for 5 days with 0.5 micromole UNC0638, a specific  inhibitor of histone methyltransferase G9a, before isolation. cells were fixed with 1% formaldehyde for 10 min. After fixation, nuclei were isolated, the nuclear DNA was digested by micrococcal nuclease to 150-200 bp DNA fragments,  the DNA fragments with attached proteins were resuspended in SDS-containing lysis buffer, and immunoprecipitated by antibodies against various histone modifications. For Illumina Hi-Seq 2500 sequencing we used New England BioLabs NEBNext ChIP-Seq library preparation reagent set for Illumina and and constructed library as described in the E6240 instruction manual.  For  SOLiD  sequencing we used Applied Biosystems SOLiD 4 System and constructed library as described in the SOLiD 4 System Library Preparation Guide. Normal polymorphonuclear granulocytes (predominantly neutrophils) were isolated from discarded fresh white blood cells (buffy coats) from unidentified healthy donors using standard OptiPrep density centrifugation, resuspended in PBS buffer and fixed with 1% formaldehyde. Cryopreserved CD34+ bone marrow hematopoietic progenitors were obtained from Allcells, Emeryville, Ca. Cryopreserved AML cellswere  isolated from bone-marrow samples by Ficoll-Pacque density gradient centrifugation. The cryopreserved samples  were thawed, resuspended in PBS, and fixed with 1% formaldehyde immediately after thawing. The human samples were collected and analyzed under Penn State Hershey IRB protocols  2000-186,  HY03-136EP-A, and STUDY00002518.   Cultured cells K562 (ATCC CCL-243) were  grown in suspension as recommended by ATCC, washed  with PBS and fixed with 1% formaldehyde
+
+All of the information below should apply specifically to this particular sample:
+
+Antibody info:H3K9me2 (ab1220 Abcam)
+Tissue info: K562 strain
+Other info of potential relevance: parsed primary ID = {SRX1761285}; LIBRARYSELECTION = {ChIP}; molecule-type = {genomic DNA}; parsed_GSM_ID = {GSM2152591}; inferred sequence type = {ChIPSeq}; LIBRARYSTRATEGY = {ChIP-Seq}; sample id = {K562 2}; gender = {female}; sample-type = {SRA}
+
+
+Barb's answers are as follows:
+0. K562
+1. myeloid leukemia
+2. blood
+3. N/A
+4. N/A (no genetic modifications are mentioned)
+5. No, the string "input" does not appear in the sample name "109 R1.h. GSM2152591: K562 ChIP H3K9me2 exp. 3;  ChIP-Seq", and the sample is not an input control
+6. Yes, "K562" appears in the sample name "109 R1.h. GSM2152591: K562 ChIP H3K9me2 exp. 3;  ChIP-Seq"
+7. H3K9me2 (ab1220 Abcam)
+8. manufacturer=abcam,clone=N/A,catalog=ab1220,lot=N/A,target=H3K9me2
+9. G9a
+10. The sample-specfiic "Antibody info" identifies the H3K9me2 antibody (ab1220 Abcam). The sample name "109 R1.h. GSM2152591: K562 ChIP H3K9me2 exp. 3;  ChIP-Seq" also indicates that the ChIP target is histone H3 lysine 9 dimethylation (H3K9me2), and does not contain "input"
+11. H3K9me2
+12. H3C1, H3C2, H3C3 (multiple genes correspond to Histone H3)
+13. ChIP-seq for sure
+14. The protocol information mentions that some K562 samples (K562-UNC0638) were grown for 5 days with 0.5 micromole UNC0638, a specific inhibitor of histone methyltransferase G9a, before isolation. But this treatment was apparently not applied to this particular sample, since the sample-specific section does not mention any treatment, and no reference to the inhibitor UNC0638 appears in the sample name
+15. N/A
+16. No (there are no genetic modifications or genetic backgrounds mentioned)
+17. Yes (this sample was not treated with G9a inhibitor UNC0638, and can thus serve as a control for comparison with UNC0638-treated samples)
+18. "G9a-mediated histone methylation in acute myeloid leukemia," "G9a regulation of cellular response to DNA damage" (inferred by Barb from her own knowledge)
+19. Yes (Barb knows that G9a plays a role in the DNA damage response)

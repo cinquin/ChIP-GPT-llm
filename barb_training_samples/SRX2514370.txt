@@ -1,0 +1,50 @@
+You are a biologist analyzing metadata from a ChIP-seq experiment database. Your task is to extract information from a record describing a single sample that is part of a larger study. The record may contain incomplete or misorganized metadata, and it is your job to identify the protein that was targeted in the ChIP experiment and to extract information about the sample.
+
+Sample name: Galaxy113-Demultiplex Fastq1 CAGATC on data 103 and data.bz2. GSM2467353: GFP-3 CY;  ChIP-Seq
+Name of the broader study to which the sample belongs: H3.Y discriminates between HIRA and DAXX chaperone complexes and reveals unexpected insights into human DAXX-H3.3-H4 binding and deposition requirements
+Titles of all samples in the study: 
+    - GSM2467359 r1, GSM2467359: Input replicate 1;  ChIP-Seq
+    - GSM2467358: GFP replicate 1;  ChIP-Seq, GSM2467358 r1
+    - GSM2467357: GFP-H3.3 replicate 1;  ChIP-Seq, GSM2467357 r1
+    - GSM2467356 r1, GSM2467356: GFP-H3.Y replicate 1;  ChIP-Seq
+    - GSM2467355: Input replicate 2;  ChIP-Seq, GSM2467355 r1
+    - GSM2467354 r1, GSM2467354: GFP-Y C3;  ChIP-Seq
+    - GSM2467353 r1, GSM2467353: GFP-3 CY;  ChIP-Seq
+    - GSM2467352 r1, GSM2467352: GFP-NY 3;  ChIP-Seq
+    - GSM2467351 r1, GSM2467351: GFP-N3 Y;  ChIP-Seq
+    - GSM2467350 r1, GSM2467350: GFP-H3Y L46V L62I R53K triple H33C-terminus;  ChIP-Seq
+    - GSM2467349 r1, GSM2467349: GFP replicate 2;  ChIP-Seq
+    - GSM2467348: GFP-H3.Y replicate 2;  ChIP-Seq, GSM2467348 r1
+    - GSM2467347: GFP-H3.3 replicate 2;  ChIP-Seq, GSM2467347 r1
+Study abstract (applies to all samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control): Histone chaperones prevent promiscuous histone interactions before chromatin assembly. They guarantee faithful deposition of canonical histones and functionally specialized histone variants into chromatin in a spatial- and temporally-restricted manner. Here, we identify the binding partners of the primate-specific and H3.3-related histone variant H3.Y using several quantitative mass spectrometry approaches, and biochemical and cell biological assays. We find the HIRA, but not the DAXX/ATRX, complex to specifically recognize H3.Y, explaining its presence in transcriptionally active euchromatic regions. Accordingly, H3.Y nucleosomes are enriched in the transcription-promoting FACT complex and depleted of repressive posttranslational histone modifications. H3.Y mutational gain-of-function analyses screens reveal an unexpected combinatorial amino acid sequence requirement for histone H3.3 interaction with DAXX but not HIRA, and for H3.3 recruitment to PML nuclear bodies. We demonstrate the importance and necessity of specific H3.3 core region and C-terminal amino acids in discriminating between distinct chaperone complexes. Further, ChIP-seq experiments reveal that in contrast to euchromatic HIRA-dependent deposition sites, human DAXX/ATRX-dependent regions of histone H3 variant incorporation are enriched in heterochromatic H3K9me3 and simple repeat sequences. These data demonstrate that H3.Y''s unique amino acids allow a functional distinction between HIRA and DAXX binding and its consequent deposition into open chromatin. Overall design: Examination of genome-wide localization of H3.3, H3.Y and mutants thereof in HeLa Kyoto cells. Respective histones were expressed with an eGFP-tag and immunoprecipitated with a GFP antibody after chromatin shearing
+The protocol information in this paragraph likely (but not necessarily) applies to **all** samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control (see abstract). Hela Kyoto (HK) cells were grown in DMEM (Sigma) supplemented with 10% fetal calf serum (FCS; Sigma) and 1% penicillin/streptomycin at 37°C and 5% CO2. GFP_3_CY.  pIRESneo-EGFP (generated from pIRESneo (digested with EcoRV and BamHI) with the EGFP insert from pEGFP-C1 (digested with NheI followed by Klenow reaction and subsequently digested with BamHI)). HeLa Kyoto cells were crosslinked with 1% formaldehyde for 10 min at room temperature. Nuclear lysates were subjected to chromatin shearing to an average size of 150 bp. Histone-DNA complexes were isolated with GFP-antibody. All libraries were prepared with the MicroPlex library preparation kit v2 (order no C05010012) following manufacturer's instructions
+
+All of the information below should apply specifically to this particular sample:
+
+Antibody info:GFP (Abcam, ab290, lot GR278073-1)
+Genotype info: pIRESneo-EGFP
+Tissue info: HeLa (Kyoto), GFP-3_CY ChIP
+Cell line info: HeLa (Kyoto)
+Other info of potential relevance: parsed primary ID = {SRX2514370}; LIBRARYSELECTION = {ChIP}; molecule-type = {genomic DNA}; parsed_GSM_ID = {GSM2467353}; inferred sequence type = {ChIPSeq}; LIBRARYSTRATEGY = {ChIP-Seq}; sample-type = {SRA}
+
+Barb's answers are as follows:
+0. HeLa
+1. adenocarcinoma
+2. cervix
+3. N/A
+4. Expression of GFP-3_CY fusion protein (Note: "3_CY" may refer to a specific H3 histone variant or modification, but this interpretation is speculative and uncertain without additional context.)
+5. No
+6. No
+7. GFP (Abcam, ab290, lot GR278073-1)
+8. manufacturer=abcam,clone=N/A,catalog=ab290,lot=GR278073-1,target=GFP
+9. HIRA, DAXX, FACT, PML, ATRX
+10. The sample name "GSM2467353: GFP-3 CY; ChIP-Seq" indicates that the ChIP target for this particular sample is GFP-3_CY. The protocol information also states that histone-DNA complexes were isolated with a GFP-antibody
+11. 3_CY
+12. Unsure (probably an H3 variant)
+13. ChIP-seq for sure
+14. No notable treatments applied to this particular sample are mentioned in the record other than the regular cell culture conditions and crosslinking with formaldehyde
+15. N/A
+16. No
+17. No
+18. N/A
+19. No

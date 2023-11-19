@@ -1,0 +1,36 @@
+You are a biologist analyzing metadata from a ChIP-seq experiment database. Your task is to extract information from a record describing a single sample that is part of a larger study. The record may contain incomplete or misorganized metadata, and it is your job to identify the protein that was targeted in the ChIP experiment and to extract information about the sample.
+
+Sample name: ChIPseq XPCdel H3K4me3 ATRA.bam. NLM-109-B6
+Name of the broader study to which the sample belongs: XPC is an RNA polymerase II cofactor recruiting ATAC to promoters by interacting with E2F1
+Study abstract (applies to all samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control): The DNA damage sensor XPC is involved in nucleotide excision repair. Here we show that in the absence of damage, XPC co-localizes with RNA polymerase II (Pol II) and active post-translational histone modifications marks on a subset of class II promoters in human fibroblasts. XPC depletion triggers specific gene down-expression due to a drop in the deposition of histone H3K9 acetylation mark and pre-initiation complex formation. XPC interacts with the histone acetyltransferase KAT2A and specifically triggers the recruitment of the KAT2A-containing ATAC complex to the promoters of down-expressed genes. We show that a strong E2F1 signature characterizes the XPC/KAT2A-bound promoters and that XPC interacts with E2F1 and promotes its binding to its DNA element. Our data reveal that the DNA repair factor XPC is also an RNA polymerase II cofactor recruiting the ATAC coactivator complex to promoters by interacting with the DNA binding transcription factor E2F1
+The protocol information in this paragraph likely (but not necessarily) applies to **all** samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control (see abstract). Diagenode MicroPlex Library Preparation kit v2 Instruction Manual
+
+All of the information below should apply specifically to this particular sample:
+
+Antibody info:H3K4me3
+Treatment info: ATRA (All-Trans Retinoic Acid)
+Genotype info: Homozygous for XPC p.Arg579Ter (PubMed=18809580)
+Tissue info: Fibroblast. Skin
+Cell line info: Homozygous for XPC p.Arg579Ter (PubMed=18809580)
+Other info of potential relevance: parsed primary ID = {SRX4120224}; Figure = {main}; LIBRARYSELECTION = {ChIP}; Desease = {Xeroderma pigmentosum, complementation group C}; inferred sequence type = {ChIPSeq}; Image analysis and base calling = {RTA 1.17.20 and CASAVA 1.8.2}; LIBRARYSTRATEGY = {ChIP-Seq}; Sequencing = {single-end 50 base reads}
+
+0. primary (the record states "Tissue info: Fibroblast. Skin," indicating that primary tissue was used instead of an established cell line)
+1. fibroblast
+2. skin (as indicated by "Tissue info: Fibroblast. Skin,")
+3. N/A
+4. Homozygous for XPC p.Arg579Ter
+5. The string "input" does not appear in the sample name, and there is no indication that the sample is an input control
+6. No, the sample name "ChIPseq XPCdel H3K4me3 ATRA.bam. NLM-109-B6" does not contain an abbreviation for the cells used
+7. N/A
+8. N/A
+9. XPC, E2F1, H3K9, KAT2A, POLR2A
+10. The record states "Antibody info: H3K4me3," identifying H3K4me3 as the ChIP target. This is further confirmed by the sample name "ChIPseq XPCdel H3K4me3 ATRA.bam. NLM-109-B6", where "H3K4me3" is the only term that refers to a plausible ChIP target
+11. H3K4me3
+12. H3C1, H3C2, H3C3 (multiple genes correspond to Histone H3)
+13. ChIP-seq for sure (the record states "LIBRARYSTRATEGY = {ChIP-Seq}; inferred sequence type = {ChIPSeq}," indicating that this sample corresponds to a ChIP-seq experiment)
+14. The record states "Treatment info: ATRA (All-Trans Retinoic Acid)," identifying ATRA as the notable treatment applied to this sample. This is further confirmed by the sample name "ChIPseq XPCdel H3K4me3 ATRA.bam. NLM-109-B6" also containing "ATRA"
+15. ATRA (concentration=unknown, duration=unknown, details=All-Trans_Retinoic_Acid)
+16. No: the sample has specific genetic modification "Homozygous for XPC p.Arg579Ter," and there is no indication that the experiment included samples without this mutation, or that this sample is a control for genetic modification or genetic background
+17. No: the sample was treated with ATRA (All-Trans Retinoic Acid), and there is no indication that this sample is a control treatment for comparison with a different treatment in the same experiment
+18. "DNA damage response," "Nucleotide excision repair," "RNA polymerase II recruitment," "ATAC complex recruitment," "E2F1 binding"
+19. DNA damage: yes (the study abstract mentions the involvement of XPC in nucleotide excision repair and response to DNA damage stimulus, indicating that this sample is related to DNA damage)

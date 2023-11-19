@@ -1,0 +1,35 @@
+You are a biologist analyzing metadata from a ChIP-seq experiment database. Your task is to extract information from a record describing a single sample that is part of a larger study. The record may contain incomplete or misorganized metadata, and it is your job to identify the protein that was targeted in the ChIP experiment and to extract information about the sample.
+
+Sample name: GSM2131306: A13-Lg 1 INP batch1;  ChIP-Seq. A13-Lg 1 INP batch1.bam
+Name of the broader study to which the sample belongs: Large-scale epigenetic reprogramming is punctuated late during the evolution of pancreatic cancer progression [ChIP-Seq]
+Study abstract (applies to all samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control): During pancreatic cancer progression, heterogeneous subclonal populations evolve in the primary tumor that possess differing capacities to metastasize and cause patient death. However, the genetics of metastasis reflects that of the primary tumor, and PDAC driver mutations arise early. This raises the possibility than an epigenetic process could be operative late. Using an exceptional resource of paired patient samples, we found that different metastatic subclones from the same patient possessed remarkably divergent malignant properties and global epigenetic programs. Global reprogramming was targeted to thousands of large chromatin domains across the genome that collectively specified malignant divergence. This was maintained by a metabolic shift within the pentose phosphate pathway, independent of KRAS driver mutations. Analysis of paired primary and metastatic tumors from multiple patients uncovered substantial epigenetic heterogeneity in primary tumors, which resolved into a terminally reprogrammed state in metastatic lesions. This supports a model whereby driver mutations accumulate early to initiate pancreatic tumorigenesis, followed by a period of subclonal evolution that generates sufficient intra-tumor heterogeneity for selection of epigenetic programs that may increase fitness during malignant progression and metastatic spread. Overall design: To map the epigenomic landscape of pancreatic cancer progression as it evolves within patients. Chip-Seq (K27Me3, K36Me3, K9Me2/3, K4Me3 and K27Ac) of 2 patients (A13 and A38) and HPDE cell line. Patient A38 included local peritoneal metastasis and 2 distant metastsis (liver and lung mets), and 6AN treated and DMSO samples for lung matastasis. Patient A13 included 2 primary tumors and 1 distant lung metastasis. Each sample has been done with replicates
+The protocol information in this paragraph likely (but not necessarily) applies to **all** samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control (see abstract). for A13-Lg_1 K36Me3. Unless otherwise stated, cells were grown to 70% (A38-Lg) or 100% (A38-Per) confluence in DMEM with 10% Fetal Bovine Serum (FBS). For ChIP-seq, cells were crosslinked with 1% formaldehyde for 10 min at 37 degrees. Isolated chromatin was sonicated to avg length of 200-600bp. For ChIP-seq, input and IP DNA were extracted with Phenol:Chloroform. Libraries were prepared from 10-20 ng of IP ChIP DNA and 100-150 ng of input DNA according to Illumina’s instructions along with the ChIP-seq DNA Sample Prep Kit (IP-102-1001). Briefly, samples were checked for quality and concentration from 150-250 bp on a bioanalyzer. DNA was end-repaired using Klenow polymerase in 58 μL of reaction buffer. For IP DNA, Klenow was diluted 1:5. Samples were incubated at 20°C for 30 minutes and subsequently purified on QIAquick PCR purification columns. A-tails were then added to the DNA with Klenow and dATP in NEB buffer 2 at 37°C for 30 minutes and cleaned with Qiagen MiniElute PCR purification columns. Sequencing adapters were then ligated onto the DNA for 15 minutes at room temperature followed by cleaning with MiniElute columns. Samples were then run on 2% agarose gels and DNA from 216-366 bp (DNA plus adapters) were cut from the gel and purified with a Qiagen QIAquickGel Extraction kit. Concentrations were then checked on a bioanalyzer and 8 ng were PCR amplified with Phusion polymerase (Fisher) for 15 cycles (10 sec 98°C, 30 sec 65°C, 30 sec 72°C) followed by 5 minutes at 72°C. Samples were then cleaned with Ampure kits (Illumina) and washed with 80% ethanol. DNA samples were resuspended at the end of the cleanup into 17.5 μL buffer EB (Qiagen) and subjected to next generation sequencing on Illumina HiSeq platform according to manufacturers instructions
+
+All of the information below should apply specifically to this particular sample:
+
+Antibody info:input
+Tissue info: Patient A13. lung metastasis
+Other info of potential relevance: parsed primary ID = {SRX1722889}; LIBRARYSELECTION = {ChIP}; molecule-type = {genomic DNA}; parsed_GSM_ID = {GSM2131306}; inferred sequence type = {ChIPSeq}; LIBRARYSTRATEGY = {ChIP-Seq}; sample-type = {SRA}
+
+
+
+0. primary tumor ("A13" refers to patient A13, indicating this is a tissue sample)
+1. adenocarcinoma (inferred from the context of pancreatic cancer mentioned in the study abstract)
+2. pancreas (the tumor sampled originated in the pancreas, before metastasis to the lung)
+3. N/A
+4. N/A (no specific genetic modifications are mentioned)
+5. "INP" appears in the sample name "GSM2131306: A13-Lg 1 INP batch1;  ChIP-Seq. A13-Lg 1 INP batch1.bam" We can infer from the rest of the record that this likely an abbreviation for "input", as the record contains "Antibody info:input". The sample is definitely an input control
+6. No (but the patient ID "A13" does appear, as does the metastasis sampling site "Lg" that must refer to "lung")
+7. N/A
+8. N/A
+9. N/A
+10. The sample is identified as an "input" control sample based on the "Antibody info: input" section. As an input control, it does not have a specific ChIP target, and it is used as a reference for background signal in ChIP-seq experiments
+11. Input
+12. N/A (not applicable for input control samples)
+13. ChIP-seq for sure (the record mentions "ChIP-Seq" and "LIBRARYSTRATEGY = {ChIP-Seq}")
+14. There is no mention of any specific treatments applied to this particular sample (or any mention of treatments at all in the abstract and protocol), other than the standard procedures for cell culture (including, e.g., FBS supplementation) or ChIP-seq experiments
+15. N/A
+16. No (there is no mention of genetic modifications or genetic backgrounds)
+17. No (there is no mention of notable treatments, for this or any other sample in this study)
+18. "Metabolic shift in pentose phosphate pathway", "Pancreatic cancer progression"
+19. No

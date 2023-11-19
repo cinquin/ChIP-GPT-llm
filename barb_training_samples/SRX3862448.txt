@@ -1,0 +1,35 @@
+You are a biologist analyzing metadata from a ChIP-seq experiment database. Your task is to extract information from a record describing a single sample that is part of a larger study. The record may contain incomplete or misorganized metadata, and it is your job to identify the protein that was targeted in the ChIP experiment and to extract information about the sample.
+
+Sample name: GSM3071285: Input Dex ChIPseq;  ChIP-Seq. Dex Input2
+Name of the broader study to which the sample belongs: BRG1 governs Glucocorticoid Receptor interactions with chromatin and pioneer factors across the genome
+Study abstract (applies to all samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control): The Glucocorticoid Receptor (GR) alters transcriptional activity in response to hormones by interacting with chromatin at GR binding sites (GBSs) throughout the genome. Our work in human breast cancer cells identifies three classes of GBSs with distinct epigenetic characteristics and reveals that BRG1 interacts with GBSs prior to hormone exposure. The GBSs pre-occupied by BRG1 are more accessible and transcriptionally active than other GBSs. BRG1 is required for a proper and robust transcriptional hormone response and knockdown of BRG1 blocks recruitment of the pioneer factors FOXA1 and GATA3 to GBSs. Finally, GR interaction with FOXA1 and GATA3 binding sites was restricted to sites pre-bound by BRG1. These findings demonstrate that BRG1 establishes specialized chromatin environments that define multiple classes of GBS. This in turn predicts that GR and other transcriptional activators function via multiple distinct chromatin-based mechanisms to modulate the transcriptional response. Overall design: ChIP-seq and RNA-seq in A1-2 and A1A3 cells (both derived from T47D human breast cancer cells)
+The protocol information in this paragraph likely (but not necessarily) applies to **all** samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control (see abstract). Cells were cultured in Dulbecco's modified Eagle medium (DMEM) containing 10% fetal bovine serum containing 250 μg/ml G418. Media for A1A3 cells also contatined 1 μg/ml Puromycin. Dexamethasone treatments were performed using 100 nM Dexamethasone or ethanol vehicle for 1 hour or 8 hours for ChIP-seq and RNA-seq experiments, respectively. To knockdown BRG1 expression in A1-A3 cells, cells were treated for 72 hours with Doxycycline. For ChIP-seq, cells were fixed with 1% formaldehyde at 37C for 10 minutes for all targets except BRG1, for which cells were fixed for 20 minutes. After quenching with glycine, cell pellets were washed Hypotonic buffer (10mM HEPES-NaOH pH 7.9, 10 mM KCl, 1.5 mM MgCl2, 340 mM sucrose, 10% glycerol, 0.1% Triton X-100, and HALT protease inhibitors (ThermoFisher)) and resuspended in Shearing buffer (10 mM Tris-HCl pH 8.0, 1mM EDTA, 0.5mM EGTA, 0.5mM PMSF, 5mM Sodium Butyrate, 0.1% SDS, and HALT protease inhibitors (ThermoFisher) and chromatin was fragmented by sonication with the Covaris S220. Chromatin was diluted two-fold in 2xIP buffer (20 mM Tris-HCl pH 8.0, 300mM NaCl, 2mM EDTA, 20% Glycerol, 1% Triton X-100, 0.5mM PMSF, 5mM Sodium Butyrate, and HALT protease inhibitors (ThermoFisher)) and immunoprecipitation was performed with 1ug antibody per 100ug chromatin. Immune complexes were captured using protein A and G dynabeads, washed once each with low salt (20 mM Tris-HCl pH 8.0, 150 mM NaCl, 2 mM EDTA, 1 % Triton X-100, 0.1 % SDS), high salt (same as low salt buffer, except 500 mM NaCl), and LiCl buffer (Tris-HCl pH 8.0, 250 mM LiCl, 2 mM EDTA, 1 % NP-40, 1 % (wt/vol) sodium deoxycholate), and twice with TE. Eluted DNA was RNaseA and Proteinase K  treated and purified using Qiagen PCR purification columns. For RNA-seq, RNA was isolated from treated A1-2 and A1A3 cells using Qiagen RNeasy kits with on-column DNase treatment. ChIP-seq libraries were generated using the Illumina Nextara-XT library generation kit, RNA-seq libraries were generated at the National Intramural Sequencing Center using Ribo-Zero Gold
+
+All of the information below should apply specifically to this particular sample:
+
+Treatment info: 1hr Dex
+Tissue info: Input_Dex_ChIPseq
+Cell line info: A1-2 breast cancer cells
+Other info of potential relevance: parsed primary ID = {SRX3862448}; LIBRARYSELECTION = {ChIP}; molecule-type = {genomic DNA}; parsed_GSM_ID = {GSM3071285}; inferred sequence type = {ChIPSeq}; LIBRARYSTRATEGY = {ChIP-Seq}; sample-type = {SRA}
+
+
+0. A1-2
+1. breast cancer
+2. breast
+3. N/A
+4. N/A (no genetic modifications are mentioned)
+5. Yes, the string "input" appears in the sample name "GSM3071285: Input Dex ChIPseq;  ChIP-Seq. Dex Input2". Yes, the sample is an input control
+6. No, "A1-2" does not appear in the sample name "GSM3071285: Input Dex ChIPseq;  ChIP-Seq. Dex Input2"
+7. N/A
+8. N/A
+9. GR (Glucocorticoid Receptor), BRG1, FOXA1, GATA3
+10. The sample is an input control, as shown by the following: 1) absence of a specific antibody used for immunoprecipitation; 2) Both "Tissue info: Input_Dex_ChIPseq" and the sample name "GSM3071285: Input Dex ChIPseq;  ChIP-Seq. Dex Input2" contain "input" and no name of a potential ChIP target
+11. Input (this is an input control sample)
+12. N/A (this is an input control sample)
+13. ChIP-seq for sure (the record mentions "ChIP-Seq" and "ChIP-seq" multiple times, indicating that this is a ChIP-seq experiment)
+14. The sample name mentions "1hr Dex," indicating that the cells were treated with Dexamethasone for 1 hour. This treatment is also mentioned in the protocol information paragraph. Doxycycline treatment is mentioned, but it is does not apply to this sample, and it is not a notable treatment in answer to this question (it is used to induce gene silencing, which would be reported in reponse to a question on genetic modifications rather than notable treatments)
+15. dexamethasone (concentration=100_nM, duration=1_hour, details=synthetic_corticosteroid_GR_modulator)
+16. No, this sample does not correspond to a control genetic modification or control genetic background
+17. No (this sample corresponds to an actual treatment, with dexamethasone, rather than to a control)
+18. "Glucocorticoid receptor signaling pathway"
+19. No

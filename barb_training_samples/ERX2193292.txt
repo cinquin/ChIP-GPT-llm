@@ -1,0 +1,32 @@
+You are a biologist analyzing metadata from a ChIP-seq experiment database. Your task is to extract information from a record describing a single sample that is part of a larger study. The record may contain incomplete or misorganized metadata, and it is your job to identify the protein that was targeted in the ChIP experiment and to extract information about the sample.
+
+Sample name: unspecified. P23 INPUT. ERR2136743. sorted P DKP 005 Input.bam.bai
+Name of the broader study to which the sample belongs: Enhancers mapping uncovers phenotypic heterogeneity and evolution in patients with luminal breast cancer
+Study abstract (applies to all samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control): The degree of intrinsic and interpatient phenotypic heterogeneity and its role in tumour evolution is poorly understood. Phenotypic divergence can be achieved via the inheritance of alternative transcriptional programs1,2. Cell-type specific transcription is maintained through the activation of epigenetically-defined regulatory regions including promoters and enhancers1,3,4. In this work, we annotated the epigenome of 47 primary and metastatic oestrogen-receptor (ER)-positive breast cancer specimens from clinical samples, and developed strategies to deduce phenotypic heterogeneity from the regulatory landscape, identifying key regulatory elements commonly shared across patients. Highly shared regions contain a unique set of regulatory information including the motif for the transcription factor YY1. In vitro work shows that YY1 defines the critical subset of functional ER binding sites commonly found in most patients. YY1 is essential for ER transcriptional activity and the expression of genes that mediate resistance to endocrine treatment. Finally, we show that H3K27ac levels at active enhancer elements can be used as a surrogate of intra-tumor phenotypic heterogeneity, and to track expansion and contraction of phenotypic subpopulations throughout breast cancer progression. Tracking YY1 and SLC9A3R1 positive clones in primary and metastatic lesions, we show that endocrine therapies drive the expansion of phenotypic clones originally underrepresented at diagnosis. Collectively, our data show that epigenetic mechanisms significantly contribute to phenotypic heterogeneity and evolution in systemically treated breast cancer patients
+The protocol information in this paragraph likely (but not necessarily) applies to **all** samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control (see abstract). P23_INPUT
+
+All of the information below should apply specifically to this particular sample:
+
+Other info of potential relevance: ENA-LAST-UPDATE = {2018-11-16}; parsed primary ID = {ERX2193292}; LIBRARYSELECTION = {ChIP}; inferred sequence type = {ChIPSeq}; LIBRARYSTRATEGY = {ChIP-Seq}; External Id = {SAMEA104315721}; ENA-FIRST-PUBLIC = {2017-10-10}; Unavailable = {true}
+
+
+0. primary tumor
+1. estrogen-receptor positive breast cancer
+2. breast
+3. N/A
+4. N/A (the record does not mention any genetic modifications)
+5. Yes, the string "input" appears in the sample name "unspecified. P23 INPUT. ERR2136743. sorted P DKP 005 Input.bam.bai", and the sample is an input control
+6. No, the sample name does not contain an abbreviation of the cells used
+7. N/A
+8. N/A
+9. YY1, SLC9A3R1, ER (estrogen receptor, ESR1)
+10. The sample name "unspecified. P23 INPUT. ERR2136743. sorted P DKP 005 Input.bam.bai" indicates that this is an input control sample. Input controls are used to account for background noise in ChIP-seq experiments and do not involve specific ChIP targets
+11. Input
+12. N/A (input control)
+13. ChIP-seq for sure
+14. The protocol information does not provide any details about specific treatments applied to this particular sample, and the sample name does not contain any indication of treatments either
+15. N/A
+16. No, this sample does not correspond to a control genetic modification or control genetic background
+17. No, this sample does not correspond to a control treatment
+18. "Response to endocrine treatment," "Breast cancer progression"
+19. No

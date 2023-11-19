@@ -1,0 +1,36 @@
+You are a biologist analyzing metadata from a ChIP-seq experiment database. Your task is to extract information from a record describing a single sample that is part of a larger study. The record may contain incomplete or misorganized metadata, and it is your job to identify the protein that was targeted in the ChIP experiment and to extract information about the sample.
+
+Sample name: 17551 4#4
+Name of the broader study to which the sample belongs: Single-cell RNA-sequencing of differentiating iPS cells reveals dynamic genetic effects on gene expression
+Study abstract (applies to all samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control): Recent developments in stem cell biology have enabled the study of cell fate decisions in early human development that are impossible to study in vivo. However, understanding how development varies across individuals and, in particular, the influence of common genetic variants during this process has not been characterised. Here, we exploit human iPS cell lines from 125 donors, a pooled experimental design, and single-cell RNA-sequencing to study population variation of endoderm differentiation. We identify molecular markers that are predictive of differentiation efficiency of individual lines, and utilise heterogeneity in the genetic background across individuals to map hundreds of expression quantitative trait loci that influence expression dynamically during differentiation and across cellular contexts
+The protocol information in this paragraph likely (but not necessarily) applies to **all** samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control (see abstract). ChIP for various histone marks (H3K4me3, H3K27me3, H3K4me1, H3K27ac, H3K36me3) was performed on two biological replicates at each time point (0h, 24h, 48h, 72h)
+
+All of the information below should apply specifically to this particular sample:
+
+Antibody info:H3K27me3
+Genotype info: H9 hESC
+Tissue info: H9 hESC, 48h
+Cell line info: H9 hESC
+Other info of potential relevance: parsed primary ID = {SRX7259191}; replicate = {rep_1}; LIBRARYSELECTION = {ChIP}; inferred sequence type = {ChIPSeq}; LIBRARYSTRATEGY = {ChIP-Seq}; time_point = {48h}
+
+
+0. H9 hESC
+1. Embryonic stem cell
+2. Embryo
+3. N/A
+4. N/A (no genetic modifications were performed by the experimenters; in addition, the study mentions a pool of genetic backgrounds from 125 donors, but this particular sample appears to correspond to a single, established cell line: H9)
+5. No, "input" does not appear in the sample name "17551 4#4", and the sample is not an input control
+6. No, the sample name "17551 4#4" does not contain a reference to the cells
+7. N/A
+8. N/A
+9. N/A
+10. The protocol information mentions "ChIP for various histone marks (H3K4me3, H3K27me3, H3K4me1, H3K27ac, H3K36me3) was performed". Among those, the field "Antibody info:H3K27me3" specifies "H3K27me3" as the target for this particular sample
+11. H3K27me3
+12. H3C1, H3C2, H3C3 (multiple genes correspond to Histone H3)
+13. ChIP-seq for sure (as indicated by "LIBRARYSELECTION = {ChIP"}; the protocol confirms that ChIP was performed as part of the experiment, even if a different technique, single cell RNA-seq (scRNA-seq), appears to have been used for other samples and is referred to in the study title)
+14. The record does mention endoderm differentiation and time points, but specifics are not provided
+15. Differentiation to endoderm (unsure; the specifics are not provided)
+16. No
+17. No
+18. "Endoderm differentiation"
+19. No

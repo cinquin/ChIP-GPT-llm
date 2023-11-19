@@ -1,0 +1,34 @@
+You are a biologist analyzing metadata from a ChIP-seq experiment database. Your task is to extract information from a record describing a single sample that is part of a larger study. The record may contain incomplete or misorganized metadata, and it is your job to identify the protein that was targeted in the ChIP experiment and to extract information about the sample.
+
+Sample name: SUM159 input DMSO 24h.bam. SRR4299704.contigs.fasta. GSM2330573: SUM159 input DMSO 24h;  ChIP-Seq
+Name of the broader study to which the sample belongs: Enhancer Remodeling During Adaptive Bypass to MEK Inhibition Is Attenuated by Pharmacological Targeting of the P-TEFb Complex (ChIP-seq)
+Study abstract (applies to all samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control): Targeting the dysregulated BRaf-MEK-ERK pathway in cancer has increasingly emerged in clinical trial design. Despite clinical responses in specific cancers using inhibitors targeting BRaf and MEK, resistance develops often involving non-genomic adaptive bypass mechanisms.   Inhibition of MEK1/2 by trametinib in triple negative breast cancer (TNBC) patients induced dramatic transcriptional responses, including upregulation of receptor tyrosine kinases (RTKs) comparing tumor samples before and after one week of treatment.  In preclinical models MEK inhibition induced genome-wide enhancer formation involving the seeding of BRD4, MED1, H3K27 acetylation and p300 that drives transcriptional adaptation.  Inhibition of P-TEFb associated proteins BRD4 and CBP/p300 arrested enhancer seeding and RTK upregulation. BRD4 bromodomain inhibitors overcame trametinib resistance, producing sustained growth inhibition in cells, xenografts and syngeneic mouse TNBC models.  Pharmacological targeting of P-TEFb members in conjunction with MEK inhibition by trametinib is an effective strategy to durably inhibit epigenomic remodeling required for adaptive resistance. Overall design: 44 experimental samples analyzed, one chromatin input control sample for each cell line
+The protocol information in this paragraph likely (but not necessarily) applies to **all** samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control (see abstract). culture media: DMEM/F12 1:1 supplemented with 5% FBS, 5 µg/ml insulin, 1 µg/ml hydrocortisone. Whole cell lysates were sonicated resulting in an average chromatin fragment size of ~300 bp and immunoprecipiated with the indicated antibodies. All libraries were constructed using KAPA Hyper Prep kits with Illumina TruSeq adapters, 18 cycles of amplification and dual SPRI size selection post-amplification, except where indicated, whereby the libraries were constructed using DNA SMART ChIP Seq kit (Clontech) with dual SPRI size selection following 18 cycles of amplification. library preparation kit: KAPA Hyper Prep
+
+All of the information below should apply specifically to this particular sample:
+
+Treatment info: DMSO
+Tissue info: SUM159 breast carcinoma cell line
+Other info of potential relevance: parsed primary ID = {SRX2194255}; LIBRARYSELECTION = {ChIP}; molecule-type = {genomic DNA}; parsed_GSM_ID = {GSM2330573}; inferred sequence type = {ChIPSeq}; time = {24h}; LIBRARYSTRATEGY = {ChIP-Seq}; sample-type = {SRA}
+
+
+0. SUM159
+1. carcinoma
+2. breast
+3. N/A
+4. N/A (no genetic modifications were introduced for this particular sample, or indeed for the study as a whole)
+5. Yes, the string "input" appears in the sample name "SUM159 input DMSO 24h.bam. SRR4299704.contigs.fasta. GSM2330573: SUM159 input DMSO 24h;  ChIP-Seq". Yes, the sample is an input control
+6. Yes, "SUM159" appears in the sample name
+7. N/A
+8. N/A
+9. N/A
+10. There is no antibody information specified for this sample, and the sample name "SUM159 input DMSO 24h" confirms that this is an input control sample. Input control samples are used to account for background noise in ChIP-seq experiments and do not involve specific ChIP targets
+11. input
+12. N/A (input)
+13. ChIP-seq for sure (the sample-specific information contains, e.g. "LIBRARYSELECTION = {ChIP}" and "LIBRARYSTRATEGY = {ChIP-Seq}", and there are further references to ChIP but not to alternative techniques in the rest of the record)
+14. The "Treatment info: DMSO" field indicates the sample was treated with DMSO only. The sample title contains "DMSO" but not the name of other drugs (such as trametinib mentioned in the study abstract), further confirming that the sample was treated with DMSO. DMSO is a common solvent used in biological experiments and can also serve as a vehicle control for drug treatments. DMSO treatment is not of high interest per se
+15. N/A
+16. No (there are no genetic modifications in this sample, or in fact in the study as a whole)
+17. Yes, this sample corresponds to a control treatment (DMSO) and may be compared to other treatments in the same experiment, such as MEK inhibition by trametinib, as mentioned in the study abstract
+18. "Adaptive bypass of MEK inhibition," "Resistance to kinase inhibitor"
+19. No

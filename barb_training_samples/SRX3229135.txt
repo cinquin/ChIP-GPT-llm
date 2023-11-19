@@ -1,0 +1,88 @@
+You are a biologist analyzing metadata from a ChIP-seq experiment database. Your task is to extract information from a record describing a single sample that is part of a larger study. The record may contain incomplete or misorganized metadata, and it is your job to identify the protein that was targeted in the ChIP experiment and to extract information about the sample.
+
+Sample name: GSM2797089: GR ChIP-seq MCF-7;  ChIP-Seq. w
+Name of the broader study to which the sample belongs: Characterizing steroid hormone receptor chromatin binding landscapes in male and female breast cancer
+Titles of all samples in the study: 
+    - GSM2797085: FOXA1 ChIP-seq Femlae 7;  ChIP-Seq, GSM2797085 r1
+    - GSM2797084 r1, GSM2797084: FOXA1 ChIP-seq Female 5;  ChIP-Seq
+    - GSM2797083 r1, GSM2797083: FOXA1 ChIP-seq Female 6;  ChIP-Seq
+    - GSM2797082 r1, GSM2797082: ER ChIP-seq Female 6;  ChIP-Seq
+    - GSM2797081: ER ChIP-seq Female 5;  ChIP-Seq, GSM2797081 r1
+    - GSM2797080: FOXA1 ChIP-seq Female 3;  ChIP-Seq, GSM2797080 r1
+    - GSM2797079: FOXA1 ChIP-seq Female 4;  ChIP-Seq, GSM2797079 r1
+    - GSM2797078: FOXA1 ChIP-seq Female 2;  ChIP-Seq, GSM2797078 r1
+    - GSM2797077: FOXA1 ChIP-seq Female 1;  ChIP-Seq, GSM2797077 r1
+    - GSM2797076: ER ChIP-seq Female 3;  ChIP-Seq, GSM2797076 r1
+    - GSM2797075: ER ChIP-seq Female 2;  ChIP-Seq, GSM2797075 r1
+    - GSM2797074 r1, GSM2797074: ER ChIP-seq Female 1;  ChIP-Seq
+    - GSM2797159: INPUT ChIP-seq Mixed male;  ChIP-Seq, GSM2797159 r1
+    - GSM2797158: INPUT ChIP-seq MCF7;  ChIP-Seq, GSM2797158 r1
+    - GSM2797157: INPUT ChIP-seq Mixed female;  ChIP-Seq, GSM2797157 r1
+    - GSM2797156: H3K4me1 ChIP-seq Male 3;  ChIP-Seq, GSM2797156 r1
+    - GSM2797155 r1, GSM2797155: H3K4me1 ChIP-seq Male 24;  ChIP-Seq
+    - GSM2797154: H3K4me1 ChIP-seq Male 19;  ChIP-Seq, GSM2797154 r1
+    - GSM2797153: H3K4me1 ChIP-seq Male 5;  ChIP-Seq, GSM2797153 r1
+    - GSM2797152: H3K4me1 ChIP-seq Male 14;  ChIP-Seq, GSM2797152 r1
+    - GSM2797151 r1, GSM2797151: H3K4me1 ChIP-seq Male 6;  ChIP-Seq
+    - GSM2797150 r1, GSM2797150: H3K4me1 ChIP-seq Male 13;  ChIP-Seq
+    - GSM2797149 r1, GSM2797149: GATA3 ChIP-seq Male 21;  ChIP-Seq
+    - GSM2797148: GATA3 ChIP-seq Male 16;  ChIP-Seq, GSM2797148 r1
+    - GSM2797147: GATA3 ChIP-seq Male 15;  ChIP-Seq, GSM2797147 r1
+    - GSM2797146: PR ChIP-seq Male 30;  ChIP-Seq, GSM2797146 r1
+    - GSM2797145: PR ChIP-seq Male 29;  ChIP-Seq, GSM2797145 r1
+    - GSM2797144 r1, GSM2797144: PR ChIP-seq Male 28;  ChIP-Seq
+    - GSM2797143: PR ChIP-seq Male 26;  ChIP-Seq, GSM2797143 r1
+    - GSM2797142: GR ChIP-seq Male 26;  ChIP-Seq, GSM2797142 r1
+    - GSM2797141: GR ChIP-seq Male 21;  ChIP-Seq, GSM2797141 r1
+    - GSM2797140: GR ChIP-seq Male 15;  ChIP-Seq, GSM2797140 r1
+    - GSM2797139 r1, GSM2797139: GR ChIP-seq Male 12;  ChIP-Seq
+    - GSM2797138: GR ChIP-seq Male 10;  ChIP-Seq, GSM2797138 r1
+    - GSM2797137: GR ChIP-seq Male 9;  ChIP-Seq, GSM2797137 r1
+    - GSM2797136: GR ChIP-seq Male 1;  ChIP-Seq, GSM2797136 r1
+    - GSM2797135: FOXA1 ChIP-seq Male 19;  ChIP-Seq, GSM2797135 r1
+    - GSM2797134 r1, GSM2797134: FOXA1 ChIP-seq Male 14;  ChIP-Seq
+    - GSM2797133: FOXA1 ChIP-seq Male 13;  ChIP-Seq, GSM2797133 r1
+    - GSM2797132 r1, GSM2797132: FOXA1 ChIP-seq Male 6;  ChIP-Seq
+    - GSM2797131: FOXA1 ChIP-seq Male 4;  ChIP-Seq, GSM2797131 r1
+    - GSM2797130 r1, GSM2797130: FOXA1 ChIP-seq Male 3;  ChIP-Seq
+    - GSM2797129: FOXA1 ChIP-seq Male 1;  ChIP-Seq, GSM2797129 r1
+    - GSM2797128 r1, GSM2797128: AR ChIP-seq Male 30;  ChIP-Seq
+    - GSM2797127 r1, GSM2797127: AR ChIP-seq Male 28;  ChIP-Seq
+    - GSM2797126: AR ChIP-seq Male 26;  ChIP-Seq, GSM2797126 r1
+    - GSM2797125: AR ChIP-seq Male 20;  ChIP-Seq, GSM2797125 r1
+    - GSM2797124: AR ChIP-seq Male 18;  ChIP-Seq, GSM2797124 r1
+    - GSM2797123: AR ChIP-seq Male 17;  ChIP-Seq, GSM2797123 r1
+    - GSM2797122: AR ChIP-seq Male 10;  ChIP-Seq, GSM2797122 r1
+    - ...
+Study abstract (applies to all samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control): Male breast cancer (MBC) is rare and poorly characterized. Like the female counterpart, most MBCs are hormonally driven, but resistance to hormonal treatment is common. The pan-hormonal action of steroid hormonal receptors including Estrogen Receptor alpha (ERa), Androgen Receptor (AR), Progesterone Receptor (PR) and Glucocorticoid Receptor (GR) in this understudied tumor type remains wholly unexamined. This pioneering study reveals genomic cross-talk of steroid hormone receptor action and interplay in human tumors, here in the context of MBC, in relation to patient outcome.  Using chromatin immunoprecipitation coupled with massively-parallel sequencing (ChIP-seq), we characterized human MBCs for epigenetic make-up of hormonal regulation in human tumors, revealing genome-wide chromatin binding landscapes of ERa, AR, PR and GR, along with pioneer factor FOXA1 and enhancer-enriched histone mark H3K4me1. These data were integrated with transcriptomics analyses to reveal gender-selective and genomic location-specific hormone receptor action, that are associated with survival in MBC patients. Overall design: Binding of steroid hormone receptors (ER, AR, PR, GR) together with pioneer factors (FOXA1, GATA3) and a histone mark (H3K4me1) profiled in subsets of 30 males and 8 females breast tumors, and MCF-7 by ChIP-seq (Chromatin Immunoprecipitation followed by deep sequencing)
+The protocol information in this paragraph likely (but not necessarily) applies to **all** samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control (see abstract). Tissue was defrosted and crosslinked in solution A (50 mM Hepes, 100 mM NaCl, 1mM EDTA, 0.5 mM EGTA, pH= 7.4) containing 2 mM DSG, incubated for 25 minutes at room temperature while rotating. After 25 minutes formaldehyde was added to 1% final and incubated another 20 minutes at room temperature with rotation. Samples were quenched by adding a surplus of 0.2M glycine, pelleted by centrifugation (5'@4000rcf 4°C), washed with cold PBS and mechanically disrupted in cold PBS using a pellet pestle (Sigma). The PicoBioruptor (Diagenode) was used for sonication. For ChIP, antibodies were used to detect ERα (sc-543, Santa Cruz), AR (sc-816, Santa Cruz), FOXA1 (sc-6554, Santa Cruz), PR (sc-7208, Santa Cruz), GR (12041S lot 3, Cell Signaling Technology) and H3K4me1 (ab8895, AbCam). Immunoprecipitated DNA was prepared for Illumina multiplex-sequencing with 10 samples per lane at 65bp single end. For steroid hormone receptor ChIPs, 5µg of antibody and 50µl dynabeads (Invitrogen) were used, for FOXA1 and H3K4me1, 4µg of antibody and 40µl magnetic beads were used. Libraries were prepared according to Illumina's instructions accompanying the DNA Sample Kit (Part# 0801-0303)
+
+All of the information below should apply specifically to this particular sample:
+
+Antibody info:GR
+Tissue info: Human breast tumor. Human breast tumor, pleural effusion
+Cell line info: MCF-7
+Other info of potential relevance: parsed primary ID = {SRX3229135}; LIBRARYSELECTION = {ChIP}; molecule-type = {genomic DNA}; parsed_GSM_ID = {GSM2797089}; inferred sequence type = {ChIPSeq}; LIBRARYSTRATEGY = {ChIP-Seq}; patient id = {n/a}; sample-type = {SRA}
+
+
+Barb's answers are as follows:
+0. MCF-7
+1. adenocarcinoma
+2. breast
+3. N/A
+4. N/A (no genetic modifications are mentioned)
+5. No, "input" does not appear in the sample name "GSM2797089: GR ChIP-seq MCF-7;  ChIP-Seq. w". This sample is not an input control.
+6. Yes, MCF-7 appears in the sample name "GSM2797089: GR ChIP-seq MCF-7;  ChIP-Seq. w"
+7. ERα (sc-543, Santa Cruz), AR (sc-816, Santa Cruz), FOXA1 (sc-6554, Santa Cruz), PR (sc-7208, Santa Cruz), GR (12041S lot 3, Cell Signaling Technology) and H3K4me1 (ab8895, AbCam)
+8. manufacturer=santa_cruz,clone=N/A,catalog=sc-543,lot=N/A,target=ERα; manufacturer=santa_cruz,clone=N/A,catalog=sc-816,lot=N/A,target=AR; manufacturer=santa_cruz,clone=N/A,catalog=sc-6554,lot=N/A,target=FOXA1; manufacturer=santa_cruz,clone=N/A,catalog=sc-7208,lot=N/A,target=PR; manufacturer=cell_signaling_technology,clone=N/A,catalog=12041S,lot=3,target=GR; manufacturer=abcam,clone=N/A,catalog=ab8895,lot=N/A,target=H3K4me1
+9. ERα (ERa, Estrogen Receptor alpha), AR (Androgen Receptor), PR (Progesterone Receptor), GR (Glucocorticoid Receptor), FOXA1, GATA3
+10. The "Antibody info" field in the sample-specific section indicates that the ChIP target is the glucocorticoid receptor (GR). In addition, "GR" is the only protein reference that appears in the sample name "GSM2797089: GR ChIP-seq MCF-7; ChIP-Seq"
+11. GR
+12. NR3C1 (Barb knows this is the official human gene name for the Glucocorticoid Receptor, GR)
+13. ChIP-seq for sure
+14. The record does not mention any notable treatments applied to this particular sample other than the standard ChIP-seq protocol steps
+15. N/A
+16. No
+17. No
+18. "Glucocorticoid receptor signaling pathway"
+19. No

@@ -1,0 +1,36 @@
+You are a biologist analyzing metadata from a ChIP-seq experiment database. Your task is to extract information from a record describing a single sample that is part of a larger study. The record may contain incomplete or misorganized metadata, and it is your job to identify the protein that was targeted in the ChIP experiment and to extract information about the sample.
+
+Sample name: GBM 143 K27ac-11.FCC7YHMACXX L7 IAGCATG.bam. GSM2430021: H3K27ac GSC143;  ChIP-Seq
+Name of the broader study to which the sample belongs: Characterizing the epigenome of glioma stem cells (ChIP-Seq)
+Study abstract (applies to all samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control): Glioma initiating cells/stem cells exist in the bulk tumor of glioblastoma. This cell population contributes to the frequent resistances toward radiation/chemotherapy, aggressiveness of adult brain cancer and increased recurrence rate. Targeting stem cell Overall design: A core set of 12 glioma stem cell lines and 3 neural stem/progenitor cell lines were mapped for 5mC, 5hmC, 5fC/caC, H3K4me1, H3K27ac, and transcriptome using next generation sequencing technique
+The protocol information in this paragraph likely (but not necessarily) applies to **all** samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control (see abstract). Tumor tissue from Patient-Derived Xenograft (PDX) were mechanically dissociated and selected in stem cell culture medium (ThermoFisher, StemPro NSC SFM A1050901) containing L-glutamin and Penicillin-Streptomycin in laminin (#L2020) -coated flasks to reduc. Genomic DNA was isolated and purified from homogenized liver tissue using a serial phenol: chloroform extraction. Trizol reagent was used for extracting total RNA following the manufacturers protocol. Total RNA samples are converted to Illumina sequencing libraries using Illuminas Truseq RNA Sample Preparation Kit; The final libraries from RRBS were prepared for sequencing as per the manufacturers instructions in the Illumina cBot and HiSeq Paired en
+
+All of the information below should apply specifically to this particular sample:
+
+Antibody info:AB4729
+Tissue info: Cell line. patient-derived Xenograph glioma stem cells
+Other info of potential relevance: parsed primary ID = {SRX2426310}; LIBRARYSELECTION = {ChIP}; molecule-type = {genomic DNA}; parsed_GSM_ID = {GSM2430021}; inferred sequence type = {ChIPSeq}; LIBRARYSTRATEGY = {ChIP-Seq}; passages = {2 to 3}; sample-type = {SRA}
+
+
+
+Barb's answers are as follows:
+0. GBM143 (not mentioned in record, but inferred by Barb from "GBM" abbreviation of "glioblastoma", followed by a number as is common for cell line names)
+1. glioma stem cells
+2. brain
+3. N/A
+4. N/A (no genetic modifications are mentioned)
+5. No, the string "input" does not appear in the sample name "GBM 143 K27ac-11.FCC7YHMACXX L7 IAGCATG.bam. GSM2430021: H3K27ac GSC143;  ChIP-Seq". The sample is not an input control
+6. Yes "GSC143" is a potential reference to the cell lines since the abbreviation "GSC" is commonly used for glioma stem cells and since the same number "143" as in the inferred cell line name follows
+7. AB4729
+8. manufacturer=abcam(inferred by Barb),clone=N/A,catalog=AB4729,lot=N/A,target=H3K27ac(inferred by Barb)
+9. N/A
+10. The antibody information specifies "AB4729", which Barb knows is a H3K27ac antibody. The ChIP target is further confirmed by the sample name "GBM 143 K27ac-11.FCC7YHMACXX L7 IAGCATG.bam. GSM2430021: H3K27ac GSC143;  ChIP-Seq", which contains "H3K27ac" as the only possible ChIP target
+11. H3K27ac
+12. H3C1, H3C2, H3C3 (multiple genes correspond to Histone H3)
+13. ChIP-seq for sure
+14. The record does not mention any notable treatments applied to this particular sample other than the ChIP-seq experiment itself
+15. N/A
+16. No, this sample does not correspond to a control genetic modification or control genetic background
+17. No, this sample does not correspond to a control treatment
+18. "Glioma initiation," "Glioma stem cell maintenance," "Tumor growth"
+19. No

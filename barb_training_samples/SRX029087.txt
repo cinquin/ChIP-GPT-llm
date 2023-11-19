@@ -1,0 +1,37 @@
+You are a biologist analyzing metadata from a ChIP-seq experiment database. Your task is to extract information from a record describing a single sample that is part of a larger study. The record may contain incomplete or misorganized metadata, and it is your job to identify the protein that was targeted in the ChIP experiment and to extract information about the sample.
+
+Sample name: K562-TPA-Fos. GSM610336: K562 TPA-FOS
+Name of the broader study to which the sample belongs: Regulation of Megakaryocytic differentiation in Cell Line Models by Dynamic Combinatorial Interactions of RUNX1 with Its Cooperating Partners
+Study abstract (applies to all samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control): Regulation of Megakaryocytic differentiation in Cell Line Models by Dynamic Combinatorial Interactions of RUNX1 with Its Cooperating Partners Overall design: Examination of RUNX1 binding in K562 cells, before and following TPA induction and CMK cells. Examination of GATA1 and FOS binding and H3K4me1 and H3K27me3 modification levels following TPA induction in K562 cells
+The protocol information in this paragraph likely (but not necessarily) applies to **all** samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control (see abstract). Culture in RPMI. Chromatin IP against FOS.  instrument model: Illumina Genome Analyzer IIx. ChIP samples were prepared using 5*10 7 cells per condition. Chromatin was prepared as described in Ainbinder et. Al Mol Cell Biol. 2002.  ChIP libraries were created following illumina sample preparation protocol from 10ng of DNA. Following end-repair and A-base addition, primers were ligated and samples were size selected on a 2% agarose gel. Fragments of 200bp were excised and purified using Qiagen gel-extraction kit with gel melting at room temperature. Enrichment was carried out using 18 cycles of amplification. Library yield was quantified using Qubit (Invitrogen) while final fragment sizes were determined using Agilent BioAnalyzer. The ChIP-seq libraries were run on an Illumina GAIIx (K562-TPA-FOS, K562-TPA-FOSB, K562-TPA-GATA1) / GAII (All other tracks) at the Department of Biological Services at WIS, using illumina cluster generation kits and sequencing reagents. cross-linked chromatin from ~108 K562 cells, before or 24h after treatment with TPA (40nM) or from ~108 cells CMK or 107 mature FL derived megakaryocytes, was prepared and fragmented to an average size of ~200bp by 40 cycles of sonications (30sec each) in 15ml tubes using the Bioruprtor UCD-200 sonicator (Diagenode, US). For immunoprecipitation, the following antibodies were added to 12ml of diluted, fragmented chromatin: 30ul of home-made anti-RUNX12 raised against the protein C-terminal fragment; anti-monomethyl-Histone H3(Lys4) and anti trimethyl-Histone H3(Lys27) (Millipore, US); anti C-FOS (Santa Cruz) and anti GATA1 (Abcam, US). Rabbit pre-immune serum was used as control. DNA was purified using QIAquick spin columns (QIAGEN, US).     Antibodies description:  NIS – non immune serum was taken from our rabbits   RUNX1- our home made antibody, described in Aziz-Aloya RB, Levanon D, Karn H, et al. Expression of AML1-d, a short human AML1 isoform, in embryonic stem cells suppresses in vivo tumor growth and differentiation. Cell Death Differ. 1998;5(9):765-773.  GATA1 – abcam, rabbit polyclonal – ChIP grade (ab11963) - 886538  FOS – Santa cruz, rabbit polyclonal – c-fos (4):sc-52, lot - #L1609  FosB: Cell Signaling, Rabbit monoclonal. FosB (5G4) lot:2  Ref: 12/2009   H3K4me1 – Milipore, rabbit polyclonal – Cat. #07-436 , Lot. #DAM1400139  H3K4me3 - Milipore, rabbit polyclonal – Cat. #17-622, Lot. #DAM1571267
+
+All of the information below should apply specifically to this particular sample:
+
+Antibody info:FOS
+Treatment info: 24 hours following induction with TPA
+Tissue info: K562 Cells, 24 hours following induction with TPA
+Cell line info: K562
+Other info of potential relevance: parsed primary ID = {SRX029087}; LIBRARYSELECTION = {ChIP}; molecule-type = {genomic DNA}; parsed_GSM_ID = {GSM610336}; inferred sequence type = {ChIPSeq}; LIBRARYSTRATEGY = {ChIP-Seq}; sample-type = {SRA}
+
+
+Barb's answers are as follows:
+0. K562
+1. myeloid leukemia
+2. blood
+3. N/A
+4. N/A (no genetic modifications are mentioned)
+5. No, the string "input" does not appear in the sample name "K562-TPA-Fos. GSM610336: K562 TPA-FOS", and the sample is not an input control
+6. Yes, "K562" appears in the sample name "K562-TPA-Fos. GSM610336: K562 TPA-FOS"
+7. GATA1 – abcam, rabbit polyclonal – ChIP grade (ab11963) - 886538  FOS – Santa cruz, rabbit polyclonal – c-fos (4):sc-52, lot - #L1609  FosB: Cell Signaling, Rabbit monoclonal. FosB (5G4) lot:2  Ref: 12/2009   H3K4me1 – Milipore, rabbit polyclonal – Cat. #07-436 , Lot. #DAM1400139  H3K4me3 - Milipore, rabbit polyclonal – Cat. #17-622, Lot. #DAM1571267
+8. manufacturer=abcam,clone=N/A,catalog=ab11963,lot=886538,target=GATA1; manufacturer=santa_cruz,clone=c-fos_(4),catalog=sc-52,lot=L1609,target=FOS; manufacturer=cell_signaling,clone=5G4,catalog=12/2009,lot=2,target=FosB; manufacturer=milipore,clone=N/A,catalog=07-436,lot=DAM1400139,target=H3K4me1; manufacturer=milipore,clone=N/A,catalog=17-622,lot=DAM1571267,target=H3K4me3
+9. RUNX1, GATA1, FOS (C-FOS, c-fos, Fos), FOSB (FosB)
+10. The "Antibody info" field in the sample-specific section identifies "FOS" as the ChIP target. The sample name "K562-TPA-Fos" also indicates that the ChIP target is FOS, since "Fos" is the only reference to a protein that appears. Finally, FOS as a target makes sense given that "Fos" refers to the transcription factor c-Fos, and given that the sample was treated with TPA, which Barb knows triggers c-Fos activation
+11. FOS
+12. FOS
+13. ChIP-seq for sure
+14. The sample name "K562-TPA-Fos" indicates that the cells were treated with TPA. The treatment info also confirms that the cells were treated with TPA for 24 hours
+15. TPA (concentration=40nM, duration=24_hours, details=induces_megakaryocyte_differentiation)
+16. No, this sample does not correspond to a control genetic modification or control genetic background
+17. No, this sample does not correspond to a control treatment
+18. "Megakaryocytic differentiation", "Regulation of megakaryocytic differentiation by dynamic combinatorial interactions of RUNX1 with its cooperating partners"
+19. No

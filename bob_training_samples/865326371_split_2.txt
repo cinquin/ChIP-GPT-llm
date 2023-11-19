@@ -1,0 +1,324 @@
+Bob is an expert biologist analyzing sentences taken from a sequencing database record describing a ChIP-seq experiment. Bob's purpose is to distinguish sentences that contain information about ChIP targets, cells processed, or treatments applied to those cells from sentences that he's not interested in. This will help downstream text analysis to be performed in the future. Bob is not interested in fine technical detail, as his purpose is not to reproduce the experiments or to optimize them. Bob is also not **at all** interested in the technical aspect of the ChIP protocol; he does not care about general cell maintenance procedures, cell fixation or fixatives, crosslinking, washing, resuspension, elution, shearing, sonication, precipitation, library preparation protocols, sequencing protocols, sequencing platforms, or downstream analysis programs etc. To perform his task, Bob outputs a numbered list of Yes/No answers about each sentence:
+1. Is this sentence of interest to Bob?
+2. Does it correspond to scientific background of the study, or to interpretation of its results?
+3. Does it contain a file name with substrings (possibly abbreviated) that refer to sample-specific antibodies or their targets, cell line names, drugs, or treatment conditions? For example, "Yes" for "GSM2423903_HEK293_FLP_BRCA1_Empty_V5_GRCh38.bigWig", which refers to "HEK293" cells, the "FLP" recombinase, the "BRCA1" gene, the "V5" tag, and the "Empty [vector]" condition, but "No" for "GSM2423903_ENCFF471MBU_signal_p-value_GRCh38.bigWig" which only has GEO/SRA/Encode sample IDs.
+4. Does it pertain solely to metadata such as the date of the experiment, the institution or researcher who conducted the experiment, data availability or publication status, or file names with numeric IDs, etc. ?
+5. Does it mention the specific antibodies used for immunoprecipitation, their catalogue numbers or manufacturers, or how they were raised?
+6. Does it add **new** information (not already included in preceding sentences) about the cell line, tissue, or organ used for ChIP, or about the gene expression, overexpression or silencing status, or vectors the cells may contain?
+7. Does it mention "interesting" cell treatments including e.g. drug treatments, application of stress or stimuli, or drugs to induce expression? Bob is not interested in regular cell culture techniques or cell preparation for ChIP.
+
+Bob provides concise, professional, insightful, helpful, and truthful explanations for his answers -- as shown in the following examples.
+
+Sentence:
+Release of promoter-proximal paused RNA polymerase II (Pol II) during early elongation is a critical step in transcriptional regulation in metazoan cells.
+Bob's explanation:
+The sentence provides scientific background on the study (hence 1:No, 2:Yes).
+Bob's answer:
+1:No  2:Yes  3:No  4:No  5:No  6:No  7:No  ###END
+
+Sentence:
+The second day, after 2 washes with RIPA-0.5, 1 wash with RIPA-0.3, 1 wash with RIPA-0, 2 washes with LiCl buffer (10 mM Tris-HCl, 0.25 M LiCl, 0.25% NP-40, and 0,25% NaDOC, pH7.4), and 2 washes with TE buffer, bound protein-DNA complexes were resuspended in elution buffer (10 mM Tris-HCl, 1mM EDTA, and 1% SDS, pH7.4) supplemented with 10 µg/ml RNase A for elution and RNA digestion, and incubated at 55 °C for 1 hour.
+Bob's explanation:
+The sentence describes protocol details of no relevance (hence 1:No) and gives no information about antibodies (hence 5:No), or cell genetic background (hence 6:No), cell treatments (hence 7:No), etc.
+Bob's answer:
+1:No  2:No  3:No  4:No  5:No  6:No  7:No  ###END
+
+Sentence:
+We knocked down expression of NSD2 in B-ALL cell lines heterozygous for NSD2 EK (RS4;11, RCH-ACV, SEM).
+Bob's explanation:
+The sentence provides information unseen so far about gene expression manipulation and cell lines (hence 6:Yes).
+Bob's answer:
+1:Yes  2:No  3:No  4:No  5:No  6:Yes  7:No  ###END
+
+Bob now analyzes *one by one* all the sentences in the text below.
+```
+The immunoprecipitated chromatin was washed subsequently with WBI (20mM HEPES, 150mM NaCl, 0.1 % SDS, 0.1 % DOC, 1 % Triton X-100, 1 mM EDTA, 0.5mM EGTA) (twice), WBII (20 mM HEPES, 500 mM NaCl, 0.1 % SDS, 0.1 % DOC, 1 % Triton X-100, 1 mM EDTA, 0.5 mM EGTA) (once), WBIII (20 mM HEPES, 250 mM LiCl, 0.5 % DOC, 0.5 % NP-40, 1 mM EDTA, 0.5 mM EGTA) (once) and WBIV (20 mM HEPES, 1 mM EDTA, 0.5 mM EGTA) (twice). Then beads were incubated with 70 μl elution buffer (0.5 % SDS, 300 mM NaCl, 5 mM EDTA, 10 mM Tris-HCl pH 8.0) containing 2 μl of Proteinase K (NEB). Beads in Elution Buffer were incubated for 1 hour at 55 °C and 8 hours at 65 °C to revert formaldehyde crosslinking, and supernatant was transferred to a new tube. Another 30 μl of elution buffer was added to the beads for 1 minute and eluates were combined and incubated with another 1 μl of Proteinase K for 1 hour at 55 °C. Finally, DNA was purified with SPRI AMPure XP beads (ratio sample:beads 1:2) or Qiagen MinElute columns; ChIP version 2 (H3K4me1, and H3K36me3 and REST): Cells were washed once with PBS and fixed with 1 % paraformaldehyde in up to 1.5 ml PBS for 10 minutes at room temperature. Glycine was added to stop the reaction. Cells were collected at 500 x g for 10 minutes at 4 °C and washed twice with up to 1 ml μl ice-cold PBS supplemented with 1 μM PMSF. The pellet was lysed in RIPA buffer (10 mM Tris-HCl, pH 8.0, 1 mM EDTA, pH 8.0, 140 mM NaCl, 1 % Triton x-100, 0.1 % SDS, 0.1 % DOC, 1x protease inhibitors (Sigma)) and sonicated in a 1 ml milliTUBE in a Covaris S220 for 30 minutes until most of the fragments were 200-700 base pairs long (settings: duty cycle 5 %, peak incident power 140 Watts, cycles per burst 200). Lysates were centrifuged at full speed for 5 minutes at 4 °C. In the meantime, 50 µl beads (10 µl for low-input ChIPmentation) were blocked and conjugated to an antibody by washing and resupsending them 2 times in PBS/0.5 % BSA/0.5 % Tween-20). A specific antibody was added and bound to the beads by rotating > 1 h at room temperature. Antibodies used in this study were H3K4me1 (1 µg/IP, Diagenode pAb-194-050), H3K36me3 (1 µg/IP, Diagenode pAb-192-050) and REST (10 µg/IP, Millipore 07-579). The supernatant was transferred to a 0.5 PCR tube and per ChIP 50 μl of blocked antibody conjugated magnetic protein A beads were added and incubated for 3 hours at 4 °C. Immunoprecipitation beads were washed subsequently with 150 μl RIPA (twice), RIPA-500 (10 mM Tris-HCl, pH 8.0, 1 mM EDTA, pH 8.0, 500 mM NaCl, 1 % Triton x-100, 0.1 % SDS, 0.1 % DOC,) (twice), RIPA-LiCl (10 mM Tris-HCl, pH 8.0, 1 mM EDTA, pH 8.0, 250 mM LiCl, 1 % Triton x-100, 0.5 % DOC, 0.5 % NP40) and TE pH 8.0 (twice). Then beads were then incubated with 70 μl elution buffer (0.5 % SDS, 300 mM NaCl, 5 mM EDTA, 10 mM Tris-HCl pH 8.0) containing 2 μl of Proteinase K (NEB). Beads in Elution Buffer were incubated for 1 hour at 55 °C and 8 hours at 65 °C to revert formaldehyde crosslinking, and supernatant was transferred to a new tube. Finally, DNA was purified with SPRI AMPure XP beads (ratio sample:beads 1:2) or Qiagen MinElute columns; ChIP version 3 (H3K27ac, PU.1, CTCF and GATA1): Cells were washed once with PBS and fixed with 1% paraformaldehyde in up to 1.5 ml PBS for 5-10 minutes at room temperature. Glycine was added to stop the reaction. Cells were collected at 500 x g for 10 minutes at 4 °C and washed twice with up to 1 ml μl ice-cold PBS supplemented with 1 μM PMSF. The pellet was lysed in buffer L3B (10 mM Tris-HCl, pH 8.0, 100 mM NaCl, 1 mM EDTA, 0.5 mM EGTA, 0.1 % Na-Deoxycholate, 0.5 % N-lauroylsarcosine, 1 x protease inhibitors (Sigma)) and sonicated in a 1ml milliTUBE in a Covaris S220 for 20 minutes until most of the fragments were 200-700 base pairs long (settings: duty cycle 5 %, peak incident power 140 Watts, cycles per burst 200). Lysates were supplemented with 1 % Triton-X-100 and centrifuged at full speed for 5 minutes at 4 °C. In the meantime, beads were blocked and conjugated to an antibody by washing them 2 times in PBS/0.5 % BSA and resuspending 50 μl of beads per IP (10 µl beads for low-input ChIPmentation) in 200 μl of PBS/0.5 % BSA. A specific antibody was added and bound to the beads by rotating >1h at room temperature. Antibodies used in this study were H3K27ac (2 µg, Diagenode pAb-196-050) PU.1 (5 μg/IP, Santa Cruz sc-352), CTCF (10 μl/IP, Millipore 07-729) and GATA1 (4 µg/IP and 2µg for low-input, Abcam ab11852). The supernatant was transferred to a 0.5 PCR tube and per ChIP 50 μl of blocked antibody conjugated magnetic protein A beads were added and incubated for 3 hours at 4 °C. Immunoprecipitation beads were washed subsequently with 150 μl TF-WBI (20 mM Tris-HCl/pH 7.4, 150 mM NaCl, 0.1 % SDS, 1 % Triton X-100, 2 mM EDTA) (twice), TF-WBIII (250 mM LiCl, 1 % Triton X-100, 0.7 % DOC, 10 mM Tris-HCl, 1 mM EDTA) (twice) and TET (0.2 % Tween-20, 10 mM Tris-HCl/pH 8.0, 1 mM EDTA) (twice). Then beads were incubated with 70 μl elution buffer (0.5 % SDS, 300 mM NaCl, 5 mM EDTA, 10 mM Tris HCl pH 8.0) containing 2 μl of Proteinase K (NEB). Beads in Elution Buffer were incubated for 1 hour at 55 °C and 8 hours at 65 °C to revert formaldehyde crosslinking, and supernatant was transferred to a new tube. Another 30 μl of elution buffer was added to the beads for 1 minute and eluates were combined and incubated with another 1 μl of Proteinase K for 1 hour at 55 °C. Finally, DNA was purified with SPRI AMPure XP beads (ratio sample:beads 1:2) or Qiagen MinElute columns. Standard ChIP-seq library preparation: Purified ChIP DNA was end-repaired using the NEBNext End Repair Module (NEB) according to manufacturer’s instruction. Clean-up was done using Ampure XP beads (Agencourt) according to manufacturer’s instruction. Fragments were A-tailed using Klenow (3′→ 5′ exo-) polymerase (Enzymatics), and TruSeq-compatible adapters were ligated using T4 DNA Ligase (Enzymatics). The final library was size-selected using Ampure XP beads to remove adapter dimers; ChIPmentation library preparation: ChIPmentation is c. K562 cells were cultured in RPMI medium supplemented with 10% FCS and antibiotics. They were analyzed with a CASY cell counter to determine cell numbers. Peripheral blood was obtained from healthy volunteers as approved by the ethics committee at the Medical University of Vienna. Coagulation was prevented with EDTA or heparin, peripheral blood was diluted 1:1-1:3 in PBS, and peripheral blood mononuclear cells (PBMCs) were isolated with Lymphoprep density gradient (Axis-Shield) following manufacturer instructions. Purified cells were suspended in RPMI supplemented with 10% FBS and penicillin-streptomycin. ChIP-seq of nan PBMC cells with H3K4ME3 - replicate 1
+
+```
+
+Sentence:
+The immunoprecipitated chromatin was washed subsequently with WBI (20mM HEPES, 150mM NaCl, 0.1 % SDS, 0.1 % DOC, 1 % Triton X-100, 1 mM EDTA, 0.5mM EGTA) (twice), WBII (20 mM HEPES, 500 mM NaCl, 0.1 % SDS, 0.1 % DOC, 1 % Triton X-100, 1 mM EDTA, 0.5 mM EGTA) (once), WBIII (20 mM HEPES, 250 mM LiCl, 0.5 % DOC, 0.5 % NP-40, 1 mM EDTA, 0.5 mM EGTA) (once) and WBIV (20 mM HEPES, 1 mM EDTA, 0.5 mM EGTA) (twice).
+Bob's explanation:
+The sentence describes washing steps in the protocol, which are not of interest to Bob (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+Then beads were incubated with 70 μl elution buffer (0.5 % SDS, 300 mM NaCl, 5 mM EDTA, 10 mM Tris-HCl pH 8.0) containing 2 μl of Proteinase K (NEB).
+Bob's explanation:
+This sentence also focuses on the ChIP protocol, which is not of interest to Bob (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+Beads in Elution Buffer were incubated for 1 hour at 55 °C and 8 hours at 65 °C to revert formaldehyde crosslinking, and supernatant was transferred to a new tube.
+Bob's explanation:
+The sentence provides details on the ChIP protocol, which is not of interest to Bob (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+Another 30 μl of elution buffer was added to the beads for 1 minute and eluates were combined and incubated with another 1 μl of Proteinase K for 1 hour at 55 °C.
+Bob's explanation:
+This sentence also describes the ChIP protocol, which is not relevant to Bob's interests (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+Finally, DNA was purified with SPRI AMPure XP beads (ratio sample:beads 1:2) or Qiagen MinElute columns; ChIP version 2 (H3K4me1, and H3K36me3 and REST): Cells were washed once with PBS and fixed with 1 % paraformaldehyde in up to 1.5 ml PBS for 10 minutes at room temperature.
+Bob's explanation:
+Although this sentence mentions some ChIP targets (H3K4me1, H3K36me3, and REST) to help identify the ChIP protocol version (2), the names are mentioned in more relevant context in subsequent sentences, and the focus here is on the ChIP protocol, which is not of interest to Bob (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+Glycine was added to stop the reaction.
+Bob's explanation:
+The sentence is about the ChIP protocol, which is not of interest to Bob (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+Cells were collected at 500 x g for 10 minutes at 4 °C and washed twice with up to 1 ml μl ice-cold PBS supplemented with 1 μM PMSF.
+Bob's explanation:
+This sentence covers cell preparation details in the ChIP protocol, which is not relevant to Bob's interests (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+The pellet was lysed in RIPA buffer (10 mM Tris-HCl, pH 8.0, 1 mM EDTA, pH 8.0, 140 mM NaCl, 1 % Triton x-100, 0.1 % SDS, 0.1 % DOC, 1x protease inhibitors (Sigma)) and sonicated in a 1 ml milliTUBE in a Covaris S220 for 30 minutes until most of the fragments were 200-700 base pairs long (settings: duty cycle 5 %, peak incident power 140 Watts, cycles per burst 200).
+Bob's explanation:
+The sentence describes the ChIP protocol, which is not of interest to Bob (hence 1:No)
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+Lysates were centrifuged at full speed for 5 minutes at 4 °C.
+Bob's explanation:
+The sentence describes a step in the ChIP protocol, which is not of interest to Bob (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+In the meantime, 50 µl beads (10 µl for low-input ChIPmentation) were blocked and conjugated to an antibody by washing and resupsending them 2 times in PBS/0.5 % BSA/0.5 % Tween-20).
+Bob's explanation:
+This sentence also describes a step in the ChIP protocol, which is not of interest to Bob (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+A specific antibody was added and bound to the beads by rotating > 1 h at room temperature.
+Bob's explanation:
+The sentence discusses adding a specific antibody, which is part of the ChIP protocol and not of interest to Bob (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+Antibodies used in this study were H3K4me1 (1 µg/IP, Diagenode pAb-194-050), H3K36me3 (1 µg/IP, Diagenode pAb-192-050) and REST (10 µg/IP, Millipore 07-579).
+Bob's explanation:
+The sentence provides information on specific antibodies used for immunoprecipitation (hence 5:Yes).
+Bob's answer:
+1:Yes 2:No 3:No 4:No 5:Yes 6:No 7:No ###END
+
+Sentence:
+The supernatant was transferred to a 0.5 PCR tube and per ChIP 50 μl of blocked antibody conjugated magnetic protein A beads were added and incubated for 3 hours at 4 °C.
+Bob's explanation:
+This sentence describes a ChIP protocol step, which is not of interest to Bob (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+Immunoprecipitation beads were washed subsequently with 150 μl RIPA (twice), RIPA-500 (10 mM Tris-HCl, pH 8.0, 1 mM EDTA, pH 8.0, 500 mM NaCl, 1 % Triton x-100, 0.1 % SDS, 0.1 % DOC,) (twice), RIPA-LiCl (10 mM Tris-HCl, pH 8.0, 1 mM EDTA, pH 8.0, 250 mM LiCl, 1 % Triton x-100, 0.5 % DOC, 0.5 % NP40) and TE pH 8.0 (twice).
+Bob's explanation:
+This sentence describes the washing step of the ChIP protocol, which is not of interest to Bob (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+Then beads were then incubated with 70 μl elution buffer (0.5 % SDS, 300 mM NaCl, 5 mM EDTA, 10 mM Tris-HCl pH 8.0) containing 2 μl of Proteinase K (NEB).
+Bob's explanation:
+This sentence pertains to the ChIP protocol and is not of interest to Bob (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+Beads in Elution Buffer were incubated for 1 hour at 55 °C and 8 hours at 65 °C to revert formaldehyde crosslinking, and supernatant was transferred to a new tube.
+Bob's explanation:
+This sentence also describes a ChIP protocol step, which is not of interest to Bob (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+Finally, DNA was purified with SPRI AMPure XP beads (ratio sample:beads 1:2) or Qiagen MinElute columns;
+Bob's explanation:
+This sentence discusses the DNA purification step of the ChIP protocol and is not of interest to Bob (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+ChIP version 3 (H3K27ac, PU.1, CTCF and GATA1): Cells were washed once with PBS and fixed with 1% paraformaldehyde in up to 1.5 ml PBS for 5-10 minutes at room temperature.
+Bob's explanation:
+This sentence describes a cell fixation step in the ChIP protocol, which is not of interest to Bob (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+Glycine was added to stop the reaction.
+Bob's explanation:
+This sentence is about stopping the cell fixation reaction, which is part of the ChIP protocol and not of interest to Bob (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+Cells were collected at 500 x g for 10 minutes at 4 °C and washed twice with up to 1 ml μl ice-cold PBS supplemented with 1 μM PMSF.
+Bob's explanation:
+The sentence describes a cell washing step in the ChIP protocol, which is not of interest to Bob (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+The pellet was lysed in buffer L3B (10 mM Tris-HCl, pH 8.0, 100 mM NaCl, 1 mM EDTA, 0.5 mM EGTA, 0.1 % Na-Deoxycholate, 0.5 % N-lauroylsarcosine, 1 x protease inhibitors (Sigma)) and sonicated in a 1ml milliTUBE in a Covaris S220 for 20 minutes until most of the fragments were 200-700 base pairs long (settings: duty cycle 5 %, peak incident power 140 Watts, cycles per burst 200).
+Bob's explanation:
+This sentence describes a cell lysis and sonication step of the ChIP protocol, which is not of interest to Bob (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+Lysates were supplemented with 1 % Triton-X-100 and centrifuged at full speed for 5 minutes at 4 °C.
+Bob's explanation:
+This sentence discusses a step in the ChIP protocol and is not of interest to Bob (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+In the meantime, beads were blocked and conjugated to an antibody by washing them 2 times in PBS/0.5 % BSA and resuspending 50 μl of beads per IP (10 µl beads for low-input ChIPmentation) in 200 μl of PBS/0.5 % BSA.
+Bob's explanation:
+The sentence describes a step in the ChIP protocol related to antibody conjugation, which is not of interest to Bob (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+A specific antibody was added and bound to the beads by rotating >1h at room temperature.
+Bob's explanation:
+This sentence describes a step in the ChIP protocol involving antibody binding, which is not of interest to Bob (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+Antibodies used in this study were H3K27ac (2 µg, Diagenode pAb-196-050) PU.1 (5 μg/IP, Santa Cruz sc-352), CTCF (10 μl/IP, Millipore 07-729) and GATA1 (4 µg/IP and 2µg for low-input, Abcam ab11852).
+Bob's explanation:
+This sentence provides information about the specific antibodies used in the study (hence 5:Yes), which is of interest to Bob.
+Bob's answer:
+1:Yes 2:No 3:No 4:No 5:Yes 6:No 7:No ###END
+
+Sentence:
+The supernatant was transferred to a 0.5 PCR tube and per ChIP 50 μl of blocked antibody conjugated magnetic protein A beads were added and incubated for 3 hours at 4 °C.
+Bob's explanation:
+This sentence describes a step in the ChIP protocol involving antibody and bead incubation, which is not of interest to Bob (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+Immunoprecipitation beads were washed subsequently with 150 μl TF-WBI (20 mM Tris-HCl/pH 7.4, 150 mM NaCl, 0.1 % SDS, 1 % Triton X-100, 2 mM EDTA) (twice), TF-WBIII (250 mM LiCl, 1 % Triton X-100, 0.7 % DOC, 10 mM Tris-HCl, 1 mM EDTA) (twice) and TET (0.2 % Tween-20, 10 mM Tris-HCl/pH 8.0, 1 mM EDTA) (twice).
+Bob's explanation:
+This sentence focuses on immunoprecipitation beads washing procedure, which is not relevant for Bob's interest (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+Then beads were incubated with 70 μl elution buffer (0.5 % SDS, 300 mM NaCl, 5 mM EDTA, 10 mM Tris HCl pH 8.0) containing 2 μl of Proteinase K (NEB).
+Bob's explanation:
+The sentence describes the incubation step with elution buffer, which is not of interest to Bob (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+Beads in Elution Buffer were incubated for 1 hour at 55 °C and 8 hours at 65 °C to revert formaldehyde crosslinking, and supernatant was transferred to a new tube.
+Bob's explanation:
+This sentence details the incubation process and crosslinking reversal, which is not relevant to Bob's interest (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+Another 30 μl of elution buffer was added to the beads for 1 minute and eluates were combined and incubated with another 1 μl of Proteinase K for 1 hour at 55 °C.
+Bob's explanation:
+This sentence describes additional elution buffer addition and incubation, which is not of interest to Bob (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+Finally, DNA was purified with SPRI AMPure XP beads (ratio sample:beads 1:2) or Qiagen MinElute columns.
+Bob's explanation:
+The sentence explains the DNA purification method, which is not relevant for Bob's interest (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+Standard ChIP-seq library preparation: Purified ChIP DNA was end-repaired using the NEBNext End Repair Module (NEB) according to manufacturer’s instruction.
+Bob's explanation:
+This sentence discusses the ChIP-seq library preparation, which is not of interest to Bob.
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+Clean-up was done using Ampure XP beads (Agencourt) according to manufacturer’s instruction.
+Bob's explanation:
+The sentence describes the clean-up process in library preparation, which Bob is not interested in.
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+Fragments were A-tailed using Klenow (3′→ 5′ exo-) polymerase (Enzymatics), and TruSeq-compatible adapters were ligated using T4 DNA Ligase (Enzymatics).
+Bob's explanation:
+The sentence discusses the process of fragment A-tailing and adapter ligation during library preparation, which is not of interest to Bob.
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+The final library was size-selected using Ampure XP beads to remove adapter dimers
+Bob's explanation:
+This sentence talks about the size-selection of the final library, which is not relevant to Bob's interests.
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+ChIPmentation library preparation: ChIPmentation is c.
+Bob's explanation:
+This sentence is incomplete and does not provide meaningful information; none of its words appear to refer to information useful for Bob.
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+K562 cells were cultured in RPMI medium supplemented with 10% FCS and antibiotics.
+Bob's explanation:
+This sentence introduces a new cell line, K562 (hence 1:Yes and 6:Yes), but only mentions standard cell culture conditions, which are not of interest to Bob (hence 7:No).
+Bob's answer:
+1:Yes 2:No 3:No 4:No 5:No 6:Yes 7:No ###END
+
+Sentence:
+They were analyzed with a CASY cell counter to determine cell numbers.
+Bob's explanation:
+The sentence talks about cell counting, which does not fall into Bob's area of interest (hence 1:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+Peripheral blood was obtained from healthy volunteers as approved by the ethics committee at the Medical University of Vienna.
+Bob's explanation:
+This sentence discusses obtaining peripheral blood and the ethics approval, which is metadata and not of interest to Bob (hence 1:No and 4:Yes).
+Bob's answer:
+1:No 2:No 3:No 4:Yes 5:No 6:No 7:No ###END
+
+Sentence:
+Coagulation was prevented with EDTA or heparin, peripheral blood was diluted 1:1-1:3 in PBS, and peripheral blood mononuclear cells (PBMCs) were isolated with Lymphoprep density gradient (Axis-Shield) following manufacturer instructions. Purified cells were suspended in RPMI supplemented with 10% FBS and penicillin-streptomycin.
+Bob's explanation:
+This sentence describes cell isolation and suspension, which is not relevant to Bob (hence 6:No).
+Bob's answer:
+1:No 2:No 3:No 4:No 5:No 6:No 7:No ###END
+
+Sentence:
+ChIP-seq of nan PBMC cells with H3K4ME3 - replicate 1
+Bob's explanation:
+The sentence provides information about the ChIP-seq experiment with a specific target, H3K4ME3, the cell type, PBMCs, and the replicate number "1" (hence 1:Yes, 5:Yes 6:Yes).
+Bob's answer:
+1:Yes 2:No 3:No 4:No 5:Yes 6:Yes 7:No ###END

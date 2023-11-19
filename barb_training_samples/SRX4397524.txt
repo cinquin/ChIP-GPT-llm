@@ -1,0 +1,60 @@
+You are a biologist analyzing metadata from a ChIP-seq experiment database. Your task is to extract information from a record describing a single sample that is part of a larger study. The record may contain incomplete or misorganized metadata, and it is your job to identify the protein that was targeted in the ChIP experiment and to extract information about the sample.
+
+Sample name: GSM3273422: NT2D1 KO H3R2me2a +Doxy R1;  ChIP-Seq. 103 B6Flp ChIPP6 IP 260218 CTTGTA
+Name of the broader study to which the sample belongs: Genomic location of PRMT6-dependent H3R2 methylation is decisive for the transcriptional outcome of associated genes [ChIP-seq]
+Titles of all samples in the study: 
+    - GSM3273427 r4, GSM3273427 r5, GSM3273427 r2, GSM3273427 r3, GSM3273427 r8, GSM3273427 r9, GSM3273427: NT2D1 KO H3R2me2a -Doxy R2;  ChIP-Seq, GSM3273427 r10, GSM3273427 r6, GSM3273427 r7, GSM3273427 r11
+    - GSM3273426 r2, GSM3273426 r5, GSM3273426 r6, GSM3273426: NT2D1 KO KMT2D -RA santacruz;  ChIP-Seq, GSM3273426 r3, GSM3273426 r4, GSM3273426 r9, GSM3273426 r7, GSM3273426 r8, GSM3273426 r10
+    - GSM3273425 r2, GSM3273425 r3, GSM3273425 r6, GSM3273425 r7, GSM3273425 r4, GSM3273425: NT2D1 CT KMT2D -RA abgent;  ChIP-Seq, GSM3273425 r5, GSM3273425 r8, GSM3273425 r9, GSM3273425 r10
+    - GSM3273424 r12, GSM3273424 r3, GSM3273424 r4, GSM3273424 r2, GSM3273424 r7, GSM3273424 r8, GSM3273424 r5, GSM3273424 r6, GSM3273424 r9, GSM3273424: NT2D1 CT KMT2D -RA santacruz;  ChIP-Seq, GSM3273424 r10, GSM3273424 r11
+    - GSM3273423 r4, GSM3273423 r5, GSM3273423: NT2D1 KO Input -Doxy;  ChIP-Seq, GSM3273423 r2, GSM3273423 r3, GSM3273423 r8, GSM3273423 r9, GSM3273423 r6, GSM3273423 r7, GSM3273423 r10
+    - GSM3273422 r5, GSM3273422 r6, GSM3273422 r3, GSM3273422 r4, GSM3273422 r7, GSM3273422 r8, GSM3273422: NT2D1 KO H3R2me2a +Doxy R1;  ChIP-Seq, GSM3273422 r1, GSM3273422 r2
+    - GSM3273421 r6, GSM3273421 r7, GSM3273421: NT2D1 CT H3R2me2a +Inh R2;  ChIP-Seq, GSM3273421 r4, GSM3273421 r5, GSM3273421 r8, GSM3273421 r9, GSM3273421 r2, GSM3273421 r3, GSM3273421 r10
+    - GSM3273420 r7, GSM3273420 r8, GSM3273420: NT2D1 KO KMT2D -RA abgent;  ChIP-Seq, GSM3273420 r5, GSM3273420 r6, GSM3273420 r9, GSM3273420 r3, GSM3273420 r4, GSM3273420 r1, GSM3273420 r2
+    - GSM3273419: NT2D1 KO Input +Doxy;  ChIP-Seq, GSM3273419 r2, GSM3273419 r4, GSM3273419 r3, GSM3273419 r6, GSM3273419 r5, GSM3273419 r10, GSM3273419 r8, GSM3273419 r7, GSM3273419 r9
+    - GSM3273418: NT2D1 CT H3R2me2a +Inh R1;  ChIP-Seq, GSM3273418 r3, GSM3273418 r2, GSM3273418 r5, GSM3273418 r4, GSM3273418 r7, GSM3273418 r6, GSM3273418 r9, GSM3273418 r10, GSM3273418 r8
+    - GSM3273417: NT2D1 CT KMT2D +RA santacruz;  ChIP-Seq, GSM3273417 r2, GSM3273417 r4, GSM3273417 r3, GSM3273417 r11, GSM3273417 r6, GSM3273417 r10, GSM3273417 r5, GSM3273417 r8, GSM3273417 r7, GSM3273417 r9, GSM3273417 r12
+    - GSM3273416 r3, GSM3273416 r2, GSM3273416 r5, GSM3273416 r4, GSM3273416 r10, GSM3273416 r7, GSM3273416 r6, GSM3273416: NT2D1 KO KMT2D +RA abgent;  ChIP-Seq, GSM3273416 r9, GSM3273416 r8, GSM3273416 r11
+    - GSM3273415 r2, GSM3273415: NT2D1 KO H3R2me2a +Doxy R2;  ChIP-Seq, GSM3273415 r4, GSM3273415 r3, GSM3273415 r6, GSM3273415 r5, GSM3273415 r8, GSM3273415 r7, GSM3273415 r9, GSM3273415 r10
+    - GSM3273414 r3, GSM3273414 r2, GSM3273414 r5, GSM3273414 r4, GSM3273414 r7, GSM3273414 r6, GSM3273414 r9, GSM3273414 r8, GSM3273414: NT2D1 CT H3R2me2a -Inh R1;  ChIP-Seq, GSM3273414 r10
+    - GSM3273413: NT2D1 CT H3R2me2a -RA R2 | NT2D1 CT H3R2me2a -Inh R2;  ChIP-Seq, GSM3273413 r2, GSM3273413 r1, GSM3273413 r4, GSM3273413 r3, GSM3273413 r6, GSM3273413 r5, GSM3273413 r8, GSM3273413 r7
+    - GSM3273412 r3, GSM3273412 r2, GSM3273412: NT2D1 KO H3R2me2a -Doxy R1;  ChIP-Seq, GSM3273412 r5, GSM3273412 r4, GSM3273412 r7, GSM3273412 r6, GSM3273412 r8, GSM3273412 r1
+    - GSM3273411 r4, GSM3273411 r10, GSM3273411 r3, GSM3273411 r6, GSM3273411 r5, GSM3273411 r8, GSM3273411: NT2D1 CT KMT2D +RA abgent;  ChIP-Seq, GSM3273411 r7, GSM3273411 r9, GSM3273411 r2
+    - GSM3273410: NT2D1 KO KMT2D +RA santacruz;  ChIP-Seq, GSM3273410 r5, GSM3273410 r10, GSM3273410 r4, GSM3273410 r7, GSM3273410 r6, GSM3273410 r9, GSM3273410 r8, GSM3273410 r3, GSM3273410 r2
+    - GSM3273409: U2OS CT H3R2me2a;  ChIP-Seq, GSM3273409 r1, GSM3273409 r3, GSM3273409 r2, GSM3273409 r5, GSM3273409 r4, GSM3273409 r7, GSM3273409 r6, GSM3273409 r8
+    - GSM3273408 r16, GSM3273408 r4, GSM3273408 r17, GSM3273408 r3, GSM3273408: U2OS KO H3R2me2a;  ChIP-Seq, GSM3273408 r14, GSM3273408 r6, GSM3273408 r15, GSM3273408 r5, GSM3273408 r12, GSM3273408 r8, GSM3273408 r13, GSM3273408 r7, GSM3273408 r10, GSM3273408 r11, GSM3273408 r9, GSM3273408 r2
+    - GSM3273407 r3, GSM3273407 r2, GSM3273407 r5, GSM3273407: U2OS IgG;  ChIP-Seq, GSM3273407 r4, GSM3273407 r7, GSM3273407 r6, GSM3273407 r10, GSM3273407 r9, GSM3273407 r8
+Study abstract (applies to all samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control): Protein arginine methyltransferase 6 (PRMT6) is an epigenetic regulator of fundamental cellular processes, such as gene expression and DNA repair. Asymmetric dimethylation of histone H3 at arginine 2 (H3R2me2a) is the major histone modification catalyzed by PRMT6. To identify the genome-wide deposition and transcriptional impact of H3R2me2a, we established PRMT6 deletion in a human cell model of neural differentiation. These knockout cells show severe neural differentiation defects. ChIP-seq profiling reveals that H3R2me2a is present at promoter as well as non-promoter sites in a PRMT6-dependent manner. Loss of H3R2me2a causes enhanced H3K4me3 deposition and target gene transcription supporting a genome-wide repressive nature of H3R2me2a. Intriguingly, the non-promoter H3R2me2a peaks co-localize with active enhancer marks, such as H3K4me1 and H3K27ac. Overall design: Examining of PRMT6 dependent H3R2me2a deposition in CRISPR control and knockout PRMT6 with neighboring histone modification
+The protocol information in this paragraph likely (but not necessarily) applies to **all** samples in the study, not just the present sample; each sample may have been processed with its own specific set of antibodies, or may be a control (see abstract). 103_B6Flp_ChIPP6_IP_260218_CTTGTA. NT2/D1 and U2OS cells were cultured in DMEMI supplemented with 10% FCS. 1 µM all trans retinoic acid (ATRA) for 3 days; 16 µM MS049 (PRMT6 inhibitor) 3 days; PRMT6 rescue with Doxy treatment 6 days. Cells were crosslinked in the presence of 1% formaldehyde. Cell lysates were sonified  and Protein-DNA complexes were enriched by immunoprecipitation with mentioned antibodies. Libraries were prepared according to the manufacturer's protocol (Diagenode, MicroPlex Library Preparation Kit)
+
+All of the information below should apply specifically to this particular sample:
+
+Antibody info:rat monoclonal generated in the laboratory
+Genotype info: CRISPR/Cas9-mediated deletion of PRMT6 in NT2/D1 cells and PRMT6 re-expression with doxy
+Tissue info: NT2D1_KO_H3R2me2a_+Doxy. embryonal carcinoma cell line
+Cell line info: NT2/D1
+Other info of potential relevance: parsed primary ID = {SRX4397524}; LIBRARYSELECTION = {ChIP}; molecule-type = {genomic DNA}; parsed_GSM_ID = {GSM3273422}; inferred sequence type = {ChIPSeq}; LIBRARYSTRATEGY = {ChIP-Seq}; cell status = {pluripotent}; sample-type = {SRA}
+
+
+
+Barb's answers are as follows:
+0. NT2/D1
+1. embryonal carcinoma
+2. testicle (Barb knows that NT2/D1 cells are a teratocarcinoma line derived from an embryonic testicular cancer)
+3. N/A
+4. CRISPR/Cas9-mediated deletion of PRMT6 in NT2/D1 cells and PRMT6 re-expression under control of doxycycline
+5. No, the string "input" does not appear in the sample name "GSM3273422: NT2D1 KO H3R2me2a +Doxy R1;  ChIP-Seq [...]", and it is not an input control
+6. Yes, "NT2D1" refers to "NT2/D1" in the sample name "GSM3273422: NT2D1 KO H3R2me2a +Doxy R1;  ChIP-Seq. 103 B6Flp ChIPP6 IP 260218 CTTGTA"
+7. N/A
+8. N/A
+9. PRMT6 (Protein arginine methyltransferase 6)
+10. The sample name "GSM3273422: NT2D1 KO H3R2me2a +Doxy R1; ChIP-Seq" suggests that the ChIP target is histone modification H3R2me2a (in the context of a knockout and doxycycline treatment). The broader study title "Genomic location of PRMT6-dependent H3R2 methylation is decisive for the transcriptional outcome of associated genes [ChIP-seq]" and the protocol information also support this inference. The antibody info mentions "rat monoclonal generated in the laboratory," which is not specific but compatible with H3R2me2a being the target
+11. H3R2me2a
+12. H3C1, H3C2, H3C3 (multiple genes correspond to Histone H3)
+13. ChIP-seq for sure
+14. The sample name "GSM3273422: NT2D1 KO H3R2me2a +Doxy R1; ChIP-Seq" indicates that the sample was treated with "Doxy" (doxycycline); the record indicates that this is for re-expression of PRMT6, which is a **genetic** modification not to be reported here. The protocol information mentions that some samples were treated with all trans retinoic acid (ATRA) and with MS049 (PRMT6 inhibitor). But the sample-specific section does not mention those treatments. Treatment references appear in the names of other samples: "+RA" for retinoic acid, and "+Inh" most likely for PRMT6 inhibitor MS049. But the name of the present sample does not contain "+RA" or "+Inh", indicating it did *not* receive those treatments
+15. N/A
+16. No, this sample does not correspond to a control genetic modification or control genetic background
+17. This particular sample does not seem to have received "RA" (retinoic acid) or "Inh" (MS049 inhibitor) treatments, and may thus serve as a control for the samples that did
+18. "Neural differentiation", "Gene repression", "Response to retinoic acid"
+19. No
